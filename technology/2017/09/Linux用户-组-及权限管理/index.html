@@ -60,16 +60,16 @@
 
 
 
-<meta name="description" content="用户(组)管理123456789101112131415# 新增用户useradd -s /bin/zsh -d /home/$user -m $user# 修改用户密码passwd $user# 用户添加到新组usermod -a -G $newGroup $user# 查看用户信息信息id $useruid=1001($user) gid=1001($user) groups=1001($us">
+<meta name="description" content="用户(组)管理1234567891011121314151617# 新增用户useradd -s /bin/zsh -d /home/$user -m $user# 修改用户密码passwd $user# 用户添加到新组usermod -a -G $newGroup $user# 查看用户信息信息id $useruid=1001($user) gid=1001($user) groups=1001">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux用户(组)及权限管理">
 <meta property="og:url" content="http://blog.willowspace.cn/technology/2017/09/Linux用户-组-及权限管理/index.html">
 <meta property="og:site_name" content="Willow's blog">
-<meta property="og:description" content="用户(组)管理123456789101112131415# 新增用户useradd -s /bin/zsh -d /home/$user -m $user# 修改用户密码passwd $user# 用户添加到新组usermod -a -G $newGroup $user# 查看用户信息信息id $useruid=1001($user) gid=1001($user) groups=1001($us">
-<meta property="og:updated_time" content="2017-09-22T14:15:59.000Z">
+<meta property="og:description" content="用户(组)管理1234567891011121314151617# 新增用户useradd -s /bin/zsh -d /home/$user -m $user# 修改用户密码passwd $user# 用户添加到新组usermod -a -G $newGroup $user# 查看用户信息信息id $useruid=1001($user) gid=1001($user) groups=1001">
+<meta property="og:updated_time" content="2017-10-18T15:23:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux用户(组)及权限管理">
-<meta name="twitter:description" content="用户(组)管理123456789101112131415# 新增用户useradd -s /bin/zsh -d /home/$user -m $user# 修改用户密码passwd $user# 用户添加到新组usermod -a -G $newGroup $user# 查看用户信息信息id $useruid=1001($user) gid=1001($user) groups=1001($us">
+<meta name="twitter:description" content="用户(组)管理1234567891011121314151617# 新增用户useradd -s /bin/zsh -d /home/$user -m $user# 修改用户密码passwd $user# 用户添加到新组usermod -a -G $newGroup $user# 查看用户信息信息id $useruid=1001($user) gid=1001($user) groups=1001">
 
 
 
@@ -392,7 +392,7 @@
       
 
       
-        <h1 id="用户-组-管理"><a href="#用户-组-管理" class="headerlink" title="用户(组)管理"></a>用户(组)管理</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"># 新增用户</div><div class="line">useradd -s /bin/zsh -d /home/$user -m $user</div><div class="line"># 修改用户密码</div><div class="line">passwd $user</div><div class="line"># 用户添加到新组</div><div class="line">usermod -a -G $newGroup $user</div><div class="line"># 查看用户信息信息</div><div class="line">id $user</div><div class="line">uid=1001($user) gid=1001($user) groups=1001($user),33(www-data)</div><div class="line"># 给用户分配组</div><div class="line">gpasswd -a $user $group</div><div class="line"># 查看用户所属组情况</div><div class="line">groups $userName</div><div class="line"># 把用户从组删除</div><div class="line">gpasswd -d $user $group</div></pre></td></tr></table></figure>
+        <h1 id="用户-组-管理"><a href="#用户-组-管理" class="headerlink" title="用户(组)管理"></a>用户(组)管理</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"># 新增用户</div><div class="line">useradd -s /bin/zsh -d /home/$user -m $user</div><div class="line"># 修改用户密码</div><div class="line">passwd $user</div><div class="line"># 用户添加到新组</div><div class="line">usermod -a -G $newGroup $user</div><div class="line"># 查看用户信息信息</div><div class="line">id $user</div><div class="line">uid=1001($user) gid=1001($user) groups=1001($user),33(www-data)</div><div class="line"># 给用户分配组</div><div class="line">gpasswd -a $user $group</div><div class="line"># 查看用户所属组情况</div><div class="line">groups $userName</div><div class="line"># 把用户从组删除</div><div class="line">gpasswd -d $user $group</div><div class="line"># 删除用户</div><div class="line">userdel -r $user</div></pre></td></tr></table></figure>
 <h1 id="用户-组-权限管理"><a href="#用户-组-权限管理" class="headerlink" title="用户(组)权限管理"></a>用户(组)权限管理</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># 给目录指定所属用户及所属用户组</div><div class="line">chown -R $user:$group $directory</div><div class="line"># 给目录指定同组用户的权限</div><div class="line">chmod -R g+wrx $directory</div><div class="line">chmod -R g-wrx $directory</div></pre></td></tr></table></figure>
 
         （EOF）
@@ -528,7 +528,7 @@
 
       
     </div>
-    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_19.jpg">
+    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_31.jpg">
 
 
         </div>
