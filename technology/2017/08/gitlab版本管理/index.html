@@ -44,7 +44,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="持续集成,git,代码版本管理," />
+  <meta name="keywords" content="代码版本管理,持续集成,git," />
 
 
 
@@ -68,7 +68,7 @@
 <meta property="og:site_name" content="Willow's blog">
 <meta property="og:description" content="一、安装安装环境为：ubuntu
 123456# 安装并配置必须的依赖sudo apt-get install -y curl openssh-server ca-certificates# 添加gitlab包及服务并安装gitlab包curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.">
-<meta property="og:updated_time" content="2017-09-22T14:15:59.000Z">
+<meta property="og:updated_time" content="2017-11-21T20:00:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gitlab版本管理">
 <meta name="twitter:description" content="一、安装安装环境为：ubuntu
@@ -407,6 +407,7 @@
 <h2 id="备份配置"><a href="#备份配置" class="headerlink" title="备份配置"></a>备份配置</h2><p>打包<code>/etc/gitlab/</code>下所有文件</p>
 <h2 id="备份数据"><a href="#备份数据" class="headerlink" title="备份数据"></a>备份数据</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo gitlab-rake gitlab:backup:create</div><div class="line">#产生的备份包名形如下</div><div class="line">1490183942_2017_03_22_gitlab_backup.tar</div><div class="line">#备份文件位于/var/opt/gitlab/backups路径下</div></pre></td></tr></table></figure>
 <h2 id="恢复数据"><a href="#恢复数据" class="headerlink" title="恢复数据"></a>恢复数据</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo gitlab-ctl stop unicorn</div><div class="line">sudo gitlab-ctl stop sidekiq</div><div class="line">sudo gitlab-ctl status</div><div class="line">sudo gitlab-rake gitlab:backup:restore BACKUP=1490183942_2017_03_22</div></pre></td></tr></table></figure>
+<h1 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo gitlab-ctl stop</div><div class="line">sudo gitlab-ctl uninstall</div><div class="line"># 删除所有gitlab文件，在根目录下find -name gitlab*，找到所有相关文件，然后执行删除。</div><div class="line">find -name gitlab*</div></pre></td></tr></table></figure>
 
         （EOF）
           <blockquote class="blockquote-center">
@@ -429,11 +430,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/代码版本管理/" rel="tag"># 代码版本管理</a>
+          
             <a href="/tags/持续集成/" rel="tag"># 持续集成</a>
           
             <a href="/tags/git/" rel="tag"># git</a>
-          
-            <a href="/tags/代码版本管理/" rel="tag"># 代码版本管理</a>
           
         </div>
       
@@ -543,7 +544,7 @@
 
       
     </div>
-    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_19.jpg">
+    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_81.jpg">
 
 
         </div>
@@ -682,7 +683,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、安装"><span class="nav-number">1.</span> <span class="nav-text">一、安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、配置gitlab访问域名及端口"><span class="nav-number">2.</span> <span class="nav-text">二、配置gitlab访问域名及端口</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、访问并设置初始密码"><span class="nav-number">3.</span> <span class="nav-text">三、访问并设置初始密码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、初始化项目"><span class="nav-number">4.</span> <span class="nav-text">四、初始化项目</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Git-global-setup"><span class="nav-number">4.0.0.0.1.</span> <span class="nav-text">Git global setup</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Create-a-new-repository"><span class="nav-number">4.0.0.0.2.</span> <span class="nav-text">Create a new repository</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Existing-folder"><span class="nav-number">4.0.0.0.3.</span> <span class="nav-text">Existing folder</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Existing-Git-repository"><span class="nav-number">4.0.0.0.4.</span> <span class="nav-text">Existing Git repository</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、常规维护"><span class="nav-number">5.</span> <span class="nav-text">五、常规维护</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#启停"><span class="nav-number">5.1.</span> <span class="nav-text">启停</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#备份配置"><span class="nav-number">5.2.</span> <span class="nav-text">备份配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#备份数据"><span class="nav-number">5.3.</span> <span class="nav-text">备份数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#恢复数据"><span class="nav-number">5.4.</span> <span class="nav-text">恢复数据</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、安装"><span class="nav-number">1.</span> <span class="nav-text">一、安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、配置gitlab访问域名及端口"><span class="nav-number">2.</span> <span class="nav-text">二、配置gitlab访问域名及端口</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、访问并设置初始密码"><span class="nav-number">3.</span> <span class="nav-text">三、访问并设置初始密码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、初始化项目"><span class="nav-number">4.</span> <span class="nav-text">四、初始化项目</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Git-global-setup"><span class="nav-number">4.0.0.0.1.</span> <span class="nav-text">Git global setup</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Create-a-new-repository"><span class="nav-number">4.0.0.0.2.</span> <span class="nav-text">Create a new repository</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Existing-folder"><span class="nav-number">4.0.0.0.3.</span> <span class="nav-text">Existing folder</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Existing-Git-repository"><span class="nav-number">4.0.0.0.4.</span> <span class="nav-text">Existing Git repository</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、常规维护"><span class="nav-number">5.</span> <span class="nav-text">五、常规维护</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#启停"><span class="nav-number">5.1.</span> <span class="nav-text">启停</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#备份配置"><span class="nav-number">5.2.</span> <span class="nav-text">备份配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#备份数据"><span class="nav-number">5.3.</span> <span class="nav-text">备份数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#恢复数据"><span class="nav-number">5.4.</span> <span class="nav-text">恢复数据</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#卸载"><span class="nav-number">6.</span> <span class="nav-text">卸载</span></a></li></ol></div>
             
 
           </div>
