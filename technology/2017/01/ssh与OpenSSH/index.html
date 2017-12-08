@@ -70,7 +70,7 @@
 <meta property="og:description" content="服务端安装并启动Openssh服务123sudo apt-get updatesudo apt-get install openssh-serversudo service ssh start
 客户端配置公私钥对12sudo ssh-keygen -t rsa -f ~/.ssh/id_rsa_xxx -C &amp;quot;...&amp;quot;sudo service ssh restart
 添加客户端">
-<meta property="og:updated_time" content="2017-11-22T20:42:08.000Z">
+<meta property="og:updated_time" content="2017-12-08T07:36:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ssh与OpenSSH">
 <meta name="twitter:description" content="服务端安装并启动Openssh服务123sudo apt-get updatesudo apt-get install openssh-serversudo service ssh start
@@ -403,6 +403,10 @@
 <h1 id="添加客户端ssh公钥到服务器授权访问列表"><a href="#添加客户端ssh公钥到服务器授权访问列表" class="headerlink" title="添加客户端ssh公钥到服务器授权访问列表"></a>添加客户端ssh公钥到服务器授权访问列表</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo ssh-copy-id -i ~/.ssh/id_rsa.pub user@server_ip</div></pre></td></tr></table></figure>
 <h1 id="使用ssh进行免密登录"><a href="#使用ssh进行免密登录" class="headerlink" title="使用ssh进行免密登录"></a>使用ssh进行免密登录</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo ssh user@server_ip</div></pre></td></tr></table></figure>
 <h1 id="客户端配置n个Key访问n个服务"><a href="#客户端配置n个Key访问n个服务" class="headerlink" title="客户端配置n个Key访问n个服务"></a>客户端配置n个Key访问n个服务</h1><p><a href="https://appkfz.com/2015/06/18/git-ssh-key/" target="_blank" rel="external">https://appkfz.com/2015/06/18/git-ssh-key/</a></p>
+<p>多站点使用不同的ssh key</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Host company</div><div class="line">  HostName company.com</div><div class="line">  User git</div><div class="line">  IdentityFile ~/.ssh/user1</div><div class="line">Host github</div><div class="line">  HostName github.com</div><div class="line">  User git</div><div class="line">  IdentityFile ~/.ssh/user2</div></pre></td></tr></table></figure>
+<p>同一站点使用不同的ssh key</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Host gitcafe-site1</div><div class="line">  HostName gitcafe.com</div><div class="line">  User git</div><div class="line">  IdentityFile ~/.ssh/user1</div><div class="line">Host gitcafe-site2</div><div class="line">  HostName gitcafe.com</div><div class="line">  User git</div><div class="line">  IdentityFile ~/.ssh/user2</div></pre></td></tr></table></figure>
 <h1 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="ssh-add报错"><a href="#ssh-add报错" class="headerlink" title="ssh-add报错"></a>ssh-add报错</h2><ul>
 <li><p>报错1</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Error connecting to agent: Connection refused</div></pre></td></tr></table></figure>
@@ -544,7 +548,7 @@
 
       
     </div>
-    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_44.jpg">
+    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_5.jpg">
 
 
         </div>
@@ -588,7 +592,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">39</span>
+                <span class="site-state-item-count">40</span>
                 <span class="site-state-item-name">博客</span>
               </a>
             </div>
@@ -606,7 +610,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">78</span>
+                <span class="site-state-item-count">82</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
