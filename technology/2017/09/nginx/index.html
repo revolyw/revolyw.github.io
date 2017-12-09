@@ -67,7 +67,7 @@
 <meta property="og:site_name" content="Willow's blog">
 <meta property="og:description" content="一、nginx安装12345678#安装依赖sudo apt-get install openssl zlib1g-dev libssl-dev gcc libpcre3 libpcre3-dev#配置./configure --prefix=/srv/nginx --with-http_ssl_module --with-http_realip_module --with-http_additi">
 <meta property="og:image" content="http://img.willowspace.cn/willowspace_2016/1505020882341.png">
-<meta property="og:updated_time" content="2017-09-22T14:15:59.000Z">
+<meta property="og:updated_time" content="2017-12-09T07:26:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nginx">
 <meta name="twitter:description" content="一、nginx安装12345678#安装依赖sudo apt-get install openssl zlib1g-dev libssl-dev gcc libpcre3 libpcre3-dev#配置./configure --prefix=/srv/nginx --with-http_ssl_module --with-http_realip_module --with-http_additi">
@@ -435,6 +435,7 @@
 <p>按照如上配置，访问x.domain.cn/status可以看到健康状态<img src="http://img.willowspace.cn/willowspace_2016/1505020882341.png" alt=""></p>
 <p>其中<code>number</code>代表上游服务器节点个数，<code>generation</code>为健康检测本身load的次数(nginx重启或者reload都会导致<code>generation</code>增加)</p>
 <p>更多健康检测模块配置参考<a href="http://tengine.taobao.org/document_cn/http_upstream_check_cn.html" target="_blank" rel="external">配置文档</a></p>
+<h1 id="五、更多配置"><a href="#五、更多配置" class="headerlink" title="五、更多配置"></a>五、更多配置</h1><h2 id="413-Request-Entity-Too-Large-Error"><a href="#413-Request-Entity-Too-Large-Error" class="headerlink" title="413 Request Entity Too Large Error"></a>413 Request Entity Too Large Error</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># http, server 或 location节点中添加</span></div><div class="line"><span class="attribute">client_max_body_size</span> <span class="number">10M</span>;</div></pre></td></tr></table></figure>
 
         （EOF）
           <blockquote class="blockquote-center">
@@ -573,7 +574,7 @@
 
       
     </div>
-    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_14.jpg">
+    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_57.jpg">
 
 
         </div>
@@ -712,7 +713,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、nginx安装"><span class="nav-number">1.</span> <span class="nav-text">一、nginx安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、nginx模块管理"><span class="nav-number">2.</span> <span class="nav-text">二、nginx模块管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看已安装的模块"><span class="nav-number">2.1.</span> <span class="nav-text">查看已安装的模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加编译模块"><span class="nav-number">2.2.</span> <span class="nav-text">添加编译模块</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、nginx基本配置"><span class="nav-number">3.</span> <span class="nav-text">三、nginx基本配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#代理转发"><span class="nav-number">3.1.</span> <span class="nav-text">代理转发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#http代理转发"><span class="nav-number">3.1.1.</span> <span class="nav-text">http代理转发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#https代理转发"><span class="nav-number">3.1.2.</span> <span class="nav-text">https代理转发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#http强转https"><span class="nav-number">3.1.3.</span> <span class="nav-text">http强转https</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#禁止ip直接访问"><span class="nav-number">3.2.</span> <span class="nav-text">禁止ip直接访问</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、nginx负载均衡"><span class="nav-number">4.</span> <span class="nav-text">四、nginx负载均衡</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#上游节点健康检测"><span class="nav-number">4.1.</span> <span class="nav-text">上游节点健康检测</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、nginx安装"><span class="nav-number">1.</span> <span class="nav-text">一、nginx安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、nginx模块管理"><span class="nav-number">2.</span> <span class="nav-text">二、nginx模块管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看已安装的模块"><span class="nav-number">2.1.</span> <span class="nav-text">查看已安装的模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加编译模块"><span class="nav-number">2.2.</span> <span class="nav-text">添加编译模块</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、nginx基本配置"><span class="nav-number">3.</span> <span class="nav-text">三、nginx基本配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#代理转发"><span class="nav-number">3.1.</span> <span class="nav-text">代理转发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#http代理转发"><span class="nav-number">3.1.1.</span> <span class="nav-text">http代理转发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#https代理转发"><span class="nav-number">3.1.2.</span> <span class="nav-text">https代理转发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#http强转https"><span class="nav-number">3.1.3.</span> <span class="nav-text">http强转https</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#禁止ip直接访问"><span class="nav-number">3.2.</span> <span class="nav-text">禁止ip直接访问</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、nginx负载均衡"><span class="nav-number">4.</span> <span class="nav-text">四、nginx负载均衡</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#上游节点健康检测"><span class="nav-number">4.1.</span> <span class="nav-text">上游节点健康检测</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、更多配置"><span class="nav-number">5.</span> <span class="nav-text">五、更多配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#413-Request-Entity-Too-Large-Error"><span class="nav-number">5.1.</span> <span class="nav-text">413 Request Entity Too Large Error</span></a></li></ol></li></ol></div>
             
 
           </div>
