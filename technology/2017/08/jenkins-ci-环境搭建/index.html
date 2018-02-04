@@ -85,7 +85,7 @@ SCM source code management 源码管理
 <meta property="og:image" content="http://img.willowspace.cn/willowspace_2016/1504010997582.png">
 <meta property="og:image" content="http://img.willowspace.cn/willowspace_2016/1487125834004.png">
 <meta property="og:image" content="http://img.willowspace.cn/willowspace_2016/1487126266497.png">
-<meta property="og:updated_time" content="2017-12-15T03:51:41.000Z">
+<meta property="og:updated_time" content="2018-02-04T11:55:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jenkins ci 环境搭建">
 <meta name="twitter:description" content="简介
@@ -428,7 +428,7 @@ SCM source code management 源码管理
 <h1 id="下载jenkins"><a href="#下载jenkins" class="headerlink" title="下载jenkins"></a>下载jenkins</h1><p>有多种安装方式，我们选择war包部署，war包下载地址 <a href="https://jenkins.io/download/" target="_blank" rel="external">https://jenkins.io/download/</a></p>
 <p>下载的war包为<code>jenkins.war</code></p>
 <h1 id="部署至tomcat"><a href="#部署至tomcat" class="headerlink" title="部署至tomcat"></a>部署至tomcat</h1><p>这里采用一台单独的tomcat部署jenkins</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># 因为此tomcat只用来部署jenkins，所以先删除webapps下其他应用</div><div class="line">rm -rf $&#123;tomcat_path&#125;/webapps/*</div><div class="line"># 部署jenkins的war包</div><div class="line">mv $&#123;download_path&#125;/jenkins.war $&#123;tomcat_path&#125;/webapps/ROOT.war</div><div class="line"># 指定jenkins工作目录(如有必要)，默认为~/.jenkins</div><div class="line">vim $&#123;download_path&#125;/bin/catalina.sh</div><div class="line">CATALINA_OPTS=&quot;-DJENKINS_HOME=~/jenkins-cluster-1/&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"># 因为此tomcat只用来部署jenkins，所以先删除webapps下其他应用</div><div class="line">rm -rf $&#123;tomcat_path&#125;/webapps/*</div><div class="line"># 部署jenkins的war包</div><div class="line">mv $&#123;download_path&#125;/jenkins.war $&#123;tomcat_path&#125;/webapps/ROOT.war</div><div class="line"># 指定jenkins工作目录(如有必要)，默认为~/.jenkins</div><div class="line">vim $&#123;download_path&#125;/bin/catalina.sh</div><div class="line">CATALINA_OPTS=&quot;-DJENKINS_HOME=~/jenkins-cluster-1/&quot;</div><div class="line"># 或</div><div class="line">vim $&#123;download_path&#125;/conf/context.xml</div><div class="line">&lt;Context ...&gt;</div><div class="line">  &lt;Environment name=&quot;JENKINS_HOME&quot; value=&quot;~/jenkins-cluster-1/&quot; type=&quot;java.lang.String&quot;/&gt;</div><div class="line">&lt;/Context&gt;</div></pre></td></tr></table></figure>
 <h1 id="配置jenkins"><a href="#配置jenkins" class="headerlink" title="配置jenkins"></a>配置jenkins</h1><p>tomcat部署启动完jenkins后，访问对应端口可以看到如下jenkins的初始界面</p>
 <p><img src="http://img.willowspace.cn/willowspace_2016/1487009258517.png" alt=""></p>
 <p>查看<code>/root/.jenkins/secrets/initialAdminPassword</code>文件可以获得管理员密码，输入后可以解锁Jenkins，开始使用。</p>
@@ -444,6 +444,7 @@ SCM source code management 源码管理
 <p><a href="https://my.oschina.net/ghm7753/blog/371954?p=1" target="_blank" rel="external">pipeline构建参考</a></p>
 <h3 id="其它插件"><a href="#其它插件" class="headerlink" title="其它插件"></a>其它插件</h3><p><code>Role-based Authorization Strategy</code>基于角色的的用户权限控制</p>
 <h2 id="设置全局工具"><a href="#设置全局工具" class="headerlink" title="设置全局工具"></a>设置全局工具</h2><p>系统设置-&gt;Global Tool Configuration-&gt;JDK、Git、Maven</p>
+<p>系统设置-&gt;Shell-&gt;Shell executable-&gt;<code>/bin/zsh</code></p>
 <h2 id="Jenkins内部shell-UTF-8-编码设置"><a href="#Jenkins内部shell-UTF-8-编码设置" class="headerlink" title="Jenkins内部shell UTF-8 编码设置"></a>Jenkins内部shell UTF-8 编码设置</h2><p><img src="http://img.willowspace.cn/willowspace_2016/1487125834004.png" alt=""></p>
 <h2 id="参数化构建"><a href="#参数化构建" class="headerlink" title="参数化构建"></a>参数化构建</h2><p><img src="http://img.willowspace.cn/willowspace_2016/1487126266497.png" alt=""></p>
 <h3 id="Pipeline构建"><a href="#Pipeline构建" class="headerlink" title="Pipeline构建"></a>Pipeline构建</h3><p>创建一个新任务，任务类型选择pipeline</p>
@@ -603,7 +604,7 @@ SCM source code management 源码管理
 
       
     </div>
-    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_20.jpg">
+    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_46.jpg">
 
 
         </div>
@@ -763,8 +764,8 @@ SCM source code management 源码管理
         <div class="footer-inner">
           <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

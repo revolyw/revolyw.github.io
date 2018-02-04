@@ -395,7 +395,7 @@
           
           <div style="word-break:break-all;word-break:break-word;">
           服务端安装并启动Openssh服务123sudo apt-get updatesudo apt-get install openssh-serversudo service ssh start
-客户端配置公私钥对12sudo ssh-keygen -t rsa -f ~/.ssh/id_rsa_xx
+服务端授权客户端访问123# 修改授权访问文件，若无此文件则新建vim ~/.ssh/authorized
           &nbsp;&nbsp;...&nbsp;&nbsp;
           <!--noindex-->
           <div class="post-button text-center" style="display:inline;">
@@ -1556,8 +1556,8 @@ slf4j-log4
         <div class="footer-inner">
           <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
