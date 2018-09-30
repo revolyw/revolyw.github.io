@@ -62,23 +62,20 @@
 
 <meta name="description" content="Chrome信任自签数字证书如何自签一个CA证书和一个子证书
 创建CA配置文件及扩展文件
-
-1234567touch localhost_ca.cnftouch localhost_ca.ext```  2. 创建CA证书私钥及CA证书```shellopenssl req -x509 -newkey rsa:2048 -out $CA_CER_NAME.cer -outform PEM -">
+1234567touch localhost_ca.cnftouch localhost_ca.ext```  2. 创建CA证书私钥及CA证书```shellopenssl req -x509 -newkey rsa:2048 -out $CA_CER_NAME.cer -outform PEM -k">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Chrome信任自签数证书">
 <meta property="og:url" content="http://blog.willowspace.cn/technology/2018/10/Chrome信任自签数证书/index.html">
 <meta property="og:site_name" content="Willow's blog">
 <meta property="og:description" content="Chrome信任自签数字证书如何自签一个CA证书和一个子证书
 创建CA配置文件及扩展文件
-
-1234567touch localhost_ca.cnftouch localhost_ca.ext```  2. 创建CA证书私钥及CA证书```shellopenssl req -x509 -newkey rsa:2048 -out $CA_CER_NAME.cer -outform PEM -">
-<meta property="og:updated_time" content="2018-09-30T09:18:46.000Z">
+1234567touch localhost_ca.cnftouch localhost_ca.ext```  2. 创建CA证书私钥及CA证书```shellopenssl req -x509 -newkey rsa:2048 -out $CA_CER_NAME.cer -outform PEM -k">
+<meta property="og:updated_time" content="2018-09-30T09:37:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chrome信任自签数证书">
 <meta name="twitter:description" content="Chrome信任自签数字证书如何自签一个CA证书和一个子证书
 创建CA配置文件及扩展文件
-
-1234567touch localhost_ca.cnftouch localhost_ca.ext```  2. 创建CA证书私钥及CA证书```shellopenssl req -x509 -newkey rsa:2048 -out $CA_CER_NAME.cer -outform PEM -">
+1234567touch localhost_ca.cnftouch localhost_ca.ext```  2. 创建CA证书私钥及CA证书```shellopenssl req -x509 -newkey rsa:2048 -out $CA_CER_NAME.cer -outform PEM -k">
 
 
 
@@ -402,17 +399,16 @@
 
       
         <h1 id="Chrome信任自签数字证书"><a href="#Chrome信任自签数字证书" class="headerlink" title="Chrome信任自签数字证书"></a>Chrome信任自签数字证书</h1><h2 id="如何自签一个CA证书和一个子证书"><a href="#如何自签一个CA证书和一个子证书" class="headerlink" title="如何自签一个CA证书和一个子证书"></a>如何自签一个CA证书和一个子证书</h2><ol>
-<li>创建CA配置文件及扩展文件</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">touch localhost_ca.cnf</div><div class="line">touch localhost_ca.ext</div><div class="line">```  </div><div class="line">2. 创建CA证书私钥及CA证书</div><div class="line"></div><div class="line">```shell</div><div class="line">openssl req -x509 -newkey rsa:2048 -out $CA_CER_NAME.cer -outform PEM -keyout $CA_KEY_NAME.pvk -days 10000 -verbose -config $CA_CNF_FILE -nodes -sha256 -subj &quot;/CN=$CA_CER_NAME&quot;</div></pre></td></tr></table></figure>
-<ol>
+<li><p>创建CA配置文件及扩展文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">touch localhost_ca.cnf</div><div class="line">touch localhost_ca.ext</div><div class="line">```  </div><div class="line"></div><div class="line">2. 创建CA证书私钥及CA证书</div><div class="line">```shell</div><div class="line">openssl req -x509 -newkey rsa:2048 -out $CA_CER_NAME.cer -outform PEM -keyout $CA_KEY_NAME.pvk -days 10000 -verbose -config $CA_CNF_FILE -nodes -sha256 -subj &quot;/CN=$CA_CER_NAME&quot;</div></pre></td></tr></table></figure>
+</li>
 <li><p>创建子证书私钥</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">openssl req -newkey rsa:2048 -keyout $KEY_NAME.pvk -out $CER_NAME.req -subj /CN=$CA_CER_NAME -sha256 -nodes</div></pre></td></tr></table></figure>
 </li>
 <li><p>创建子证书</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">openssl x509 -req -CA $CA_CER_NAME.cer -CAkey $CA_KEY_NAME.pvk -in $CER_NAME.req -out $CER_NAME.cer -days 10000 -extfile $CA_EXT_FILE -sha256 -set_serial 0x1111</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">openssl x509 -req -CA $CA_CER_NAME.cer -CAkey $CA_KEY_NAME.pvk -in $CER_NAME.req -out $CER_NAME.cer -days 10000 -extfile $CA_EXT_FILE -sha256 -set_serial 0x1111</div></pre></td></tr></table></figure>
 <blockquote>
 <p>可以做成脚本以便复用</p>
 </blockquote>
@@ -558,7 +554,7 @@
 
       
     </div>
-    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_71.jpg">
+    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_70.jpg">
 
 
         </div>
