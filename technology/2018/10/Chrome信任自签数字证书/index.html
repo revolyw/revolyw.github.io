@@ -60,22 +60,22 @@
 
 
 
-<meta name="description" content="Chrome信任自签数字证书如何自签一个CA证书和一个子证书
+<meta name="description" content="Chrome信任自签数字证书如何自签一个CA证书和一个子证书
 创建CA配置文件
-1234567891011121314151617181920212223touch localhost_ca.cnf[ req ]distinguished_name  = req_distinguished_namex509_extensions     = root_ca[ req_distinguished">
+1234567891011121314151617181920212223touch localhost_ca.cnf[ req ]distinguished_name  = req_distinguished_namex509_extensions     = root_ca[ req_distinguished_n">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Chrome信任自签数字证书">
 <meta property="og:url" content="http://blog.willowspace.cn/technology/2018/10/Chrome信任自签数字证书/index.html">
 <meta property="og:site_name" content="Willow's blog">
-<meta property="og:description" content="Chrome信任自签数字证书如何自签一个CA证书和一个子证书
+<meta property="og:description" content="Chrome信任自签数字证书如何自签一个CA证书和一个子证书
 创建CA配置文件
-1234567891011121314151617181920212223touch localhost_ca.cnf[ req ]distinguished_name  = req_distinguished_namex509_extensions     = root_ca[ req_distinguished">
-<meta property="og:updated_time" content="2018-10-10T06:13:58.000Z">
+1234567891011121314151617181920212223touch localhost_ca.cnf[ req ]distinguished_name  = req_distinguished_namex509_extensions     = root_ca[ req_distinguished_n">
+<meta property="og:updated_time" content="2018-10-10T06:22:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chrome信任自签数字证书">
-<meta name="twitter:description" content="Chrome信任自签数字证书如何自签一个CA证书和一个子证书
+<meta name="twitter:description" content="Chrome信任自签数字证书如何自签一个CA证书和一个子证书
 创建CA配置文件
-1234567891011121314151617181920212223touch localhost_ca.cnf[ req ]distinguished_name  = req_distinguished_namex509_extensions     = root_ca[ req_distinguished">
+1234567891011121314151617181920212223touch localhost_ca.cnf[ req ]distinguished_name  = req_distinguished_namex509_extensions     = root_ca[ req_distinguished_n">
 
 
 
@@ -398,17 +398,17 @@
       
 
       
-        <h1 id="Chrome信任自签数字证书"><a href="#Chrome信任自签数字证书" class="headerlink" title="Chrome信任自签数字证书"></a>Chrome信任自签数字证书</h1><h2 id="如何自签一个CA证书和一个子证书"><a href="#如何自签一个CA证书和一个子证书" class="headerlink" title="如何自签一个CA证书和一个子证书"></a>如何自签一个CA证书和一个子证书</h2><ol>
+        <h1 id="Chrome信任自签数字证书"><a href="#Chrome信任自签数字证书" class="headerlink" title="Chrome信任自签数字证书"></a>Chrome信任自签数字证书</h1><h2 id="如何自签一个CA证书和一个子证书"><a href="#如何自签一个CA证书和一个子证书" class="headerlink" title="如何自签一个CA证书和一个子证书"></a>如何自签一个CA证书和一个子证书</h2><ol>
 <li><p>创建CA配置文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">touch localhost_ca.cnf</div><div class="line"></div><div class="line">[ req ]</div><div class="line">distinguished_name  = req_distinguished_name</div><div class="line">x509_extensions     = root_ca</div><div class="line"></div><div class="line">[ req_distinguished_name ]</div><div class="line"></div><div class="line"># 以下内容可随意填写</div><div class="line">countryName             = CN (2 letter code)</div><div class="line">countryName_min         = 2</div><div class="line">countryName_max         = 2</div><div class="line">stateOrProvinceName     = ZheJiang</div><div class="line">localityName            = HangZhou</div><div class="line">organizationName        = Dxy</div><div class="line">organizationalUnitName  = technology</div><div class="line">commonName              = develop</div><div class="line">commonName_max          = 64</div><div class="line">emailAddress            = yangw@dxy.cn</div><div class="line">emailAddress_max        = 64</div><div class="line"></div><div class="line">[ root_ca ]</div><div class="line">basicConstraints        = critical, CA:true</div></pre></td></tr></table></figure>
 </li>
 <li><p>创建扩展配置文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">touch localhost_ca.ext</div><div class="line"></div><div class="line">subjectAltName = @alt_names</div><div class="line">extendedKeyUsage = serverAuth</div><div class="line"></div><div class="line">[alt_names]</div><div class="line"></div><div class="line"># 域名，如有多个用DNS.2,DNS.3…来增加</div><div class="line">DNS.1 = a.domain.cn</div><div class="line">DNS.2 = b.domain.cn</div><div class="line"># IP地址</div><div class="line">IP.1 = 192.168.0.1</div><div class="line">IP.2 = 127.0.0.1</div></pre></td></tr></table></figure>
 </li>
-<li><p>创建CA证书私钥及CA证书</p>
+<li><p>创建CA证书私钥及CA证书</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">openssl req -x509 -newkey rsa:2048 -out $CA_CER_NAME.cer -outform PEM -keyout $CA_KEY_NAME.pvk -days 10000 -verbose -config $CA_CNF_FILE -nodes -sha256 -subj &quot;/CN=$CA_CER_NAME&quot;</div></pre></td></tr></table></figure>
 </li>
-<li><p>创建子证书私钥</p>
+<li><p>创建子证书私钥</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">openssl req -newkey rsa:2048 -keyout $KEY_NAME.pvk -out $CER_NAME.req -subj /CN=$CA_CER_NAME -sha256 -nodes</div></pre></td></tr></table></figure>
 </li>
 <li><p>创建子证书</p>
@@ -416,13 +416,13 @@
 </li>
 </ol>
 <blockquote>
-<p>可以做成脚本以便复用</p>
+<p>可以做成脚本以便复用</p>
 </blockquote>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">#!/bin/zsh</div><div class="line">CA_CER_NAME=localhost_ca</div><div class="line">CA_KEY_NAME=localhost_ca</div><div class="line">CA_CNF_FILE=./localhost_ca.cnf</div><div class="line">CA_EXT_FILE=./localhost_ca.ext</div><div class="line"></div><div class="line">CER_NAME=localhost</div><div class="line">KEY_NAME=localhost</div><div class="line"></div><div class="line">openssl req -x509 -newkey rsa:2048 -out $CA_CER_NAME.cer -outform PEM -keyout $CA_KEY_NAME.pvk -days 10000 -verbose -config $CA_CNF_FILE -nodes -sha256 -subj &quot;/CN=$CA_CER_NAME&quot;</div><div class="line"></div><div class="line">openssl req -newkey rsa:2048 -keyout $KEY_NAME.pvk -out $CER_NAME.req -subj /CN=$CA_CER_NAME -sha256 -nodes</div><div class="line"></div><div class="line">openssl x509 -req -CA $CA_CER_NAME.cer -CAkey $CA_KEY_NAME.pvk -in $CER_NAME.req -out $CER_NAME.cer -days 10000 -extfile $CA_EXT_FILE -sha256 -set_serial 0x1111</div></pre></td></tr></table></figure>
 <h2 id="Chrome如何信任自签证书"><a href="#Chrome如何信任自签证书" class="headerlink" title="Chrome如何信任自签证书"></a>Chrome如何信任自签证书</h2><ol>
-<li>chrome://settings进入Chrome设置界面,搜索certificate,找到并点击Manage certificates将进入系统Keychain Access</li>
-<li>将生成CA(.cer)证书导入</li>
-<li>将导入后的CA证书设置成always trust</li>
+<li>chrome://settings进入Chrome设置界面,搜索certificate,找到并点击Manage certificates将进入系统Keychain Access</li>
+<li>将生成CA(.cer)证书导入</li>
+<li>将导入后的CA证书设置成always trust</li>
 </ol>
 <h2 id="一些证书使用场景"><a href="#一些证书使用场景" class="headerlink" title="一些证书使用场景"></a>一些证书使用场景</h2><h3 id="pem格式转cer格式"><a href="#pem格式转cer格式" class="headerlink" title="pem格式转cer格式"></a>pem格式转cer格式</h3>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">openssl x509 -inform PEM -in cacert.pem -outform DER -out certificate.cer</div></pre></td></tr></table></figure>
 <h3 id="查看jdk证书"><a href="#查看jdk证书" class="headerlink" title="查看jdk证书"></a>查看jdk证书</h3>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -list -keystore &quot;%JAVA_HOME%/jre/lib/security/cacerts&quot;</div></pre></td></tr></table></figure>
@@ -564,7 +564,7 @@
 
       
     </div>
-    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_63.jpg">
+    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_79.jpg">
 
 
         </div>
@@ -703,7 +703,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chrome信任自签数字证书"><span class="nav-number">1.</span> <span class="nav-text">Chrome信任自签数字证书</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何自签一个CA证书和一个子证书"><span class="nav-number">1.1.</span> <span class="nav-text">如何自签一个CA证书和一个子证书</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chrome如何信任自签证书"><span class="nav-number">1.2.</span> <span class="nav-text">Chrome如何信任自签证书</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些证书使用场景"><span class="nav-number">1.3.</span> <span class="nav-text">一些证书使用场景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pem格式转cer格式"><span class="nav-number">1.3.1.</span> <span class="nav-text">pem格式转cer格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看jdk证书"><span class="nav-number">1.3.2.</span> <span class="nav-text">查看jdk证书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jdk密钥库操作"><span class="nav-number">1.3.3.</span> <span class="nav-text">jdk密钥库操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cocos-creator中打包原生android应用时，使用android-studio中的证书"><span class="nav-number">1.3.4.</span> <span class="nav-text">cocos creator中打包原生android应用时，使用android studio中的证书</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chrome信任自签数字证书"><span class="nav-number">1.</span> <span class="nav-text">Chrome信任自签数字证书</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何自签一个CA证书和一个子证书"><span class="nav-number">1.1.</span> <span class="nav-text">如何自签一个CA证书和一个子证书</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chrome如何信任自签证书"><span class="nav-number">1.2.</span> <span class="nav-text">Chrome如何信任自签证书</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些证书使用场景"><span class="nav-number">1.3.</span> <span class="nav-text">一些证书使用场景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pem格式转cer格式"><span class="nav-number">1.3.1.</span> <span class="nav-text">pem格式转cer格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看jdk证书"><span class="nav-number">1.3.2.</span> <span class="nav-text">查看jdk证书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jdk密钥库操作"><span class="nav-number">1.3.3.</span> <span class="nav-text">jdk密钥库操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cocos-creator中打包原生android应用时，使用android-studio中的证书"><span class="nav-number">1.3.4.</span> <span class="nav-text">cocos creator中打包原生android应用时，使用android studio中的证书</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
