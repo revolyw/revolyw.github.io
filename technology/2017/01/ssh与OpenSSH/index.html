@@ -70,7 +70,7 @@
 <meta property="og:description" content="服务端安装并启动Openssh服务123sudo apt-get updatesudo apt-get install openssh-serversudo service ssh start
 服务端授权客户端访问123# 修改授权访问文件，若无此文件则新建vim ~/.ssh/authorized_keys# 按行输入须授权的客户端ssh公钥即可
 客户端配置公私钥对12sudo ssh-keyg">
-<meta property="og:updated_time" content="2018-02-04T11:55:33.000Z">
+<meta property="og:updated_time" content="2018-11-01T03:12:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ssh与OpenSSH">
 <meta name="twitter:description" content="服务端安装并启动Openssh服务123sudo apt-get updatesudo apt-get install openssh-serversudo service ssh start
@@ -408,14 +408,11 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Host company</div><div class="line">  HostName company.com</div><div class="line">  User git</div><div class="line">  IdentityFile ~/.ssh/user1</div><div class="line">Host github</div><div class="line">  HostName github.com</div><div class="line">  User git</div><div class="line">  IdentityFile ~/.ssh/user2</div></pre></td></tr></table></figure>
 <p>同一站点使用不同的ssh key</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Host gitcafe-site1</div><div class="line">  HostName gitcafe.com</div><div class="line">  User git</div><div class="line">  IdentityFile ~/.ssh/user1</div><div class="line">Host gitcafe-site2</div><div class="line">  HostName gitcafe.com</div><div class="line">  User git</div><div class="line">  IdentityFile ~/.ssh/user2</div></pre></td></tr></table></figure>
-<h1 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="ssh-add报错"><a href="#ssh-add报错" class="headerlink" title="ssh-add报错"></a>ssh-add报错</h2><ul>
-<li><p>报错1</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Error connecting to agent: Connection refused</div></pre></td></tr></table></figure>
-</li>
-<li><p>重启ssh-agent</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">exec ssh-agent zsh</div><div class="line">eval `ssh-agent -s`</div></pre></td></tr></table></figure>
-</li>
-</ul>
+<h1 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="ssh-add报错"><a href="#ssh-add报错" class="headerlink" title="ssh-add报错"></a>ssh-add报错</h2><h3 id="case1"><a href="#case1" class="headerlink" title="case1"></a>case1</h3>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Error connecting to agent: Connection refused</div></pre></td></tr></table></figure>
+<p>  重启ssh-agent</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">exec ssh-agent zsh</div><div class="line">eval `ssh-agent -s`</div></pre></td></tr></table></figure>
+<h3 id="case2"><a href="#case2" class="headerlink" title="case2"></a>case2</h3>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">No user exists for uid 501</div></pre></td></tr></table></figure>
+<p>  重启终端即可</p>
 <h1 id="多客户端SSH-KEY"><a href="#多客户端SSH-KEY" class="headerlink" title="多客户端SSH KEY"></a>多客户端SSH KEY</h1><p>配置了多个KEY，但是jenkins验证失败，尝试重启jenkins所在的web服务器</p>
 
         （EOF）
@@ -548,7 +545,7 @@
 
       
     </div>
-    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_56.jpg">
+    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_77.jpg">
 
 
         </div>
@@ -687,7 +684,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#服务端安装并启动Openssh服务"><span class="nav-number">1.</span> <span class="nav-text">服务端安装并启动Openssh服务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#服务端授权客户端访问"><span class="nav-number">2.</span> <span class="nav-text">服务端授权客户端访问</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#客户端配置公私钥对"><span class="nav-number">3.</span> <span class="nav-text">客户端配置公私钥对</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加客户端ssh公钥到服务器授权访问列表"><span class="nav-number">4.</span> <span class="nav-text">添加客户端ssh公钥到服务器授权访问列表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用ssh进行免密登录"><span class="nav-number">5.</span> <span class="nav-text">使用ssh进行免密登录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#客户端配置n个Key访问n个服务"><span class="nav-number">6.</span> <span class="nav-text">客户端配置n个Key访问n个服务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Q-amp-A"><span class="nav-number">7.</span> <span class="nav-text">Q&A</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ssh-add报错"><span class="nav-number">7.1.</span> <span class="nav-text">ssh-add报错</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多客户端SSH-KEY"><span class="nav-number">8.</span> <span class="nav-text">多客户端SSH KEY</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#服务端安装并启动Openssh服务"><span class="nav-number">1.</span> <span class="nav-text">服务端安装并启动Openssh服务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#服务端授权客户端访问"><span class="nav-number">2.</span> <span class="nav-text">服务端授权客户端访问</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#客户端配置公私钥对"><span class="nav-number">3.</span> <span class="nav-text">客户端配置公私钥对</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加客户端ssh公钥到服务器授权访问列表"><span class="nav-number">4.</span> <span class="nav-text">添加客户端ssh公钥到服务器授权访问列表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用ssh进行免密登录"><span class="nav-number">5.</span> <span class="nav-text">使用ssh进行免密登录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#客户端配置n个Key访问n个服务"><span class="nav-number">6.</span> <span class="nav-text">客户端配置n个Key访问n个服务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Q-amp-A"><span class="nav-number">7.</span> <span class="nav-text">Q&A</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ssh-add报错"><span class="nav-number">7.1.</span> <span class="nav-text">ssh-add报错</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#case1"><span class="nav-number">7.1.1.</span> <span class="nav-text">case1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#case2"><span class="nav-number">7.1.2.</span> <span class="nav-text">case2</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多客户端SSH-KEY"><span class="nav-number">8.</span> <span class="nav-text">多客户端SSH KEY</span></a></li></ol></div>
             
 
           </div>
