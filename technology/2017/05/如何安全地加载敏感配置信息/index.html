@@ -6,22 +6,22 @@
 
 
 <html class="theme-next mist use-motion" lang="en">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
 
 
 
-  <meta name="baidu-site-verification" content="cCnzKblc25" />
+  <meta name="baidu-site-verification" content="cCnzKblc25">
 
 
 
@@ -31,7 +31,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -39,41 +39,40 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="ops,架构,java,spring,web安全,分布式,配置中心," />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="ops,架构,java,spring,web安全,分布式,配置中心,">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
 
 
 
 
 
 
-<meta name="description" content="本文介绍的是配置信息的动静态加载，这里的动静态加载可以类比程序的编译时加载和运行时加载的概念，本文将举例说明静态加载配置的缺点、为了避免这些缺点引入动态加载配置的概念，并给出实际操作的方法。
-静态加载配置我们常常会将配置文件存放在项目上下文环境中，例如classpath下，或者项目某个目录下，启动时去读这个文件，这样的配置可以称之为静态加载配置。静态加载配置不够集中灵活，因为在项目打包的时候就决定">
+<meta name="description" content="本文介绍的是配置信息的动静态加载，这里的动静态加载可以类比程序的编译时加载和运行时加载的概念，本文将举例说明静态加载配置的缺点、为了避免这些缺点引入动态加载配置的概念，并给出实际操作的方法。 静态加载配置我们常常会将配置文件存放在项目上下文环境中，例如classpath下，或者项目某个目录下，启动时去读这个文件，这样的配置可以称之为静态加载配置。静态加载配置不够集中灵活，因为在项目打包的时候就决定">
+<meta name="keywords" content="ops,架构,java,spring,web安全,分布式,配置中心">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何安全地加载敏感配置信息">
 <meta property="og:url" content="http://blog.willowspace.cn/technology/2017/05/如何安全地加载敏感配置信息/index.html">
-<meta property="og:site_name" content="Willow's blog">
-<meta property="og:description" content="本文介绍的是配置信息的动静态加载，这里的动静态加载可以类比程序的编译时加载和运行时加载的概念，本文将举例说明静态加载配置的缺点、为了避免这些缺点引入动态加载配置的概念，并给出实际操作的方法。
-静态加载配置我们常常会将配置文件存放在项目上下文环境中，例如classpath下，或者项目某个目录下，启动时去读这个文件，这样的配置可以称之为静态加载配置。静态加载配置不够集中灵活，因为在项目打包的时候就决定">
+<meta property="og:site_name" content="Willow&#39;s blog">
+<meta property="og:description" content="本文介绍的是配置信息的动静态加载，这里的动静态加载可以类比程序的编译时加载和运行时加载的概念，本文将举例说明静态加载配置的缺点、为了避免这些缺点引入动态加载配置的概念，并给出实际操作的方法。 静态加载配置我们常常会将配置文件存放在项目上下文环境中，例如classpath下，或者项目某个目录下，启动时去读这个文件，这样的配置可以称之为静态加载配置。静态加载配置不够集中灵活，因为在项目打包的时候就决定">
+<meta property="og:locale" content="en">
 <meta property="og:image" content="http://img.willowspace.cn/willowspace_2016/1495594711464.png?imageMogr2/thumbnail/300">
 <meta property="og:updated_time" content="2017-09-27T18:07:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何安全地加载敏感配置信息">
-<meta name="twitter:description" content="本文介绍的是配置信息的动静态加载，这里的动静态加载可以类比程序的编译时加载和运行时加载的概念，本文将举例说明静态加载配置的缺点、为了避免这些缺点引入动态加载配置的概念，并给出实际操作的方法。
-静态加载配置我们常常会将配置文件存放在项目上下文环境中，例如classpath下，或者项目某个目录下，启动时去读这个文件，这样的配置可以称之为静态加载配置。静态加载配置不够集中灵活，因为在项目打包的时候就决定">
+<meta name="twitter:description" content="本文介绍的是配置信息的动静态加载，这里的动静态加载可以类比程序的编译时加载和运行时加载的概念，本文将举例说明静态加载配置的缺点、为了避免这些缺点引入动态加载配置的概念，并给出实际操作的方法。 静态加载配置我们常常会将配置文件存放在项目上下文环境中，例如classpath下，或者项目某个目录下，启动时去读这个文件，这样的配置可以称之为静态加载配置。静态加载配置不够集中灵活，因为在项目打包的时候就决定">
 <meta name="twitter:image" content="http://img.willowspace.cn/willowspace_2016/1495594711464.png?imageMogr2/thumbnail/300">
 
 
@@ -102,7 +101,7 @@
 
 
 
-  <link rel="canonical" href="http://blog.willowspace.cn/technology/2017/05/如何安全地加载敏感配置信息/"/>
+  <link rel="canonical" href="http://blog.willowspace.cn/technology/2017/05/如何安全地加载敏感配置信息/">
 
 
 
@@ -156,14 +155,14 @@
   
 
   <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">Willow's blog</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
     
-      <h1 class="site-subtitle" itemprop="description"><a href="" target="_blank">Writing</a></h1>
+      <h1 class="site-subtitle" itemprop="description"><a href target="_blank">Writing</a></h1>
     
 </div>
 
@@ -185,7 +184,7 @@
         <li class="menu-item menu-item-home">
           <a href="http://blog.willowspace.cn" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -195,7 +194,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             文章分类
           </a>
@@ -205,7 +204,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             最新文章
           </a>
@@ -215,7 +214,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             分类标签
           </a>
@@ -228,7 +227,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             文章搜索
           </a>
@@ -277,14 +276,14 @@
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="杨威">
-    <meta itemprop="description" content="">
+    <meta itemprop="description" content>
     <meta itemprop="image" content="http://img.willowspace.cn/hexo_post_img/portrait2.jpg">
   </span>
 
   <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Willow's blog">
     <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Willow's blog" src="">
+      <img style="display:none;" itemprop="url image" alt="Willow's blog" src>
     </span>
   </span>
 
@@ -323,7 +322,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -381,7 +380,7 @@
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -401,37 +400,37 @@
 <h2 id="静态加载配置"><a href="#静态加载配置" class="headerlink" title="静态加载配置"></a>静态加载配置</h2><p>我们常常会将配置文件存放在项目上下文环境中，例如classpath下，或者项目某个目录下，启动时去读这个文件，这样的配置可以称之为静态加载配置。静态加载配置不够集中灵活，因为在项目打包的时候就决定了配置信息内容；最重要的是，这种配置方式不够安全，因为配置信息跟随代码，当我们将代码上传到github等开源的代码版本管理平台，那么一些敏感的配置（e.g. 数据库账号密码等）就暴露了。</p>
 <p>拿jdbc的配置信息举例。</p>
 <p>下面这行xml配置代码是使用jdbc配置数据库连接时在datasource.xml文件中的配置项。它包含一个location属性，该属性告诉了程序该去哪里加载配置信息，值中包含classpath说明这个配置存在于项目上下文中。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- datasource.xml --&gt;</span></div><div class="line"><span class="comment">&lt;!--可以将数据库连接池的配置文件单独放在另一个properties中--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">context:property-placeholder</span> <span class="attr">location</span>=<span class="string">"classpath:conf/db.properties"</span>/&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- datasource.xml --&gt;</span></span><br><span class="line"><span class="comment">&lt;!--可以将数据库连接池的配置文件单独放在另一个properties中--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">context:property-placeholder</span> <span class="attr">location</span>=<span class="string">"classpath:conf/db.properties"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
 <p>以下是上面location指明的db.properties文件中的内容，存储了数据库连接地址、用户名、密码，注意到这些都是敏感配置，很明显存在前面提到的静态加载配置的弊端:不安全，敏感信息暴露无遗。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># db.properties</div><div class="line">jdbc_url=jdbc:mysql://localhost:3306/db?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull</div><div class="line">jdbc_user=username</div><div class="line">jdbc_password=password</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># db.properties</span><br><span class="line">jdbc_url=jdbc:mysql://localhost:3306/db?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull</span><br><span class="line">jdbc_user=username</span><br><span class="line">jdbc_password=password</span><br></pre></td></tr></table></figure>
 <h2 id="动态加载配置"><a href="#动态加载配置" class="headerlink" title="动态加载配置"></a>动态加载配置</h2><p>为了避免静态加载配置的缺点，我们很自然的想到需要干掉上面的db.properties以及datasource.xml中关于db.properties的配置信息。为了说明动态加载配置，我们将当前这个项目叫做业务项目。</p>
 <p>基本思路是将db.properties中的信息放到一个独立于业务项目的地方存放。然后在业务项目启动加载datasource时动态的去这个独立的地方拿db.properties的信息并加载。这样就干掉了db.properties及datasource.xml中的敏感配置项，这就是本文要介绍的<strong>动态加载配置</strong>。上文提到的<code>独立的地方</code>可以是一个独立的项目，如了方便说明实际操作，这里我给这个项目取名为cc项目，取Configuration Center（配置中心）之意。</p>
 <p>大致的示意图如下</p>
-<p><img src="http://img.willowspace.cn/willowspace_2016/1495594711464.png?imageMogr2/thumbnail/300" alt=""></p>
+<p><img src="http://img.willowspace.cn/willowspace_2016/1495594711464.png?imageMogr2/thumbnail/300" alt></p>
 <p>下面就来看看具体如何操作</p>
 <h3 id="配置中心-cc项目"><a href="#配置中心-cc项目" class="headerlink" title="配置中心:cc项目"></a>配置中心:cc项目</h3><p>cc项目非常容易构建，如果只是为了独立数据库连接配置，那么可以只提供一个接口，在业务项目启动时，请求这个接口来获得数据库连接的敏感配置信息即可。</p>
-<h3 id="cc项目中提供敏感配置信息的接口"><a href="#cc项目中提供敏感配置信息的接口" class="headerlink" title="cc项目中提供敏感配置信息的接口"></a>cc项目中提供敏感配置信息的接口</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RestController</span></div><div class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/"</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConfigurationController</span> </span>&#123;</div><div class="line">  	<span class="comment">//内网配置过访问权限的目录，该目录存放各业务项目的敏感配置</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String PREFIX = <span class="string">"/var/www/cc"</span>;</div><div class="line"></div><div class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"/jdbc"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getPropertiesByProject</span><span class="params">(Cgi cgi)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">        String project = cgi.getString(<span class="string">"project"</span>, <span class="string">""</span>); <span class="comment">//调用方业务项目名</span></div><div class="line">        String token = cgi.getString(<span class="string">"token"</span>, <span class="string">""</span>); <span class="comment">//接口调用凭证token</span></div><div class="line">        Properties properties = <span class="keyword">new</span> Properties();</div><div class="line">        FileInputStream inputStream = <span class="keyword">new</span> FileInputStream(PREFIX + <span class="string">"/"</span> + project + <span class="string">".properties"</span>);</div><div class="line">        properties.load(inputStream);</div><div class="line">        <span class="keyword">if</span> (properties.isEmpty()) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="string">"get properties error"</span>;</div><div class="line">        &#125;</div><div class="line">        String savedCipher = properties.getProperty(<span class="string">"cipher"</span>);</div><div class="line">        <span class="keyword">if</span> (cipher.isEmpty() || savedCipher.isEmpty() || !cipher.equals(savedCipher)) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="string">"authentication is failed"</span>;</div><div class="line">        &#125;</div><div class="line">        String jdbc_url = properties.getProperty(<span class="string">"jdbc_url"</span>);</div><div class="line">        String jdbc_user = properties.getProperty(<span class="string">"jdbc_user"</span>);</div><div class="line">        String jdbc_password = properties.getProperty(<span class="string">"jdbc_password"</span>);</div><div class="line">        JSONObject propertiesJson = <span class="keyword">new</span> JSONObject();</div><div class="line">        propertiesJson.put(<span class="string">"jdbc_url"</span>, jdbc_url);</div><div class="line">        propertiesJson.put(<span class="string">"jdbc_user"</span>, jdbc_user);</div><div class="line">        propertiesJson.put(<span class="string">"jdbc_password"</span>, jdbc_password);</div><div class="line">        System.out.println(propertiesJson.toString());</div><div class="line">        inputStream.close();</div><div class="line"></div><div class="line">        <span class="keyword">return</span> propertiesJson.toString();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># $&#123;project&#125;.properties 这里的$&#123;project&#125;根据调用的业务系统传入的project参数配置不同读取对应的properties文件</div><div class="line"># 内网存储系统(配置过访问权限)中存储的某业务项目的敏感配置信息</div><div class="line">token=2^$&gt;[[.34337,8@4</div><div class="line">jdbc_url=jdbc:mysql://localhost:3306/db?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull</div><div class="line">jdbc_user=username</div><div class="line">jdbc_password=password</div></pre></td></tr></table></figure>
+<h3 id="cc项目中提供敏感配置信息的接口"><a href="#cc项目中提供敏感配置信息的接口" class="headerlink" title="cc项目中提供敏感配置信息的接口"></a>cc项目中提供敏感配置信息的接口</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConfigurationController</span> </span>&#123;</span><br><span class="line">  	<span class="comment">//内网配置过访问权限的目录，该目录存放各业务项目的敏感配置</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String PREFIX = <span class="string">"/var/www/cc"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"/jdbc"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getPropertiesByProject</span><span class="params">(Cgi cgi)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        String project = cgi.getString(<span class="string">"project"</span>, <span class="string">""</span>); <span class="comment">//调用方业务项目名</span></span><br><span class="line">        String token = cgi.getString(<span class="string">"token"</span>, <span class="string">""</span>); <span class="comment">//接口调用凭证token</span></span><br><span class="line">        Properties properties = <span class="keyword">new</span> Properties();</span><br><span class="line">        FileInputStream inputStream = <span class="keyword">new</span> FileInputStream(PREFIX + <span class="string">"/"</span> + project + <span class="string">".properties"</span>);</span><br><span class="line">        properties.load(inputStream);</span><br><span class="line">        <span class="keyword">if</span> (properties.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"get properties error"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        String savedCipher = properties.getProperty(<span class="string">"cipher"</span>);</span><br><span class="line">        <span class="keyword">if</span> (cipher.isEmpty() || savedCipher.isEmpty() || !cipher.equals(savedCipher)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"authentication is failed"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        String jdbc_url = properties.getProperty(<span class="string">"jdbc_url"</span>);</span><br><span class="line">        String jdbc_user = properties.getProperty(<span class="string">"jdbc_user"</span>);</span><br><span class="line">        String jdbc_password = properties.getProperty(<span class="string">"jdbc_password"</span>);</span><br><span class="line">        JSONObject propertiesJson = <span class="keyword">new</span> JSONObject();</span><br><span class="line">        propertiesJson.put(<span class="string">"jdbc_url"</span>, jdbc_url);</span><br><span class="line">        propertiesJson.put(<span class="string">"jdbc_user"</span>, jdbc_user);</span><br><span class="line">        propertiesJson.put(<span class="string">"jdbc_password"</span>, jdbc_password);</span><br><span class="line">        System.out.println(propertiesJson.toString());</span><br><span class="line">        inputStream.close();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> propertiesJson.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># $&#123;project&#125;.properties 这里的$&#123;project&#125;根据调用的业务系统传入的project参数配置不同读取对应的properties文件</span><br><span class="line"># 内网存储系统(配置过访问权限)中存储的某业务项目的敏感配置信息</span><br><span class="line">token=2^$&gt;[[.34337,8@4</span><br><span class="line">jdbc_url=jdbc:mysql://localhost:3306/db?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull</span><br><span class="line">jdbc_user=username</span><br><span class="line">jdbc_password=password</span><br></pre></td></tr></table></figure>
 <h3 id="业务项目加载敏感信息"><a href="#业务项目加载敏感信息" class="headerlink" title="业务项目加载敏感信息"></a>业务项目加载敏感信息</h3><p>业务项目获取敏感信息分两步：1.配置cc项目的接口及参数信息 2.启动时从cc接口加载敏感信息。</p>
 <p>还是以加载jdbc数据源为例说明</p>
 <ul>
 <li>1.配置cc项目的接口及参数信息</li>
 </ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- datasource.xml 配置cc项目提供敏感配置的接口及所需参数信息 --&gt;</span></div><div class="line"><span class="comment">&lt;!-- 原加载配置的方式 &lt;context:property-placeholder location="classpath:conf/db.properties"/&gt;--&gt;</span></div><div class="line"><span class="comment">&lt;!-- 现在注入用于从cc项目拉取配置的类--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"configurationCenterHolder"</span></span></div><div class="line">      <span class="attr">class</span>=<span class="string">"framework.ConfigurationCenterHolder"</span>&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"locations"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">list</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">value</span>&gt;</span>classpath:conf/cc.properties<span class="tag">&lt;/<span class="name">value</span>&gt;</span><span class="comment">&lt;!-- 配置cc提供配置的接口信息 --&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">list</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"dataSource"</span> <span class="attr">class</span>=<span class="string">"com.demo.DataSource"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"driverClassName"</span> <span class="attr">value</span>=<span class="string">"com.mysql.jdbc.Driver"</span>/&gt;</span></div><div class="line">        <span class="comment">&lt;!-- 基本属性 url、user、password，使用了形如$&#123;key&#125;的占位符，从cc获取敏感配置后将替换成实际值 --&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"url"</span> <span class="attr">value</span>=<span class="string">"$&#123;jdbc_url&#125;"</span>/&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">value</span>=<span class="string">"$&#123;jdbc_user&#125;"</span>/&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">value</span>=<span class="string">"$&#123;jdbc_password&#125;"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># cc.properties</div><div class="line"># 这里的cc已经不存在可供外网访问的路由、用户名、密码等敏感信息,所以可以放心配置在项目中</div><div class="line">jdbc_url=http\://localhost\:8110/jdbc</div><div class="line">project=javavirtual</div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- datasource.xml 配置cc项目提供敏感配置的接口及所需参数信息 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 原加载配置的方式 &lt;context:property-placeholder location="classpath:conf/db.properties"/&gt;--&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 现在注入用于从cc项目拉取配置的类--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"configurationCenterHolder"</span></span></span><br><span class="line"><span class="tag">      <span class="attr">class</span>=<span class="string">"framework.ConfigurationCenterHolder"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"locations"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">list</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">value</span>&gt;</span>classpath:conf/cc.properties<span class="tag">&lt;/<span class="name">value</span>&gt;</span><span class="comment">&lt;!-- 配置cc提供配置的接口信息 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">list</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"dataSource"</span> <span class="attr">class</span>=<span class="string">"com.demo.DataSource"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"driverClassName"</span> <span class="attr">value</span>=<span class="string">"com.mysql.jdbc.Driver"</span>/&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 基本属性 url、user、password，使用了形如$&#123;key&#125;的占位符，从cc获取敏感配置后将替换成实际值 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"url"</span> <span class="attr">value</span>=<span class="string">"$&#123;jdbc_url&#125;"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">value</span>=<span class="string">"$&#123;jdbc_user&#125;"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">value</span>=<span class="string">"$&#123;jdbc_password&#125;"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># cc.properties</span><br><span class="line"># 这里的cc已经不存在可供外网访问的路由、用户名、密码等敏感信息,所以可以放心配置在项目中</span><br><span class="line">jdbc_url=http\://localhost\:8110/jdbc</span><br><span class="line">project=javavirtual</span><br></pre></td></tr></table></figure>
 <ul>
 <li>2.启动时从cc接口加载敏感信息</li>
 </ul>
 <p>使用第1步中配置的<code>framework.ConfigurationCenterHolder</code>类，该类继承了spring的<code>PropertyPlaceholderConfigurer</code>类，这是spring中的一个bean工厂后置处理器，重载其processProperties方法可以在程序运行时替换bean配置文件(xml)中用${key}占位的配置项。于是，我们可以结合cc的接口如下来实现动态加载敏感配置。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConfigurationCenterHolder</span> <span class="keyword">extends</span> <span class="title">PropertyPlaceholderConfigurer</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String JDBC_URL = <span class="string">"jdbc_url"</span>;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String PROJECT = <span class="string">"project"</span>;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">processProperties</span><span class="params">(ConfigurableListableBeanFactory beanFactoryToProcess, Properties props)</span> <span class="keyword">throws</span> BeansException </span>&#123;</div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            <span class="comment">//读取cc接口配置</span></div><div class="line">            String jdbcUrl = props.getProperty(JDBC_URL);</div><div class="line">            String project = props.getProperty(PROJECT);</div><div class="line">            String token = initCipher(project);</div><div class="line">          	<span class="comment">//请求cc接口获取敏感配置</span></div><div class="line">            String urlStr = jdbcUrl + <span class="string">"?token="</span> + URLEncoder.encode(token, <span class="string">"UTF-8"</span>) + <span class="string">"&amp;project="</span> + project;</div><div class="line">            String responseString = HttpClientUtil.request(urlStr);</div><div class="line">            JSONObject json = JSONObject.parseObject(responseString);</div><div class="line">            <span class="comment">//动态加载获取到的敏感配置信息，并填充占位符$&#123;key&#125;</span></div><div class="line">            props.setProperty(<span class="string">"jdbc_url"</span>, json.isEmpty() ? <span class="string">""</span> : (String) json.get(<span class="string">"jdbc_url"</span>));</div><div class="line">            props.setProperty(<span class="string">"jdbc_user"</span>, json.isEmpty() ? <span class="string">""</span> : (String) json.get(<span class="string">"jdbc_user"</span>));</div><div class="line">            props.setProperty(<span class="string">"jdbc_password"</span>, json.isEmpty() ? <span class="string">""</span> : (String) json.get(<span class="string">"jdbc_password"</span>));</div><div class="line">            LoggerUtil.info(<span class="string">"init datasource success"</span>);</div><div class="line"></div><div class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">            LoggerUtil.error(<span class="string">"init datasource error"</span>, e);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">super</span>.processProperties(beanFactoryToProcess, props);</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="comment">//从内网存储系统(配置过访问权限)获取cc接口认证token参数</span></div><div class="line">    <span class="function"><span class="keyword">private</span> String <span class="title">initCipher</span><span class="params">(String project)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">        String cipherFile = (SysConfig.DEV ? <span class="string">"/Users/."</span> : <span class="string">"/home/."</span>) + project;</div><div class="line">        BufferedReader reader = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(<span class="keyword">new</span> File(cipherFile)), <span class="string">"utf-8"</span>));</div><div class="line">        String line;</div><div class="line">        <span class="keyword">while</span> ((line = reader.readLine()) != <span class="keyword">null</span>) &#123;</div><div class="line">            <span class="keyword">if</span> (line.trim().length() == <span class="number">0</span>)</div><div class="line">                <span class="keyword">continue</span>;</div><div class="line"></div><div class="line">            String token = line.trim().replaceAll(<span class="string">"\\s+"</span>, <span class="string">" "</span>);</div><div class="line">            <span class="keyword">return</span> token;</div><div class="line">        &#125;</div><div class="line">        reader.close();</div><div class="line">        <span class="keyword">return</span> <span class="string">""</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># .$&#123;project&#125; 与业务项目名对应的文件，用于存储调用cc接口的token</div><div class="line"># 该token与cc接口读取的$&#123;project&#125;.properties文件中的token一致方可通过cc接口认证，成功拿到敏感配置</div><div class="line">2^$&gt;[[.34337,8@4</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConfigurationCenterHolder</span> <span class="keyword">extends</span> <span class="title">PropertyPlaceholderConfigurer</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String JDBC_URL = <span class="string">"jdbc_url"</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String PROJECT = <span class="string">"project"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">processProperties</span><span class="params">(ConfigurableListableBeanFactory beanFactoryToProcess, Properties props)</span> <span class="keyword">throws</span> BeansException </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//读取cc接口配置</span></span><br><span class="line">            String jdbcUrl = props.getProperty(JDBC_URL);</span><br><span class="line">            String project = props.getProperty(PROJECT);</span><br><span class="line">            String token = initCipher(project);</span><br><span class="line">          	<span class="comment">//请求cc接口获取敏感配置</span></span><br><span class="line">            String urlStr = jdbcUrl + <span class="string">"?token="</span> + URLEncoder.encode(token, <span class="string">"UTF-8"</span>) + <span class="string">"&amp;project="</span> + project;</span><br><span class="line">            String responseString = HttpClientUtil.request(urlStr);</span><br><span class="line">            JSONObject json = JSONObject.parseObject(responseString);</span><br><span class="line">            <span class="comment">//动态加载获取到的敏感配置信息，并填充占位符$&#123;key&#125;</span></span><br><span class="line">            props.setProperty(<span class="string">"jdbc_url"</span>, json.isEmpty() ? <span class="string">""</span> : (String) json.get(<span class="string">"jdbc_url"</span>));</span><br><span class="line">            props.setProperty(<span class="string">"jdbc_user"</span>, json.isEmpty() ? <span class="string">""</span> : (String) json.get(<span class="string">"jdbc_user"</span>));</span><br><span class="line">            props.setProperty(<span class="string">"jdbc_password"</span>, json.isEmpty() ? <span class="string">""</span> : (String) json.get(<span class="string">"jdbc_password"</span>));</span><br><span class="line">            LoggerUtil.info(<span class="string">"init datasource success"</span>);</span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            LoggerUtil.error(<span class="string">"init datasource error"</span>, e);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">super</span>.processProperties(beanFactoryToProcess, props);</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    <span class="comment">//从内网存储系统(配置过访问权限)获取cc接口认证token参数</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> String <span class="title">initCipher</span><span class="params">(String project)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        String cipherFile = (SysConfig.DEV ? <span class="string">"/Users/."</span> : <span class="string">"/home/."</span>) + project;</span><br><span class="line">        BufferedReader reader = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(<span class="keyword">new</span> File(cipherFile)), <span class="string">"utf-8"</span>));</span><br><span class="line">        String line;</span><br><span class="line">        <span class="keyword">while</span> ((line = reader.readLine()) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (line.trim().length() == <span class="number">0</span>)</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">            String token = line.trim().replaceAll(<span class="string">"\\s+"</span>, <span class="string">" "</span>);</span><br><span class="line">            <span class="keyword">return</span> token;</span><br><span class="line">        &#125;</span><br><span class="line">        reader.close();</span><br><span class="line">        <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># .$&#123;project&#125; 与业务项目名对应的文件，用于存储调用cc接口的token</span><br><span class="line"># 该token与cc接口读取的$&#123;project&#125;.properties文件中的token一致方可通过cc接口认证，成功拿到敏感配置</span><br><span class="line">2^$&gt;[[.34337,8@4</span><br></pre></td></tr></table></figure>
 <p><strong>注意</strong></p>
 <ul>
 <li>1.cc项目应该和业务项目部署在同一个内网环境中，并且屏蔽外网对cc项目的访问。这样就完全隔绝的敏感配置信息与外网环境，就算业务项目代码泄漏也不会直接泄漏敏感配置信息。另外敏感信息以及cc接口认证的信息要配置在内网中配置了访问权限的文件中，这样保证了在内网中的只有对应的用户可以访问到对应的敏感文件。</li>
 <li>2.这里提供的token认证只是一个示例，实际生产环境汇总可以给cc项目获取敏感配置信息的接口增加一些其他的安全措施来进一步确保安全(e.g. 接口签名)。 </li>
 </ul>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>至此，我们就从业务项目中剔除了敏感配置信息，并且可以从cc接口动态加载配置。另外，cc项目的代码中也不存在敏感信息，所以，业务项目和cc项目都是可以公开暴露的，我们只需要在确保内网不能访问cc的接口并且保证内网中存储的敏感配置有权限控制，这样的动态加载配置保证了敏感配置信息是私密的、安全的。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://blog.jobbole.com/111412/" target="_blank" rel="external">应用敏感信息的 6 个配置原则</a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://blog.jobbole.com/111412/" target="_blank" rel="noopener">应用敏感信息的 6 个配置原则</a></p>
 
         （EOF）
           <blockquote class="blockquote-center">
@@ -514,7 +513,7 @@
   <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
   <a class="jiathis_counter_style"></a>
 </div>
-<script type="text/javascript" >
+<script type="text/javascript">
   var jiathis_config={
     hideMore:false
   }
@@ -541,7 +540,7 @@
       
         
 <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="杨威 wechat" style="width: 100px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="杨威 wechat" style="width: 100px; max-width: 100%;">
     <div>微信订阅号</div>
 </div>
 
@@ -559,13 +558,13 @@
     <div id="QR" style="display: none;">
       
         <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/wechatpay.jpeg" alt="杨威 WeChat Pay"/>
+          <img id="wechat_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/wechatpay.jpeg" alt="杨威 WeChat Pay">
           <p>微信打赏</p>
         </div>
       
       
         <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/alipay.jpeg" alt="杨威 Alipay"/>
+          <img id="alipay_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/alipay.jpeg" alt="杨威 Alipay">
           <p>支付宝打赏</p>
         </div>
       
@@ -575,7 +574,7 @@
 
       
     </div>
-    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_48.jpg">
+    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_33.jpg">
 
 
         </div>
@@ -597,7 +596,7 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -608,9 +607,7 @@
 
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://img.willowspace.cn/hexo_post_img/portrait2.jpg"
-               alt="杨威" />
+          <img class="site-author-image" itemprop="image" src="http://img.willowspace.cn/hexo_post_img/portrait2.jpg" alt="杨威">
           <p class="site-author-name" itemprop="name">杨威</p>
           <p class="site-description motion-element" itemprop="description">捉虫子的人</p>
         </div>
@@ -619,7 +616,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">博客</span>
               </a>
             </div>
@@ -637,7 +634,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">106</span>
+                <span class="site-state-item-count">108</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -733,7 +730,7 @@
     <footer id="footer" class="footer">
       <blockquote class="blockquote-center">
         <div class="footer-inner">
-          <div class="copyright" >
+          <div class="copyright">
   
   &copy;  2017 - 
   <span itemprop="copyrightYear">2019</span>

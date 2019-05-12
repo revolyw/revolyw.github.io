@@ -6,22 +6,22 @@
 
 
 <html class="theme-next mist use-motion" lang="en">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
 
 
 
-  <meta name="baidu-site-verification" content="cCnzKblc25" />
+  <meta name="baidu-site-verification" content="cCnzKblc25">
 
 
 
@@ -31,7 +31,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -39,40 +39,39 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="java,hibernate,JPA,transaction,sql," />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="java,hibernate,JPA,transaction,sql,">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
 
 
 
 
 
 
-<meta name="description" content="一、问题描述使用hibernate管理ORM时，如果某个映射实体字段为null保存时会报column ‘xx’ cannot be null之类的异常，导致存库失败，为解决这个问题，hibernate提供了动态SQL的机制。
-二、解决方案在实体关系配置时，加入dynamic-insert / dynamic-update （对应JPA中的@DynamicInsert/ @DynamicUpdate">
+<meta name="description" content="一、问题描述使用hibernate管理ORM时，如果某个映射实体字段为null保存时会报column ‘xx’ cannot be null之类的异常，导致存库失败，为解决这个问题，hibernate提供了动态SQL的机制。 二、解决方案在实体关系配置时，加入dynamic-insert / dynamic-update （对应JPA中的@DynamicInsert/ @DynamicUpdate">
+<meta name="keywords" content="java,hibernate,JPA,transaction,sql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hibernate的动态SQL机制">
 <meta property="og:url" content="http://blog.willowspace.cn/technology/2017/12/hibernate的动态SQL机制/index.html">
-<meta property="og:site_name" content="Willow's blog">
-<meta property="og:description" content="一、问题描述使用hibernate管理ORM时，如果某个映射实体字段为null保存时会报column ‘xx’ cannot be null之类的异常，导致存库失败，为解决这个问题，hibernate提供了动态SQL的机制。
-二、解决方案在实体关系配置时，加入dynamic-insert / dynamic-update （对应JPA中的@DynamicInsert/ @DynamicUpdate">
+<meta property="og:site_name" content="Willow&#39;s blog">
+<meta property="og:description" content="一、问题描述使用hibernate管理ORM时，如果某个映射实体字段为null保存时会报column ‘xx’ cannot be null之类的异常，导致存库失败，为解决这个问题，hibernate提供了动态SQL的机制。 二、解决方案在实体关系配置时，加入dynamic-insert / dynamic-update （对应JPA中的@DynamicInsert/ @DynamicUpdate">
+<meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2017-12-08T17:46:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hibernate的动态SQL机制">
-<meta name="twitter:description" content="一、问题描述使用hibernate管理ORM时，如果某个映射实体字段为null保存时会报column ‘xx’ cannot be null之类的异常，导致存库失败，为解决这个问题，hibernate提供了动态SQL的机制。
-二、解决方案在实体关系配置时，加入dynamic-insert / dynamic-update （对应JPA中的@DynamicInsert/ @DynamicUpdate">
+<meta name="twitter:description" content="一、问题描述使用hibernate管理ORM时，如果某个映射实体字段为null保存时会报column ‘xx’ cannot be null之类的异常，导致存库失败，为解决这个问题，hibernate提供了动态SQL的机制。 二、解决方案在实体关系配置时，加入dynamic-insert / dynamic-update （对应JPA中的@DynamicInsert/ @DynamicUpdate">
 
 
 
@@ -100,7 +99,7 @@
 
 
 
-  <link rel="canonical" href="http://blog.willowspace.cn/technology/2017/12/hibernate的动态SQL机制/"/>
+  <link rel="canonical" href="http://blog.willowspace.cn/technology/2017/12/hibernate的动态SQL机制/">
 
 
 
@@ -154,14 +153,14 @@
   
 
   <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">Willow's blog</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
     
-      <h1 class="site-subtitle" itemprop="description"><a href="" target="_blank">Writing</a></h1>
+      <h1 class="site-subtitle" itemprop="description"><a href target="_blank">Writing</a></h1>
     
 </div>
 
@@ -183,7 +182,7 @@
         <li class="menu-item menu-item-home">
           <a href="http://blog.willowspace.cn" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -193,7 +192,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             文章分类
           </a>
@@ -203,7 +202,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             最新文章
           </a>
@@ -213,7 +212,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             分类标签
           </a>
@@ -226,7 +225,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             文章搜索
           </a>
@@ -275,14 +274,14 @@
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="杨威">
-    <meta itemprop="description" content="">
+    <meta itemprop="description" content>
     <meta itemprop="image" content="http://img.willowspace.cn/hexo_post_img/portrait2.jpg">
   </span>
 
   <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Willow's blog">
     <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Willow's blog" src="">
+      <img style="display:none;" itemprop="url image" alt="Willow's blog" src>
     </span>
   </span>
 
@@ -321,7 +320,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -379,7 +378,7 @@
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -398,18 +397,18 @@
         <h1 id="一、问题描述"><a href="#一、问题描述" class="headerlink" title="一、问题描述"></a>一、问题描述</h1><p>使用hibernate管理ORM时，如果某个映射实体字段为null保存时会报column ‘xx’ cannot be null之类的异常，导致存库失败，为解决这个问题，hibernate提供了动态SQL的机制。</p>
 <h1 id="二、解决方案"><a href="#二、解决方案" class="headerlink" title="二、解决方案"></a>二、解决方案</h1><p>在实体关系配置时，加入<code>dynamic-insert</code> / <code>dynamic-update</code> （对应JPA中的<code>@DynamicInsert</code>/ <code>@DynamicUpdate</code>）会在执行插入或更新时动态判断字段是否为null（或是否有更新），如果为null（或没有更新）则不更新这类字段，也就不会产生异常。它的原理是在实体被加载到session中时会保存一份快照，如果在后续的更新操作检测到有更新，则动态生成更新部分涉及到的字段的sql。</p>
 <h1 id="三、Bonus"><a href="#三、Bonus" class="headerlink" title="三、Bonus"></a>三、Bonus</h1><h2 id="使用动态SQL的前提"><a href="#使用动态SQL的前提" class="headerlink" title="使用动态SQL的前提"></a>使用动态SQL的前提</h2><p>就算使用了动态SQL机制，但如果字段在DDL中没有声明默认值，那么当实体字段为null时进行更新，依然会由db层面报出异常。因此要规范DDL，并结合动态SQL机制来避免业务代码出现实体保存时的空值异常。 案例如下：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"># java code</div><div class="line">User user = new User();</div><div class="line">session.save(user);</div><div class="line"></div><div class="line"># exception</div><div class="line">org.hibernate.PropertyValueException: not-null property references a null or transient value: User.avatar</div><div class="line"></div><div class="line"># hibernate mapping</div><div class="line">&lt;class name="User" table="user" dynamic-insert="true" dynamic-update="true"&gt;</div><div class="line">    &lt;property name="avatarId" column="avatar_id" type="integer" not-null="true"&gt;</div><div class="line">&lt;/class&gt;</div><div class="line"></div><div class="line"></div><div class="line"># table DDL 没有设置默认值，如果实体值为null依然会由db报异常</div><div class="line">CREATE TABLE `user` (</div><div class="line">  `avatar_id` int(11) NOT NULL</div><div class="line">);</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># java code</span><br><span class="line">User user = <span class="keyword">new</span> User();</span><br><span class="line">session.save(user);</span><br><span class="line"></span><br><span class="line"># exception</span><br><span class="line">org.hibernate.PropertyValueException: not-<span class="keyword">null</span> property references a <span class="keyword">null</span> or <span class="keyword">transient</span> value: User.avatar</span><br><span class="line"></span><br><span class="line"># hibernate mapping</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> <span class="title">name</span></span>=<span class="string">"User"</span> table=<span class="string">"user"</span> dynamic-insert=<span class="string">"true"</span> dynamic-update=<span class="string">"true"</span>&gt;</span><br><span class="line">    &lt;property name=<span class="string">"avatarId"</span> column=<span class="string">"avatar_id"</span> type=<span class="string">"integer"</span> not-<span class="keyword">null</span>=<span class="string">"true"</span>&gt;</span><br><span class="line">&lt;/class&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># table DDL 没有设置默认值，如果实体值为null依然会由db报异常</span><br><span class="line">CREATE TABLE `user` (</span><br><span class="line">  `avatar_id` <span class="keyword">int</span>(<span class="number">11</span>) NOT NULL</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 <h2 id="动态SQL的使用限制：同一个Session"><a href="#动态SQL的使用限制：同一个Session" class="headerlink" title="动态SQL的使用限制：同一个Session"></a>动态SQL的使用限制：同一个Session</h2><p>动态SQL的使用是有前提条件的：需要在同一个Session中操作实体才能生效。 前面提到动态SQL的原理是在实体加载到Session中时保留了一份快照，后续操作时比对快照生成正确的sql操作，那么如果一个实体加载和回写使用的Session是不同的，那么自然无法进行快照比对，那么动态SQL的机制也就无法实施，hibernate只好按照默认规则更新全字段。</p>
 <p>看个例子：如果我们在Controller层去写业务逻辑（<strong>生产中请务必不要这么干！</strong>）就极有可能会导致<code>@DynamicUpdate</code>失效，比如下面这段代码。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/queryAndUpdate"</span>)</div><div class="line"><span class="function"><span class="keyword">public</span> Result <span class="title">queryAndUpdate</span><span class="params">(Http http)</span> </span>&#123;</div><div class="line">	<span class="comment">//Controller层写业务逻辑</span></div><div class="line">	<span class="keyword">int</span> id = <span class="number">1</span>; </div><div class="line">	<span class="comment">//using session1</span></div><div class="line">    User user = services.getDaos().getUserDao().findById(id);</div><div class="line">	<span class="comment">//using session2 user中加载有没有映射到的关联实体 更新时抛出异常</span></div><div class="line">    lecturer = services.getUserService().updateUser(user);</div><div class="line">    <span class="keyword">return</span> Result.success().setBean(user);</div><div class="line">&#125;</div><div class="line"><span class="comment">//实体</span></div><div class="line"><span class="meta">@Entity</span></div><div class="line"><span class="meta">@DynamicInsert</span></div><div class="line"><span class="meta">@DynamicUpdate</span></div><div class="line"><span class="meta">@Table</span>(name = <span class="string">"user"</span>)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span></span>&#123;</div><div class="line">	<span class="meta">@Id</span></div><div class="line">	<span class="meta">@Column</span>(name = <span class="string">"id"</span>)</div><div class="line">	<span class="meta">@GeneratedValue</span>(strategy = GenerationType.IDENTITY)</div><div class="line">	<span class="keyword">private</span> Integer id;</div><div class="line"></div><div class="line">	<span class="meta">@NotFound</span>(action = NotFoundAction.IGNORE)</div><div class="line">	<span class="meta">@OneToOne</span>(targetEntity = File.class,cascade = CascadeType.REFRESH)</div><div class="line">	<span class="meta">@JoinColumn</span>(name = <span class="string">"avatar_id"</span>)</div><div class="line">	<span class="keyword">private</span> File avatar;  <span class="comment">//未加载的关联实体</span></div><div class="line">	...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/queryAndUpdate"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> Result <span class="title">queryAndUpdate</span><span class="params">(Http http)</span> </span>&#123;</span><br><span class="line">	<span class="comment">//Controller层写业务逻辑</span></span><br><span class="line">	<span class="keyword">int</span> id = <span class="number">1</span>; </span><br><span class="line">	<span class="comment">//using session1</span></span><br><span class="line">    User user = services.getDaos().getUserDao().findById(id);</span><br><span class="line">	<span class="comment">//using session2 user中加载有没有映射到的关联实体 更新时抛出异常</span></span><br><span class="line">    lecturer = services.getUserService().updateUser(user);</span><br><span class="line">    <span class="keyword">return</span> Result.success().setBean(user);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//实体</span></span><br><span class="line"><span class="meta">@Entity</span></span><br><span class="line"><span class="meta">@DynamicInsert</span></span><br><span class="line"><span class="meta">@DynamicUpdate</span></span><br><span class="line"><span class="meta">@Table</span>(name = <span class="string">"user"</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span></span>&#123;</span><br><span class="line">	<span class="meta">@Id</span></span><br><span class="line">	<span class="meta">@Column</span>(name = <span class="string">"id"</span>)</span><br><span class="line">	<span class="meta">@GeneratedValue</span>(strategy = GenerationType.IDENTITY)</span><br><span class="line">	<span class="keyword">private</span> Integer id;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@NotFound</span>(action = NotFoundAction.IGNORE)</span><br><span class="line">	<span class="meta">@OneToOne</span>(targetEntity = File.class,cascade = CascadeType.REFRESH)</span><br><span class="line">	<span class="meta">@JoinColumn</span>(name = <span class="string">"avatar_id"</span>)</span><br><span class="line">	<span class="keyword">private</span> File avatar;  <span class="comment">//未加载的关联实体</span></span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>原因是我们一般会把事务控制在Service层，那么在Controller层的业务逻辑加载完一个对象，当对象返回到Controller层其实就已经穿透了事务边界，事务结束，hibernate默认会关闭Session；那么下面再次进入Service层更新这个对象就会开启新的事务，由新的Session来进行执行。</p>
 <p>所以我们要想解决上述问题，目标很明确，在Controller中不会因为穿透了Service层而加载新的Session。</p>
-<p>Spring为我们提供了<code>OpenSessionInViewFilter</code>这个过滤器可以轻松的达到上述目的，它将开启一个Session绑定到当前请求线程，这个线程上的Session将会被<code>TransactionManager</code>利用，因此事务结束(Service层穿透)也不会关闭Session，而是在整个请求周期中复用同一个Session。具体参考<em><a href="https://docs.spring.io/spring/docs/4.3.0.RC1/javadoc-api//org/springframework/orm/hibernate3/support/OpenSessionInViewFilter.html" target="_blank" rel="external">Spring文档</a></em>，这里不展开。</p>
+<p>Spring为我们提供了<code>OpenSessionInViewFilter</code>这个过滤器可以轻松的达到上述目的，它将开启一个Session绑定到当前请求线程，这个线程上的Session将会被<code>TransactionManager</code>利用，因此事务结束(Service层穿透)也不会关闭Session，而是在整个请求周期中复用同一个Session。具体参考<em><a href="https://docs.spring.io/spring/docs/4.3.0.RC1/javadoc-api//org/springframework/orm/hibernate3/support/OpenSessionInViewFilter.html" target="_blank" rel="noopener">Spring文档</a></em>，这里不展开。</p>
 <p>至此，动态SQL在整个请求周期内可以正常运行。</p>
 <h2 id="性能！"><a href="#性能！" class="headerlink" title="性能！"></a>性能！</h2><p>另外值得注意的是动态SQL打开了以后，不同对象的sql语句会不一样，如果一次更新多条记录，hibernate将不能使用 executeBatch进行批量更新，这样效率将大打折扣。在这种情况下，多条sql意味着数据库要编译多次sql语句。 </p>
 <p>因此有批量更新的特殊场景时，建议单独使用hql或者sql进行操作。</p>
-<h2 id="文档参考："><a href="#文档参考：" class="headerlink" title="文档参考："></a>文档参考：</h2><p>_<a href="http://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.html#annotations-hibernate-dynamicupdate" target="_blank" rel="external">annotations-hibernate-dynamicupdate</a>_</p>
-<p>_<a href="http://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.html#pc-managed-state-dynamic-update" target="_blank" rel="external">pc-managed-state-dynamic-update</a>_</p>
+<h2 id="文档参考："><a href="#文档参考：" class="headerlink" title="文档参考："></a>文档参考：</h2><p>_<a href="http://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.html#annotations-hibernate-dynamicupdate" target="_blank" rel="noopener">annotations-hibernate-dynamicupdate</a>_</p>
+<p>_<a href="http://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.html#pc-managed-state-dynamic-update" target="_blank" rel="noopener">pc-managed-state-dynamic-update</a>_</p>
 
         （EOF）
           <blockquote class="blockquote-center">
@@ -488,7 +487,7 @@
   <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
   <a class="jiathis_counter_style"></a>
 </div>
-<script type="text/javascript" >
+<script type="text/javascript">
   var jiathis_config={
     hideMore:false
   }
@@ -515,7 +514,7 @@
       
         
 <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="杨威 wechat" style="width: 100px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="杨威 wechat" style="width: 100px; max-width: 100%;">
     <div>微信订阅号</div>
 </div>
 
@@ -533,13 +532,13 @@
     <div id="QR" style="display: none;">
       
         <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/wechatpay.jpeg" alt="杨威 WeChat Pay"/>
+          <img id="wechat_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/wechatpay.jpeg" alt="杨威 WeChat Pay">
           <p>微信打赏</p>
         </div>
       
       
         <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/alipay.jpeg" alt="杨威 Alipay"/>
+          <img id="alipay_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/alipay.jpeg" alt="杨威 Alipay">
           <p>支付宝打赏</p>
         </div>
       
@@ -549,7 +548,7 @@
 
       
     </div>
-    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_2.jpg">
+    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_51.jpg">
 
 
         </div>
@@ -571,7 +570,7 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -582,9 +581,7 @@
 
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://img.willowspace.cn/hexo_post_img/portrait2.jpg"
-               alt="杨威" />
+          <img class="site-author-image" itemprop="image" src="http://img.willowspace.cn/hexo_post_img/portrait2.jpg" alt="杨威">
           <p class="site-author-name" itemprop="name">杨威</p>
           <p class="site-description motion-element" itemprop="description">捉虫子的人</p>
         </div>
@@ -593,7 +590,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">博客</span>
               </a>
             </div>
@@ -611,7 +608,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">106</span>
+                <span class="site-state-item-count">108</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -707,7 +704,7 @@
     <footer id="footer" class="footer">
       <blockquote class="blockquote-center">
         <div class="footer-inner">
-          <div class="copyright" >
+          <div class="copyright">
   
   &copy;  2017 - 
   <span itemprop="copyrightYear">2019</span>

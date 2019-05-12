@@ -6,22 +6,22 @@
 
 
 <html class="theme-next mist use-motion" lang="en">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
 
 
 
-  <meta name="baidu-site-verification" content="cCnzKblc25" />
+  <meta name="baidu-site-verification" content="cCnzKblc25">
 
 
 
@@ -31,7 +31,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -39,47 +39,40 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="java,JPDA,JVM,IDE,debug," />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="java,JPDA,JVM,IDE,debug,">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
 
 
 
 
 
 
-<meta name="description" content="问题以及解决方案今天使用Intellj IDEA部署web项目时，spring web容器上下文(ContextLoader)加载非常慢，慢到完全启动一个项目需要耗时20分钟左右。
-打开debug日志发现不停的加载注入的各种类，并且还有打印类中方法的详细信息。
-最终定位问题是因为打开了Java Method Breakpoints（如下图），将其取消即可快速启动项目。
-探究原因Google上找到同">
+<meta name="description" content="问题以及解决方案今天使用Intellj IDEA部署web项目时，spring web容器上下文(ContextLoader)加载非常慢，慢到完全启动一个项目需要耗时20分钟左右。 打开debug日志发现不停的加载注入的各种类，并且还有打印类中方法的详细信息。 最终定位问题是因为打开了Java Method Breakpoints（如下图），将其取消即可快速启动项目。 探究原因Google上找到同">
+<meta name="keywords" content="java,JPDA,JVM,IDE,debug">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java Method Breakpoints are evil">
 <meta property="og:url" content="http://blog.willowspace.cn/technology/2017/08/Java Method Breakpoints are evil/index.html">
-<meta property="og:site_name" content="Willow's blog">
-<meta property="og:description" content="问题以及解决方案今天使用Intellj IDEA部署web项目时，spring web容器上下文(ContextLoader)加载非常慢，慢到完全启动一个项目需要耗时20分钟左右。
-打开debug日志发现不停的加载注入的各种类，并且还有打印类中方法的详细信息。
-最终定位问题是因为打开了Java Method Breakpoints（如下图），将其取消即可快速启动项目。
-探究原因Google上找到同">
+<meta property="og:site_name" content="Willow&#39;s blog">
+<meta property="og:description" content="问题以及解决方案今天使用Intellj IDEA部署web项目时，spring web容器上下文(ContextLoader)加载非常慢，慢到完全启动一个项目需要耗时20分钟左右。 打开debug日志发现不停的加载注入的各种类，并且还有打印类中方法的详细信息。 最终定位问题是因为打开了Java Method Breakpoints（如下图），将其取消即可快速启动项目。 探究原因Google上找到同">
+<meta property="og:locale" content="en">
 <meta property="og:image" content="http://img.willowspace.cn/willowspace_2016/1503176081426.png?imageMogr2/thumbnail/400">
 <meta property="og:updated_time" content="2017-09-22T14:15:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Method Breakpoints are evil">
-<meta name="twitter:description" content="问题以及解决方案今天使用Intellj IDEA部署web项目时，spring web容器上下文(ContextLoader)加载非常慢，慢到完全启动一个项目需要耗时20分钟左右。
-打开debug日志发现不停的加载注入的各种类，并且还有打印类中方法的详细信息。
-最终定位问题是因为打开了Java Method Breakpoints（如下图），将其取消即可快速启动项目。
-探究原因Google上找到同">
+<meta name="twitter:description" content="问题以及解决方案今天使用Intellj IDEA部署web项目时，spring web容器上下文(ContextLoader)加载非常慢，慢到完全启动一个项目需要耗时20分钟左右。 打开debug日志发现不停的加载注入的各种类，并且还有打印类中方法的详细信息。 最终定位问题是因为打开了Java Method Breakpoints（如下图），将其取消即可快速启动项目。 探究原因Google上找到同">
 <meta name="twitter:image" content="http://img.willowspace.cn/willowspace_2016/1503176081426.png?imageMogr2/thumbnail/400">
 
 
@@ -108,7 +101,7 @@
 
 
 
-  <link rel="canonical" href="http://blog.willowspace.cn/technology/2017/08/Java Method Breakpoints are evil/"/>
+  <link rel="canonical" href="http://blog.willowspace.cn/technology/2017/08/Java Method Breakpoints are evil/">
 
 
 
@@ -162,14 +155,14 @@
   
 
   <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">Willow's blog</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
     
-      <h1 class="site-subtitle" itemprop="description"><a href="" target="_blank">Writing</a></h1>
+      <h1 class="site-subtitle" itemprop="description"><a href target="_blank">Writing</a></h1>
     
 </div>
 
@@ -191,7 +184,7 @@
         <li class="menu-item menu-item-home">
           <a href="http://blog.willowspace.cn" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -201,7 +194,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             文章分类
           </a>
@@ -211,7 +204,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             最新文章
           </a>
@@ -221,7 +214,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             分类标签
           </a>
@@ -234,7 +227,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             文章搜索
           </a>
@@ -283,14 +276,14 @@
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="杨威">
-    <meta itemprop="description" content="">
+    <meta itemprop="description" content>
     <meta itemprop="image" content="http://img.willowspace.cn/hexo_post_img/portrait2.jpg">
   </span>
 
   <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Willow's blog">
     <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Willow's blog" src="">
+      <img style="display:none;" itemprop="url image" alt="Willow's blog" src>
     </span>
   </span>
 
@@ -329,7 +322,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -387,7 +380,7 @@
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -406,13 +399,13 @@
         <h1 id="问题以及解决方案"><a href="#问题以及解决方案" class="headerlink" title="问题以及解决方案"></a>问题以及解决方案</h1><p>今天使用Intellj IDEA部署web项目时，spring web容器上下文(ContextLoader)加载非常慢，慢到完全启动一个项目需要耗时20分钟左右。</p>
 <p>打开debug日志发现不停的加载注入的各种类，并且还有打印类中方法的详细信息。</p>
 <p>最终定位问题是因为打开了<code>Java Method Breakpoints</code>（如下图），将其取消即可快速启动项目。<img src="http://img.willowspace.cn/willowspace_2016/1503176081426.png?imageMogr2/thumbnail/400" alt="img"></p>
-<h1 id="探究原因"><a href="#探究原因" class="headerlink" title="探究原因"></a>探究原因</h1><p>Google上找到同样的<a href="https://blogs.sourceallies.com/2013/04/java-method-breakpoints-are-evil/" target="_blank" rel="external">JAVA METHOD BREAKPOINTS ARE EVIL</a>（借用了这篇文章的标题，因为这个标题太符合<code>Java Method Breakpoints</code>了，就是邪恶），从其中找到了jetbrains team在jetbrains官网上给出的针对这个问题的回应参考<a href="https://intellij-support.jetbrains.com/hc/en-us/articles/206544799-Java-slow-performance-or-hangups-when-starting-debugger-and-stepping" target="_blank" rel="external">原链接</a> (链接加载略慢)</p>
-<p>然后继续查了几个搜索结果发现各大IDE厂商的bug list里都有报类似问题，参考<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=20869" target="_blank" rel="external">NetBeans Bug</a>、<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=20869" target="_blank" rel="external">Eclipse Bug</a></p>
+<h1 id="探究原因"><a href="#探究原因" class="headerlink" title="探究原因"></a>探究原因</h1><p>Google上找到同样的<a href="https://blogs.sourceallies.com/2013/04/java-method-breakpoints-are-evil/" target="_blank" rel="noopener">JAVA METHOD BREAKPOINTS ARE EVIL</a>（借用了这篇文章的标题，因为这个标题太符合<code>Java Method Breakpoints</code>了，就是邪恶），从其中找到了jetbrains team在jetbrains官网上给出的针对这个问题的回应参考<a href="https://intellij-support.jetbrains.com/hc/en-us/articles/206544799-Java-slow-performance-or-hangups-when-starting-debugger-and-stepping" target="_blank" rel="noopener">原链接</a> (链接加载略慢)</p>
+<p>然后继续查了几个搜索结果发现各大IDE厂商的bug list里都有报类似问题，参考<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=20869" target="_blank" rel="noopener">NetBeans Bug</a>、<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=20869" target="_blank" rel="noopener">Eclipse Bug</a></p>
 <p>他们基本都说明了一点：这个问题的产生和<strong>JVM的设计</strong>有关系。</p>
-<p>具体是指的JVM规定了虚拟机必须支持一组标准的调试API，这组标准的调试API指的是<a href="http://docs.oracle.com/javase/7/docs/technotes/guides/jpda/" target="_blank" rel="external">JPDA</a> (Java Platform Debugger Architecture)，JDPA是一组精心设计的接口与协议，所有的IDE基于JPDA进行封装，提供友好的用户调试接口。</p>
+<p>具体是指的JVM规定了虚拟机必须支持一组标准的调试API，这组标准的调试API指的是<a href="http://docs.oracle.com/javase/7/docs/technotes/guides/jpda/" target="_blank" rel="noopener">JPDA</a> (Java Platform Debugger Architecture)，JDPA是一组精心设计的接口与协议，所有的IDE基于JPDA进行封装，提供友好的用户调试接口。</p>
 <p>当你设置断点时，IDE告诉<em>JVM’s Tool Interface</em>（JDPA的一部分）断点所属的源文件和行号，JVM找到这个断点在源文件中位置对应的编译后class文件中的位置，当JVM运行到一个断点，它将会中断当前执行的线程并且告诉IDE这个断点的源文件和行号，然后由IDE呈现定位给用户。</p>
 <p>这是基本的行断点调试的机制，而<code>Java Method Breakpoints</code>是方法断点调试，它的机制与行断点调试略有不同，它将给方法注册进入/退出事件，需要用到<code>MethodEntryRequest</code>这个类来进行注册。</p>
-<p>然后我在JAVA官方找到了关于<a href="http://bugs.java.com/bugdatabase/view_bug.do?bug_id=6176614" target="_blank" rel="external">JPDA性能问题的BUG清单</a>，其中有如下这样一段描述涉及到了<code>MethodEntryRequest</code>及其带来的性能问题</p>
+<p>然后我在JAVA官方找到了关于<a href="http://bugs.java.com/bugdatabase/view_bug.do?bug_id=6176614" target="_blank" rel="noopener">JPDA性能问题的BUG清单</a>，其中有如下这样一段描述涉及到了<code>MethodEntryRequest</code>及其带来的性能问题</p>
 <p><em>MethodEntryRequest and MethodExitRequest unreasonably slow down whole</em><br><em>performance. We use them to track calls to method in a particular class</em><br><em>or to any overriding methods. But it seems the performance slows down</em><br><em>for any method calls, not even to that particular class.</em></p>
 <p>大致的意思就是说当用<code>MethodEntryRequest</code>来追踪方法调用时(可以理解为方法断点调试)，它将会让任何方法的调用性能都下降，而不只是特定的类(打了方法断点的那个类)。</p>
 <p>找到这里基本上明了了，因为我打了一个方法断点没有放开，spring web context在进行依赖注入时构造各种各样的类需要调用大量的方法(构造方法、静态方法、解析方法等等)，每个方法的调用性能都下降了，所以整个项目加载起来自然就非常慢了。</p>
@@ -494,7 +487,7 @@
   <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
   <a class="jiathis_counter_style"></a>
 </div>
-<script type="text/javascript" >
+<script type="text/javascript">
   var jiathis_config={
     hideMore:false
   }
@@ -521,7 +514,7 @@
       
         
 <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="杨威 wechat" style="width: 100px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="杨威 wechat" style="width: 100px; max-width: 100%;">
     <div>微信订阅号</div>
 </div>
 
@@ -539,13 +532,13 @@
     <div id="QR" style="display: none;">
       
         <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/wechatpay.jpeg" alt="杨威 WeChat Pay"/>
+          <img id="wechat_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/wechatpay.jpeg" alt="杨威 WeChat Pay">
           <p>微信打赏</p>
         </div>
       
       
         <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/alipay.jpeg" alt="杨威 Alipay"/>
+          <img id="alipay_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/alipay.jpeg" alt="杨威 Alipay">
           <p>支付宝打赏</p>
         </div>
       
@@ -555,7 +548,7 @@
 
       
     </div>
-    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_79.jpg">
+    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_33.jpg">
 
 
         </div>
@@ -577,7 +570,7 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -588,9 +581,7 @@
 
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://img.willowspace.cn/hexo_post_img/portrait2.jpg"
-               alt="杨威" />
+          <img class="site-author-image" itemprop="image" src="http://img.willowspace.cn/hexo_post_img/portrait2.jpg" alt="杨威">
           <p class="site-author-name" itemprop="name">杨威</p>
           <p class="site-description motion-element" itemprop="description">捉虫子的人</p>
         </div>
@@ -599,7 +590,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">博客</span>
               </a>
             </div>
@@ -617,7 +608,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">106</span>
+                <span class="site-state-item-count">108</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -713,7 +704,7 @@
     <footer id="footer" class="footer">
       <blockquote class="blockquote-center">
         <div class="footer-inner">
-          <div class="copyright" >
+          <div class="copyright">
   
   &copy;  2017 - 
   <span itemprop="copyrightYear">2019</span>

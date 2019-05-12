@@ -6,22 +6,22 @@
 
 
 <html class="theme-next mist use-motion" lang="en">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
 
 
 
-  <meta name="baidu-site-verification" content="cCnzKblc25" />
+  <meta name="baidu-site-verification" content="cCnzKblc25">
 
 
 
@@ -31,7 +31,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -39,47 +39,35 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="持续集成,CI,jenkins," />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="持续集成,CI,jenkins,">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
 
 
 
 
 
 
-<meta name="description" content="简介
-
-jenkins是一个持续集成(CI)工具，使用java编写
-CI continuous integration 持续集成
-SCM source code management 源码管理
-下载jenkins有多种安装方式，我们选择war包部署，war包下载地址 https://jenkins.io/download/
-下载的war包为jenkins.war
-部署至tomcat这里采用一台单">
+<meta name="description" content="简介  jenkins是一个持续集成(CI)工具，使用java编写 CI continuous integration 持续集成 SCM source code management 源码管理 下载jenkins有多种安装方式，我们选择war包部署，war包下载地址 https://jenkins.io/download/ 下载的war包为jenkins.war 部署至tomcat这里采用一台单">
+<meta name="keywords" content="持续集成,CI,jenkins">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jenkins ci 环境搭建">
 <meta property="og:url" content="http://blog.willowspace.cn/technology/2017/08/jenkins-ci-环境搭建/index.html">
-<meta property="og:site_name" content="Willow's blog">
-<meta property="og:description" content="简介
-
-jenkins是一个持续集成(CI)工具，使用java编写
-CI continuous integration 持续集成
-SCM source code management 源码管理
-下载jenkins有多种安装方式，我们选择war包部署，war包下载地址 https://jenkins.io/download/
-下载的war包为jenkins.war
-部署至tomcat这里采用一台单">
+<meta property="og:site_name" content="Willow&#39;s blog">
+<meta property="og:description" content="简介  jenkins是一个持续集成(CI)工具，使用java编写 CI continuous integration 持续集成 SCM source code management 源码管理 下载jenkins有多种安装方式，我们选择war包部署，war包下载地址 https://jenkins.io/download/ 下载的war包为jenkins.war 部署至tomcat这里采用一台单">
+<meta property="og:locale" content="en">
 <meta property="og:image" content="http://img.willowspace.cn/willowspace_2016/1487009258517.png">
 <meta property="og:image" content="http://img.willowspace.cn/willowspace_2016/1487009586270.png">
 <meta property="og:image" content="http://img.willowspace.cn/willowspace_2016/1504010997582.png">
@@ -88,14 +76,7 @@ SCM source code management 源码管理
 <meta property="og:updated_time" content="2018-02-04T11:55:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jenkins ci 环境搭建">
-<meta name="twitter:description" content="简介
-
-jenkins是一个持续集成(CI)工具，使用java编写
-CI continuous integration 持续集成
-SCM source code management 源码管理
-下载jenkins有多种安装方式，我们选择war包部署，war包下载地址 https://jenkins.io/download/
-下载的war包为jenkins.war
-部署至tomcat这里采用一台单">
+<meta name="twitter:description" content="简介  jenkins是一个持续集成(CI)工具，使用java编写 CI continuous integration 持续集成 SCM source code management 源码管理 下载jenkins有多种安装方式，我们选择war包部署，war包下载地址 https://jenkins.io/download/ 下载的war包为jenkins.war 部署至tomcat这里采用一台单">
 <meta name="twitter:image" content="http://img.willowspace.cn/willowspace_2016/1487009258517.png">
 
 
@@ -124,7 +105,7 @@ SCM source code management 源码管理
 
 
 
-  <link rel="canonical" href="http://blog.willowspace.cn/technology/2017/08/jenkins-ci-环境搭建/"/>
+  <link rel="canonical" href="http://blog.willowspace.cn/technology/2017/08/jenkins-ci-环境搭建/">
 
 
 
@@ -178,14 +159,14 @@ SCM source code management 源码管理
   
 
   <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">Willow's blog</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
     
-      <h1 class="site-subtitle" itemprop="description"><a href="" target="_blank">Writing</a></h1>
+      <h1 class="site-subtitle" itemprop="description"><a href target="_blank">Writing</a></h1>
     
 </div>
 
@@ -207,7 +188,7 @@ SCM source code management 源码管理
         <li class="menu-item menu-item-home">
           <a href="http://blog.willowspace.cn" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -217,7 +198,7 @@ SCM source code management 源码管理
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             文章分类
           </a>
@@ -227,7 +208,7 @@ SCM source code management 源码管理
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             最新文章
           </a>
@@ -237,7 +218,7 @@ SCM source code management 源码管理
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             分类标签
           </a>
@@ -250,7 +231,7 @@ SCM source code management 源码管理
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             文章搜索
           </a>
@@ -299,14 +280,14 @@ SCM source code management 源码管理
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="杨威">
-    <meta itemprop="description" content="">
+    <meta itemprop="description" content>
     <meta itemprop="image" content="http://img.willowspace.cn/hexo_post_img/portrait2.jpg">
   </span>
 
   <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Willow's blog">
     <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Willow's blog" src="">
+      <img style="display:none;" itemprop="url image" alt="Willow's blog" src>
     </span>
   </span>
 
@@ -345,7 +326,7 @@ SCM source code management 源码管理
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -403,7 +384,7 @@ SCM source code management 源码管理
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -425,48 +406,48 @@ SCM source code management 源码管理
 <p>jenkins是一个持续集成(CI)工具，使用java编写</p>
 <p><code>CI</code> <strong>continuous integration</strong> 持续集成</p>
 <p><code>SCM</code> <strong>source code management</strong> 源码管理</p>
-<h1 id="下载jenkins"><a href="#下载jenkins" class="headerlink" title="下载jenkins"></a>下载jenkins</h1><p>有多种安装方式，我们选择war包部署，war包下载地址 <a href="https://jenkins.io/download/" target="_blank" rel="external">https://jenkins.io/download/</a></p>
+<h1 id="下载jenkins"><a href="#下载jenkins" class="headerlink" title="下载jenkins"></a>下载jenkins</h1><p>有多种安装方式，我们选择war包部署，war包下载地址 <a href="https://jenkins.io/download/" target="_blank" rel="noopener">https://jenkins.io/download/</a></p>
 <p>下载的war包为<code>jenkins.war</code></p>
 <h1 id="部署至tomcat"><a href="#部署至tomcat" class="headerlink" title="部署至tomcat"></a>部署至tomcat</h1><p>这里采用一台单独的tomcat部署jenkins</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"># 因为此tomcat只用来部署jenkins，所以先删除webapps下其他应用</div><div class="line">rm -rf $&#123;tomcat_path&#125;/webapps/*</div><div class="line"># 部署jenkins的war包</div><div class="line">mv $&#123;download_path&#125;/jenkins.war $&#123;tomcat_path&#125;/webapps/ROOT.war</div><div class="line"># 指定jenkins工作目录(如有必要)，默认为~/.jenkins</div><div class="line">vim $&#123;download_path&#125;/bin/catalina.sh</div><div class="line">CATALINA_OPTS=&quot;-DJENKINS_HOME=~/jenkins-cluster-1/&quot;</div><div class="line"># 或</div><div class="line">vim $&#123;download_path&#125;/conf/context.xml</div><div class="line">&lt;Context ...&gt;</div><div class="line">  &lt;Environment name=&quot;JENKINS_HOME&quot; value=&quot;~/jenkins-cluster-1/&quot; type=&quot;java.lang.String&quot;/&gt;</div><div class="line">&lt;/Context&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 因为此tomcat只用来部署jenkins，所以先删除webapps下其他应用</span></span><br><span class="line">rm -rf $&#123;tomcat_path&#125;/webapps/*</span><br><span class="line"><span class="meta">#</span><span class="bash"> 部署jenkins的war包</span></span><br><span class="line">mv $&#123;download_path&#125;/jenkins.war $&#123;tomcat_path&#125;/webapps/ROOT.war</span><br><span class="line"><span class="meta">#</span><span class="bash"> 指定jenkins工作目录(如有必要)，默认为~/.jenkins</span></span><br><span class="line">vim $&#123;download_path&#125;/bin/catalina.sh</span><br><span class="line">CATALINA_OPTS="-DJENKINS_HOME=~/jenkins-cluster-1/"</span><br><span class="line"><span class="meta">#</span><span class="bash"> 或</span></span><br><span class="line">vim $&#123;download_path&#125;/conf/context.xml</span><br><span class="line">&lt;Context ...&gt;</span><br><span class="line">  &lt;Environment name="JENKINS_HOME" value="~/jenkins-cluster-1/" type="java.lang.String"/&gt;</span><br><span class="line">&lt;/Context&gt;</span><br></pre></td></tr></table></figure>
 <h1 id="配置jenkins"><a href="#配置jenkins" class="headerlink" title="配置jenkins"></a>配置jenkins</h1><p>tomcat部署启动完jenkins后，访问对应端口可以看到如下jenkins的初始界面</p>
-<p><img src="http://img.willowspace.cn/willowspace_2016/1487009258517.png" alt=""></p>
+<p><img src="http://img.willowspace.cn/willowspace_2016/1487009258517.png" alt></p>
 <p>查看<code>/root/.jenkins/secrets/initialAdminPassword</code>文件可以获得管理员密码，输入后可以解锁Jenkins，开始使用。</p>
 <h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>初始化界面会提示我们安装插件，我们选择推荐插件</p>
-<p><img src="http://img.willowspace.cn/willowspace_2016/1487009586270.png" alt=""></p>
+<p><img src="http://img.willowspace.cn/willowspace_2016/1487009586270.png" alt></p>
 <p>推荐的插件如下图所示</p>
-<p><img src="http://img.willowspace.cn/willowspace_2016/1504010997582.png" alt=""></p>
+<p><img src="http://img.willowspace.cn/willowspace_2016/1504010997582.png" alt></p>
 <p>我们主要需要<code>身份认证</code> <code>源码管理</code> <code>打包构建</code> <code>管道命令</code> 几个方面的插件</p>
 <h3 id="身份认证"><a href="#身份认证" class="headerlink" title="身份认证"></a>身份认证</h3><p><code>ssh plugin</code> <code>SSH Slaves plugin</code> <code>Credentials Binding Plugin</code> </p>
 <h3 id="源码管理"><a href="#源码管理" class="headerlink" title="源码管理"></a>源码管理</h3><p><code>git plugin</code> <code>github plugin</code> <code>GitHub Branch Source Plugin</code> <code>gitlab plugin</code> <code>subversion Plug-in</code> </p>
 <h3 id="打包构建"><a href="#打包构建" class="headerlink" title="打包构建"></a>打包构建</h3><p><code>Gradle Plugin</code></p>
 <h3 id="管道命令"><a href="#管道命令" class="headerlink" title="管道命令"></a>管道命令</h3><p><code>Pipeline</code>   <code>Pipeline:State View Plugin</code></p>
-<p><a href="https://my.oschina.net/ghm7753/blog/371954?p=1" target="_blank" rel="external">pipeline构建参考</a></p>
+<p><a href="https://my.oschina.net/ghm7753/blog/371954?p=1" target="_blank" rel="noopener">pipeline构建参考</a></p>
 <h3 id="其它插件"><a href="#其它插件" class="headerlink" title="其它插件"></a>其它插件</h3><p><code>Role-based Authorization Strategy</code>基于角色的的用户权限控制</p>
 <h2 id="设置全局工具"><a href="#设置全局工具" class="headerlink" title="设置全局工具"></a>设置全局工具</h2><p>系统设置-&gt;Global Tool Configuration-&gt;JDK、Git、Maven</p>
 <p>系统设置-&gt;Shell-&gt;Shell executable-&gt;<code>/bin/zsh</code></p>
-<h2 id="Jenkins内部shell-UTF-8-编码设置"><a href="#Jenkins内部shell-UTF-8-编码设置" class="headerlink" title="Jenkins内部shell UTF-8 编码设置"></a>Jenkins内部shell UTF-8 编码设置</h2><p><img src="http://img.willowspace.cn/willowspace_2016/1487125834004.png" alt=""></p>
-<h2 id="参数化构建"><a href="#参数化构建" class="headerlink" title="参数化构建"></a>参数化构建</h2><p><img src="http://img.willowspace.cn/willowspace_2016/1487126266497.png" alt=""></p>
+<h2 id="Jenkins内部shell-UTF-8-编码设置"><a href="#Jenkins内部shell-UTF-8-编码设置" class="headerlink" title="Jenkins内部shell UTF-8 编码设置"></a>Jenkins内部shell UTF-8 编码设置</h2><p><img src="http://img.willowspace.cn/willowspace_2016/1487125834004.png" alt></p>
+<h2 id="参数化构建"><a href="#参数化构建" class="headerlink" title="参数化构建"></a>参数化构建</h2><p><img src="http://img.willowspace.cn/willowspace_2016/1487126266497.png" alt></p>
 <h3 id="Pipeline构建"><a href="#Pipeline构建" class="headerlink" title="Pipeline构建"></a>Pipeline构建</h3><p>创建一个新任务，任务类型选择pipeline</p>
-<h4 id="拉取源码"><a href="#拉取源码" class="headerlink" title="拉取源码"></a>拉取源码</h4><p>勾选<code>GitHub hook trigger for GITScm polling</code> 参考<a href="https://www.fourkitchens.com/blog/article/trigger-jenkins-builds-pushing-github" target="_blank" rel="external">Trigger Jenkins builds by pushing to Github</a></p>
+<h4 id="拉取源码"><a href="#拉取源码" class="headerlink" title="拉取源码"></a>拉取源码</h4><p>勾选<code>GitHub hook trigger for GITScm polling</code> 参考<a href="https://www.fourkitchens.com/blog/article/trigger-jenkins-builds-pushing-github" target="_blank" rel="noopener">Trigger Jenkins builds by pushing to Github</a></p>
 <ol>
 <li>在jenkins所在服务器上生成ssh key</li>
 <li>在gitlab的Deploy Key中添加public key</li>
 <li>在jenkins创建项目，添加gitlab的项目地址，选择添加Credential，填入private key</li>
 </ol>
-<h4 id="编写构建打包部署的pipeline脚本"><a href="#编写构建打包部署的pipeline脚本" class="headerlink" title="编写构建打包部署的pipeline脚本"></a>编写构建打包部署的pipeline脚本</h4><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">node &#123;</div><div class="line">    stage(<span class="string">'checkout'</span>) &#123;</div><div class="line">        checkout([<span class="string">$class:</span> <span class="string">'GitSCM'</span>, <span class="string">branches:</span> [[<span class="string">name:</span> <span class="string">'*/master'</span>]], <span class="string">doGenerateSubmoduleConfigurations:</span> <span class="literal">false</span>, <span class="string">extensions:</span> [], <span class="string">submoduleCfg:</span> [], <span class="string">userRemoteConfigs:</span> [[<span class="string">credentialsId:</span> <span class="string">'&#123;git_credentialsId&#125;'</span>, <span class="string">url:</span> <span class="string">'&#123;git_url&#125;'</span>]]])</div><div class="line">    &#125;</div><div class="line">    stage(<span class="string">'build'</span>) &#123;</div><div class="line">        sh <span class="string">'mvn clean package'</span></div><div class="line">    &#125;</div><div class="line">    stage(<span class="string">'send war to server'</span>) &#123;</div><div class="line">      sh <span class="string">'scp &#123;user_root_path&#125;/.jenkins/workspace/&#123;you_project_name&#125;/target/&#123;you_project_packaged_name&#125;.war &#123;user&#125;@&#123;server_ip&#125;:&#123;tomcat_path&#125;/webapps/javavirtual.war'</span></div><div class="line">    &#125;</div><div class="line">    stage(<span class="string">'restart tomcat server'</span>)&#123;</div><div class="line">        sh <span class="string">'echo "wait restart shell"'</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="编写构建打包部署的pipeline脚本"><a href="#编写构建打包部署的pipeline脚本" class="headerlink" title="编写构建打包部署的pipeline脚本"></a>编写构建打包部署的pipeline脚本</h4><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">node &#123;</span><br><span class="line">    stage(<span class="string">'checkout'</span>) &#123;</span><br><span class="line">        checkout([<span class="string">$class:</span> <span class="string">'GitSCM'</span>, <span class="string">branches:</span> [[<span class="string">name:</span> <span class="string">'*/master'</span>]], <span class="string">doGenerateSubmoduleConfigurations:</span> <span class="literal">false</span>, <span class="string">extensions:</span> [], <span class="string">submoduleCfg:</span> [], <span class="string">userRemoteConfigs:</span> [[<span class="string">credentialsId:</span> <span class="string">'&#123;git_credentialsId&#125;'</span>, <span class="string">url:</span> <span class="string">'&#123;git_url&#125;'</span>]]])</span><br><span class="line">    &#125;</span><br><span class="line">    stage(<span class="string">'build'</span>) &#123;</span><br><span class="line">        sh <span class="string">'mvn clean package'</span></span><br><span class="line">    &#125;</span><br><span class="line">    stage(<span class="string">'send war to server'</span>) &#123;</span><br><span class="line">      sh <span class="string">'scp &#123;user_root_path&#125;/.jenkins/workspace/&#123;you_project_name&#125;/target/&#123;you_project_packaged_name&#125;.war &#123;user&#125;@&#123;server_ip&#125;:&#123;tomcat_path&#125;/webapps/javavirtual.war'</span></span><br><span class="line">    &#125;</span><br><span class="line">    stage(<span class="string">'restart tomcat server'</span>)&#123;</span><br><span class="line">        sh <span class="string">'echo "wait restart shell"'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="基于角色的任务访问控制"><a href="#基于角色的任务访问控制" class="headerlink" title="基于角色的任务访问控制"></a>基于角色的任务访问控制</h2><ol>
-<li>系统管理-&gt;管理插件-&gt;安装<a href="https://plugins.jenkins.io/role-strategy" target="_blank" rel="external">Role-based Authorization Strategy</a>插件</li>
+<li>系统管理-&gt;管理插件-&gt;安装<a href="https://plugins.jenkins.io/role-strategy" target="_blank" rel="noopener">Role-based Authorization Strategy</a>插件</li>
 <li>系统管理-&gt;<code>Configure Global Security</code>-&gt;访问控制-&gt;授权策略-&gt;Role-Based Strategy-&gt;保存</li>
 <li>系统管理-&gt;Manage and Assign Roles-&gt;Manage Roles-&gt;Global roles-&gt;在admin角色外创建其他角色分配Overall/Read权限</li>
 <li><strong>指定角色访问特定项目</strong></li>
 </ol>
 <p>系统管理-&gt;Manage and Assign Roles-&gt;Manage Roles-&gt;Project roles-&gt;添加一个角色,然后指定项目Pattern(注意：patter不是正则表达式,其中<code>*</code>要用<code>.*</code>代替)</p>
-<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><h3 id="pipeline使用nohup命令启动后台进程无效"><a href="#pipeline使用nohup命令启动后台进程无效" class="headerlink" title="pipeline使用nohup命令启动后台进程无效"></a>pipeline使用nohup命令启动后台进程无效</h3><p><a href="https://wiki.jenkins.io/display/JENKINS/ProcessTreeKiller" target="_blank" rel="external">参考ProcessTreeKiller</a></p>
+<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><h3 id="pipeline使用nohup命令启动后台进程无效"><a href="#pipeline使用nohup命令启动后台进程无效" class="headerlink" title="pipeline使用nohup命令启动后台进程无效"></a>pipeline使用nohup命令启动后台进程无效</h3><p><a href="https://wiki.jenkins.io/display/JENKINS/ProcessTreeKiller" target="_blank" rel="noopener">参考ProcessTreeKiller</a></p>
 <h3 id="使用Boolean类型参数化构建时，参数逻辑判断总是true"><a href="#使用Boolean类型参数化构建时，参数逻辑判断总是true" class="headerlink" title="使用Boolean类型参数化构建时，参数逻辑判断总是true"></a>使用Boolean类型参数化构建时，参数逻辑判断总是true</h3><p>jenkins传入groovy的boolean parameter是对象类型，非null总是true，所以判断总为true，进行一次类型转换就好</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">def</span> booleanParameter = Boolean.valueOf(jenkinsBooleanParameter);</div></pre></td></tr></table></figure>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> booleanParameter = Boolean.valueOf(jenkinsBooleanParameter);</span><br></pre></td></tr></table></figure>
 <h3 id="容器的编码问题"><a href="#容器的编码问题" class="headerlink" title="容器的编码问题"></a>容器的编码问题</h3><blockquote>
-<p>Your container doesn’t use UTF-8 to decode URLs. If you use non-ASCII characters as a job name etc, this will cause problems. See <a href="http://wiki.jenkins-ci.org/display/JENKINS/Containers" target="_blank" rel="external">Containers</a> and <a href="http://wiki.jenkins-ci.org/display/JENKINS/Tomcat#Tomcat-i18n" target="_blank" rel="external">Tomcat i18n</a> for more details.</p>
+<p>Your container doesn’t use UTF-8 to decode URLs. If you use non-ASCII characters as a job name etc, this will cause problems. See <a href="http://wiki.jenkins-ci.org/display/JENKINS/Containers" target="_blank" rel="noopener">Containers</a> and <a href="http://wiki.jenkins-ci.org/display/JENKINS/Tomcat#Tomcat-i18n" target="_blank" rel="noopener">Tomcat i18n</a> for more details.</p>
 </blockquote>
 
         （EOF）
@@ -542,7 +523,7 @@ SCM source code management 源码管理
   <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
   <a class="jiathis_counter_style"></a>
 </div>
-<script type="text/javascript" >
+<script type="text/javascript">
   var jiathis_config={
     hideMore:false
   }
@@ -569,7 +550,7 @@ SCM source code management 源码管理
       
         
 <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="杨威 wechat" style="width: 100px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="杨威 wechat" style="width: 100px; max-width: 100%;">
     <div>微信订阅号</div>
 </div>
 
@@ -587,13 +568,13 @@ SCM source code management 源码管理
     <div id="QR" style="display: none;">
       
         <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/wechatpay.jpeg" alt="杨威 WeChat Pay"/>
+          <img id="wechat_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/wechatpay.jpeg" alt="杨威 WeChat Pay">
           <p>微信打赏</p>
         </div>
       
       
         <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/alipay.jpeg" alt="杨威 Alipay"/>
+          <img id="alipay_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/alipay.jpeg" alt="杨威 Alipay">
           <p>支付宝打赏</p>
         </div>
       
@@ -603,7 +584,7 @@ SCM source code management 源码管理
 
       
     </div>
-    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_20.jpg">
+    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_70.jpg">
 
 
         </div>
@@ -625,7 +606,7 @@ SCM source code management 源码管理
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -636,9 +617,7 @@ SCM source code management 源码管理
 
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://img.willowspace.cn/hexo_post_img/portrait2.jpg"
-               alt="杨威" />
+          <img class="site-author-image" itemprop="image" src="http://img.willowspace.cn/hexo_post_img/portrait2.jpg" alt="杨威">
           <p class="site-author-name" itemprop="name">杨威</p>
           <p class="site-description motion-element" itemprop="description">捉虫子的人</p>
         </div>
@@ -647,7 +626,7 @@ SCM source code management 源码管理
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">博客</span>
               </a>
             </div>
@@ -665,7 +644,7 @@ SCM source code management 源码管理
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">106</span>
+                <span class="site-state-item-count">108</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -761,7 +740,7 @@ SCM source code management 源码管理
     <footer id="footer" class="footer">
       <blockquote class="blockquote-center">
         <div class="footer-inner">
-          <div class="copyright" >
+          <div class="copyright">
   
   &copy;  2017 - 
   <span itemprop="copyrightYear">2019</span>

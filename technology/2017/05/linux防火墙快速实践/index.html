@@ -6,22 +6,22 @@
 
 
 <html class="theme-next mist use-motion" lang="en">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
 
 
 
-  <meta name="baidu-site-verification" content="cCnzKblc25" />
+  <meta name="baidu-site-verification" content="cCnzKblc25">
 
 
 
@@ -31,7 +31,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -39,43 +39,39 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="ops,linux,ubuntu,firewall,iptables,ufw,security,web安全," />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="ops,linux,ubuntu,firewall,iptables,ufw,security,web安全,">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
 
 
 
 
 
 
-<meta name="description" content="linux防火墙介绍iptables
-Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操作的命令行工具是iptables。它提供一套完整的可灵活配置的防火墙解决方案。但是它的使用相对复杂
-精通iptables需要耗费很多时间，开始使用iptables来管理网络过滤器是个复杂的工作。所以近年来，出现了许多iptables的前端/上游软件，它们都是为了达到不同的目的和满足">
+<meta name="description" content="linux防火墙介绍iptables Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操作的命令行工具是iptables。它提供一套完整的可灵活配置的防火墙解决方案。但是它的使用相对复杂 精通iptables需要耗费很多时间，开始使用iptables来管理网络过滤器是个复杂的工作。所以近年来，出现了许多iptables的前端/上游软件，它们都是为了达到不同的目的和满足">
+<meta name="keywords" content="ops,linux,ubuntu,firewall,iptables,ufw,security,web安全">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux防火墙快速实践">
 <meta property="og:url" content="http://blog.willowspace.cn/technology/2017/05/linux防火墙快速实践/index.html">
-<meta property="og:site_name" content="Willow's blog">
-<meta property="og:description" content="linux防火墙介绍iptables
-Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操作的命令行工具是iptables。它提供一套完整的可灵活配置的防火墙解决方案。但是它的使用相对复杂
-精通iptables需要耗费很多时间，开始使用iptables来管理网络过滤器是个复杂的工作。所以近年来，出现了许多iptables的前端/上游软件，它们都是为了达到不同的目的和满足">
+<meta property="og:site_name" content="Willow&#39;s blog">
+<meta property="og:description" content="linux防火墙介绍iptables Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操作的命令行工具是iptables。它提供一套完整的可灵活配置的防火墙解决方案。但是它的使用相对复杂 精通iptables需要耗费很多时间，开始使用iptables来管理网络过滤器是个复杂的工作。所以近年来，出现了许多iptables的前端/上游软件，它们都是为了达到不同的目的和满足">
+<meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2017-09-22T14:15:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux防火墙快速实践">
-<meta name="twitter:description" content="linux防火墙介绍iptables
-Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操作的命令行工具是iptables。它提供一套完整的可灵活配置的防火墙解决方案。但是它的使用相对复杂
-精通iptables需要耗费很多时间，开始使用iptables来管理网络过滤器是个复杂的工作。所以近年来，出现了许多iptables的前端/上游软件，它们都是为了达到不同的目的和满足">
+<meta name="twitter:description" content="linux防火墙介绍iptables Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操作的命令行工具是iptables。它提供一套完整的可灵活配置的防火墙解决方案。但是它的使用相对复杂 精通iptables需要耗费很多时间，开始使用iptables来管理网络过滤器是个复杂的工作。所以近年来，出现了许多iptables的前端/上游软件，它们都是为了达到不同的目的和满足">
 
 
 
@@ -103,7 +99,7 @@ Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操
 
 
 
-  <link rel="canonical" href="http://blog.willowspace.cn/technology/2017/05/linux防火墙快速实践/"/>
+  <link rel="canonical" href="http://blog.willowspace.cn/technology/2017/05/linux防火墙快速实践/">
 
 
 
@@ -157,14 +153,14 @@ Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操
   
 
   <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">Willow's blog</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
     
-      <h1 class="site-subtitle" itemprop="description"><a href="" target="_blank">Writing</a></h1>
+      <h1 class="site-subtitle" itemprop="description"><a href target="_blank">Writing</a></h1>
     
 </div>
 
@@ -186,7 +182,7 @@ Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操
         <li class="menu-item menu-item-home">
           <a href="http://blog.willowspace.cn" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -196,7 +192,7 @@ Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             文章分类
           </a>
@@ -206,7 +202,7 @@ Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             最新文章
           </a>
@@ -216,7 +212,7 @@ Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             分类标签
           </a>
@@ -229,7 +225,7 @@ Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             文章搜索
           </a>
@@ -278,14 +274,14 @@ Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="杨威">
-    <meta itemprop="description" content="">
+    <meta itemprop="description" content>
     <meta itemprop="image" content="http://img.willowspace.cn/hexo_post_img/portrait2.jpg">
   </span>
 
   <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Willow's blog">
     <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Willow's blog" src="">
+      <img style="display:none;" itemprop="url image" alt="Willow's blog" src>
     </span>
   </span>
 
@@ -324,7 +320,7 @@ Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -382,7 +378,7 @@ Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -404,13 +400,13 @@ Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操
 <p><strong>ufw</strong></p>
 <p>The Uncomplicated Firewall (<code>ufw</code>)是对iptables的封装，非常适合作为基于主机的防火墙。<code>ufw</code>提供了一套管理<code>netfilter</code>的框架以及一套配置防火墙的命令行接口。<code>ufw</code>的目标是提供一套容易使用的接口给不熟悉防火墙概念的人使用，同时帮助知道自己要干嘛的系统管理员简化复杂的<code>iptables</code>命令的使用。</p>
 <h3 id="使用ufw"><a href="#使用ufw" class="headerlink" title="使用ufw"></a>使用ufw</h3><h4 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h4><p>一般ubuntu自带ufw，如果需要也可以自行安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install ufw</div></pre></td></tr></table></figure>
-<h4 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">#启用</div><div class="line">sudo ufw enable</div><div class="line">#系统启动时关闭所有外部对本机的访问（本机访问外部正常）。</div><div class="line">sudo ufw default deny </div><div class="line">#关闭</div><div class="line">sudo ufw disable </div><div class="line">#查看防火墙状态</div><div class="line">sudo ufw status</div><div class="line">#允许外部访问80端口</div><div class="line">sudo ufw allow 80</div><div class="line">#禁止外部访问80端口</div><div class="line">sudo ufw delete allow 80</div><div class="line">#允许IP访问所有的本机端口</div><div class="line">sudo ufw allow from 192.168.1.1</div><div class="line">#禁止外部访问smtp服务</div><div class="line">sudo ufw deny smtp</div><div class="line">#删除上面建立的某条规则</div><div class="line">sudo ufw delete deny smtp</div><div class="line">#拒绝所有的TCP流量从10.0.0.0/8 到192.168.0.1地址的22端口</div><div class="line">sudo ufw deny proto tcp from 10.0.0.0/8 to 192.168.0.1 port 22</div><div class="line">#允许所有RFC1918网络（局域网/无线局域网的）访问这个主机</div><div class="line">sudo ufw allow from 10.0.0.0/8</div><div class="line">sudo ufw allow from 172.16.0.0/12</div><div class="line">sudo ufw allow from 192.168.0.0/16</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install ufw</span><br></pre></td></tr></table></figure>
+<h4 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">启用</span></span><br><span class="line">sudo ufw enable</span><br><span class="line"><span class="meta">#</span><span class="bash">系统启动时关闭所有外部对本机的访问（本机访问外部正常）。</span></span><br><span class="line">sudo ufw default deny </span><br><span class="line"><span class="meta">#</span><span class="bash">关闭</span></span><br><span class="line">sudo ufw disable </span><br><span class="line"><span class="meta">#</span><span class="bash">查看防火墙状态</span></span><br><span class="line">sudo ufw status</span><br><span class="line"><span class="meta">#</span><span class="bash">允许外部访问80端口</span></span><br><span class="line">sudo ufw allow 80</span><br><span class="line"><span class="meta">#</span><span class="bash">禁止外部访问80端口</span></span><br><span class="line">sudo ufw delete allow 80</span><br><span class="line"><span class="meta">#</span><span class="bash">允许IP访问所有的本机端口</span></span><br><span class="line">sudo ufw allow from 192.168.1.1</span><br><span class="line"><span class="meta">#</span><span class="bash">禁止外部访问smtp服务</span></span><br><span class="line">sudo ufw deny smtp</span><br><span class="line"><span class="meta">#</span><span class="bash">删除上面建立的某条规则</span></span><br><span class="line">sudo ufw delete deny smtp</span><br><span class="line"><span class="meta">#</span><span class="bash">拒绝所有的TCP流量从10.0.0.0/8 到192.168.0.1地址的22端口</span></span><br><span class="line">sudo ufw deny proto tcp from 10.0.0.0/8 to 192.168.0.1 port 22</span><br><span class="line"><span class="meta">#</span><span class="bash">允许所有RFC1918网络（局域网/无线局域网的）访问这个主机</span></span><br><span class="line">sudo ufw allow from 10.0.0.0/8</span><br><span class="line">sudo ufw allow from 172.16.0.0/12</span><br><span class="line">sudo ufw allow from 192.168.0.0/16</span><br></pre></td></tr></table></figure>
 <p><strong>惯例配置</strong></p>
 <p>服务器通常只暴露用于管理的22端口及一个服务端(入)口80，内部再通过反向代理进行端口(服务)分发</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#启用</div><div class="line">sudo ufw enable</div><div class="line">#系统启动时关闭所有外部对本机的访问（本机访问外部正常）。</div><div class="line">sudo ufw default deny </div><div class="line">#允许外部访问80端口及22端口</div><div class="line">sudo ufw allow 22</div><div class="line">sudo ufw allow 80</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">启用</span></span><br><span class="line">sudo ufw enable</span><br><span class="line"><span class="meta">#</span><span class="bash">系统启动时关闭所有外部对本机的访问（本机访问外部正常）。</span></span><br><span class="line">sudo ufw default deny </span><br><span class="line"><span class="meta">#</span><span class="bash">允许外部访问80端口及22端口</span></span><br><span class="line">sudo ufw allow 22</span><br><span class="line">sudo ufw allow 80</span><br></pre></td></tr></table></figure>
 <p><strong>使用指南</strong></p>
-<p><a href="http://wiki.ubuntu.org.cn/Ufw%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97" target="_blank" rel="external">ufw中文使用指南</a></p>
+<p><a href="http://wiki.ubuntu.org.cn/Ufw%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97" target="_blank" rel="noopener">ufw中文使用指南</a></p>
 
         （EOF）
           <blockquote class="blockquote-center">
@@ -495,7 +491,7 @@ Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操
   <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
   <a class="jiathis_counter_style"></a>
 </div>
-<script type="text/javascript" >
+<script type="text/javascript">
   var jiathis_config={
     hideMore:false
   }
@@ -522,7 +518,7 @@ Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操
       
         
 <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="杨威 wechat" style="width: 100px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="杨威 wechat" style="width: 100px; max-width: 100%;">
     <div>微信订阅号</div>
 </div>
 
@@ -540,13 +536,13 @@ Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操
     <div id="QR" style="display: none;">
       
         <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/wechatpay.jpeg" alt="杨威 WeChat Pay"/>
+          <img id="wechat_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/wechatpay.jpeg" alt="杨威 WeChat Pay">
           <p>微信打赏</p>
         </div>
       
       
         <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/alipay.jpeg" alt="杨威 Alipay"/>
+          <img id="alipay_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/alipay.jpeg" alt="杨威 Alipay">
           <p>支付宝打赏</p>
         </div>
       
@@ -556,7 +552,7 @@ Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操
 
       
     </div>
-    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_33.jpg">
+    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_38.jpg">
 
 
         </div>
@@ -578,7 +574,7 @@ Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -589,9 +585,7 @@ Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操
 
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://img.willowspace.cn/hexo_post_img/portrait2.jpg"
-               alt="杨威" />
+          <img class="site-author-image" itemprop="image" src="http://img.willowspace.cn/hexo_post_img/portrait2.jpg" alt="杨威">
           <p class="site-author-name" itemprop="name">杨威</p>
           <p class="site-description motion-element" itemprop="description">捉虫子的人</p>
         </div>
@@ -600,7 +594,7 @@ Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">博客</span>
               </a>
             </div>
@@ -618,7 +612,7 @@ Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">106</span>
+                <span class="site-state-item-count">108</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -714,7 +708,7 @@ Ubuntu的Linux内核提供一个数据包过滤框架：netfilter，传统的操
     <footer id="footer" class="footer">
       <blockquote class="blockquote-center">
         <div class="footer-inner">
-          <div class="copyright" >
+          <div class="copyright">
   
   &copy;  2017 - 
   <span itemprop="copyrightYear">2019</span>

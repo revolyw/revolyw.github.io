@@ -6,22 +6,22 @@
 
 
 <html class="theme-next mist use-motion" lang="en">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
 
 
 
-  <meta name="baidu-site-verification" content="cCnzKblc25" />
+  <meta name="baidu-site-verification" content="cCnzKblc25">
 
 
 
@@ -31,7 +31,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -39,41 +39,40 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="java,gradle,maven," />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="java,gradle,maven,">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
 
 
 
 
 
 
-<meta name="description" content="本文介绍使用Gradle快速构建Java项目
-由于博主使用的是Intellj IDEA，所以如果你对Intellj IDEA的项目结构不熟悉，那你可能需要先了解一下Intellj IDEA的项目结构：一个project（区别eclipse中的project）+ 多个modules，以下图为例，spring-boot-rmi是项目，greenqiang,laowang,oldwang,xiaomin">
+<meta name="description" content="本文介绍使用Gradle快速构建Java项目 由于博主使用的是Intellj IDEA，所以如果你对Intellj IDEA的项目结构不熟悉，那你可能需要先了解一下Intellj IDEA的项目结构：一个project（区别eclipse中的project）+ 多个modules，以下图为例，spring-boot-rmi是项目，greenqiang,laowang,oldwang,xiaomin">
+<meta name="keywords" content="java,gradle,maven">
 <meta property="og:type" content="article">
 <meta property="og:title" content="gradle_quick_start">
 <meta property="og:url" content="http://blog.willowspace.cn/technology/2017/01/gradle-quick-start/index.html">
-<meta property="og:site_name" content="Willow's blog">
-<meta property="og:description" content="本文介绍使用Gradle快速构建Java项目
-由于博主使用的是Intellj IDEA，所以如果你对Intellj IDEA的项目结构不熟悉，那你可能需要先了解一下Intellj IDEA的项目结构：一个project（区别eclipse中的project）+ 多个modules，以下图为例，spring-boot-rmi是项目，greenqiang,laowang,oldwang,xiaomin">
+<meta property="og:site_name" content="Willow&#39;s blog">
+<meta property="og:description" content="本文介绍使用Gradle快速构建Java项目 由于博主使用的是Intellj IDEA，所以如果你对Intellj IDEA的项目结构不熟悉，那你可能需要先了解一下Intellj IDEA的项目结构：一个project（区别eclipse中的project）+ 多个modules，以下图为例，spring-boot-rmi是项目，greenqiang,laowang,oldwang,xiaomin">
+<meta property="og:locale" content="en">
 <meta property="og:image" content="http://img.willowspace.cn/willowspace_2016/1485234708330.png">
 <meta property="og:updated_time" content="2017-09-22T14:15:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gradle_quick_start">
-<meta name="twitter:description" content="本文介绍使用Gradle快速构建Java项目
-由于博主使用的是Intellj IDEA，所以如果你对Intellj IDEA的项目结构不熟悉，那你可能需要先了解一下Intellj IDEA的项目结构：一个project（区别eclipse中的project）+ 多个modules，以下图为例，spring-boot-rmi是项目，greenqiang,laowang,oldwang,xiaomin">
+<meta name="twitter:description" content="本文介绍使用Gradle快速构建Java项目 由于博主使用的是Intellj IDEA，所以如果你对Intellj IDEA的项目结构不熟悉，那你可能需要先了解一下Intellj IDEA的项目结构：一个project（区别eclipse中的project）+ 多个modules，以下图为例，spring-boot-rmi是项目，greenqiang,laowang,oldwang,xiaomin">
 <meta name="twitter:image" content="http://img.willowspace.cn/willowspace_2016/1485234708330.png">
 
 
@@ -102,7 +101,7 @@
 
 
 
-  <link rel="canonical" href="http://blog.willowspace.cn/technology/2017/01/gradle-quick-start/"/>
+  <link rel="canonical" href="http://blog.willowspace.cn/technology/2017/01/gradle-quick-start/">
 
 
 
@@ -156,14 +155,14 @@
   
 
   <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">Willow's blog</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
     
-      <h1 class="site-subtitle" itemprop="description"><a href="" target="_blank">Writing</a></h1>
+      <h1 class="site-subtitle" itemprop="description"><a href target="_blank">Writing</a></h1>
     
 </div>
 
@@ -185,7 +184,7 @@
         <li class="menu-item menu-item-home">
           <a href="http://blog.willowspace.cn" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -195,7 +194,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             文章分类
           </a>
@@ -205,7 +204,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             最新文章
           </a>
@@ -215,7 +214,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             分类标签
           </a>
@@ -228,7 +227,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             文章搜索
           </a>
@@ -277,14 +276,14 @@
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="杨威">
-    <meta itemprop="description" content="">
+    <meta itemprop="description" content>
     <meta itemprop="image" content="http://img.willowspace.cn/hexo_post_img/portrait2.jpg">
   </span>
 
   <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Willow's blog">
     <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Willow's blog" src="">
+      <img style="display:none;" itemprop="url image" alt="Willow's blog" src>
     </span>
   </span>
 
@@ -323,7 +322,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -381,7 +380,7 @@
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -399,30 +398,30 @@
       
         <p>本文介绍使用Gradle快速构建Java项目</p>
 <p>由于博主使用的是Intellj IDEA，所以如果你对Intellj IDEA的项目结构不熟悉，那你可能需要先了解一下Intellj IDEA的项目结构：一个project（区别eclipse中的project）+ 多个modules，以下图为例，spring-boot-rmi是项目，greenqiang,laowang,oldwang,xiaoming是4个module</p>
-<p><img src="http://img.willowspace.cn/willowspace_2016/1485234708330.png" alt=""></p>
+<p><img src="http://img.willowspace.cn/willowspace_2016/1485234708330.png" alt></p>
 <h2 id="Gradle准备"><a href="#Gradle准备" class="headerlink" title="Gradle准备"></a>Gradle准备</h2><ul>
 <li>安装jdk或者jre，且版本至少是6以上</li>
-<li>从<a href="https://gradle.org/" target="_blank" rel="external">官网</a>安装gradle</li>
+<li>从<a href="https://gradle.org/" target="_blank" rel="noopener">官网</a>安装gradle</li>
 </ul>
 <h2 id="配置文件与构建脚本"><a href="#配置文件与构建脚本" class="headerlink" title="配置文件与构建脚本"></a>配置文件与构建脚本</h2><p>使用gradle构建项目，项目根目录下会有build.gradle和settings.gradle两个文件(如上图)</p>
 <p><strong>settings.gradle</strong> 配置文件</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//多项目（或多modules）管理</span></div><div class="line"><span class="comment">//rootProject.name = "spring-boot-rmi" //根项目</span></div><div class="line">include <span class="string">"old-wang"</span>, <span class="string">"green-qiang"</span></div></pre></td></tr></table></figure>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//多项目（或多modules）管理</span></span><br><span class="line"><span class="comment">//rootProject.name = "spring-boot-rmi" //根项目</span></span><br><span class="line">include <span class="string">"old-wang"</span>, <span class="string">"green-qiang"</span></span><br></pre></td></tr></table></figure>
 <p><strong>build.gradle</strong> 构建脚本</p>
 <ul>
 <li>根目录下的构建脚本 /build.gradle</li>
 </ul>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//项目基本信息</span></div><div class="line">group <span class="string">'cn.willowspace'</span></div><div class="line">version <span class="string">'1.0-SNAPSHOT'</span></div><div class="line"></div><div class="line"><span class="comment">//allprojects or subprojects</span></div><div class="line">allprojects &#123;</div><div class="line">  	<span class="comment">//应用插件</span></div><div class="line">    apply <span class="string">plugin:</span> <span class="string">'java'</span></div><div class="line">	<span class="comment">//指定编译级别</span></div><div class="line">    sourceCompatibility = <span class="number">1.8</span></div><div class="line">    targetCompatibility = <span class="number">1.8</span></div><div class="line">	<span class="comment">//指定依赖仓库</span></div><div class="line">    repositories &#123;</div><div class="line">        mavenLocal()</div><div class="line">        mavenCentral()</div><div class="line">        maven &#123;</div><div class="line">            url <span class="string">'http://repo.spring.io/libs-milestone/'</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">	<span class="comment">//依赖管理</span></div><div class="line">    dependencies &#123;</div><div class="line">        <span class="comment">//spring-boot-starter-parent</span></div><div class="line">        compile <span class="string">group:</span> <span class="string">'org.springframework.boot'</span>, <span class="string">name:</span> <span class="string">'spring-boot'</span>, <span class="string">version:</span> <span class="string">'1.2.8.RELEASE'</span></div><div class="line">        compile <span class="string">group:</span> <span class="string">'org.springframework.boot'</span>, <span class="string">name:</span> <span class="string">'spring-boot-starter-web'</span>, <span class="string">version:</span> <span class="string">'1.2.8.RELEASE'</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//项目基本信息</span></span><br><span class="line">group <span class="string">'cn.willowspace'</span></span><br><span class="line">version <span class="string">'1.0-SNAPSHOT'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//allprojects or subprojects</span></span><br><span class="line">allprojects &#123;</span><br><span class="line">  	<span class="comment">//应用插件</span></span><br><span class="line">    apply <span class="string">plugin:</span> <span class="string">'java'</span></span><br><span class="line">	<span class="comment">//指定编译级别</span></span><br><span class="line">    sourceCompatibility = <span class="number">1.8</span></span><br><span class="line">    targetCompatibility = <span class="number">1.8</span></span><br><span class="line">	<span class="comment">//指定依赖仓库</span></span><br><span class="line">    repositories &#123;</span><br><span class="line">        mavenLocal()</span><br><span class="line">        mavenCentral()</span><br><span class="line">        maven &#123;</span><br><span class="line">            url <span class="string">'http://repo.spring.io/libs-milestone/'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="comment">//依赖管理</span></span><br><span class="line">    dependencies &#123;</span><br><span class="line">        <span class="comment">//spring-boot-starter-parent</span></span><br><span class="line">        compile <span class="string">group:</span> <span class="string">'org.springframework.boot'</span>, <span class="string">name:</span> <span class="string">'spring-boot'</span>, <span class="string">version:</span> <span class="string">'1.2.8.RELEASE'</span></span><br><span class="line">        compile <span class="string">group:</span> <span class="string">'org.springframework.boot'</span>, <span class="string">name:</span> <span class="string">'spring-boot-starter-web'</span>, <span class="string">version:</span> <span class="string">'1.2.8.RELEASE'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>old-wang子项目的构建脚本 old-wang/build.gradle</li>
 </ul>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//指定项目的源码及资源文件路径</span></div><div class="line">sourceSets &#123;</div><div class="line">    main &#123;</div><div class="line">        java &#123;</div><div class="line">            srcDir <span class="string">'old-wang/src/main/java'</span></div><div class="line">        &#125;</div><div class="line">        resources &#123;</div><div class="line">            srcDir <span class="string">'old-wang/src/main/resources'</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//指定项目的源码及资源文件路径</span></span><br><span class="line">sourceSets &#123;</span><br><span class="line">    main &#123;</span><br><span class="line">        java &#123;</span><br><span class="line">            srcDir <span class="string">'old-wang/src/main/java'</span></span><br><span class="line">        &#125;</span><br><span class="line">        resources &#123;</span><br><span class="line">            srcDir <span class="string">'old-wang/src/main/resources'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>green-qiang子项目的构建脚本 green-qiang/build.gradle</li>
 </ul>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//指定项目的源码及资源文件路径</span></div><div class="line">sourceSets &#123;</div><div class="line">    main &#123;</div><div class="line">        java &#123;</div><div class="line">            srcDir <span class="string">'green-qiang/src/main/java'</span></div><div class="line">        &#125;</div><div class="line">        resources &#123;</div><div class="line">            srcDir <span class="string">'green-qiang/src/main/resources'</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//指定项目的源码及资源文件路径</span></span><br><span class="line">sourceSets &#123;</span><br><span class="line">    main &#123;</span><br><span class="line">        java &#123;</span><br><span class="line">            srcDir <span class="string">'green-qiang/src/main/java'</span></span><br><span class="line">        &#125;</span><br><span class="line">        resources &#123;</span><br><span class="line">            srcDir <span class="string">'green-qiang/src/main/resources'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>通过settings.gradle及build.gradle两类文件，我们就可以建立起项目之间的依赖及第三方依赖，一个java项目的基本构建就完成了。</p>
-<p>更多gradle相关的用法，参考<a href="https://www.gitbook.com/book/dongchuan/gradle-user-guide-/details" target="_blank" rel="external">Gradle User Guide 中文版</a></p>
-<p><a href="http://www.jetbrains.com/help/idea/2016.3/gradle-2.html" target="_blank" rel="external">IDEA中Gradle的设置</a> ,特别注意：不要在IDEA里开启offline work选项，否则你可能经常找不到你要的dependencies</p>
+<p>更多gradle相关的用法，参考<a href="https://www.gitbook.com/book/dongchuan/gradle-user-guide-/details" target="_blank" rel="noopener">Gradle User Guide 中文版</a></p>
+<p><a href="http://www.jetbrains.com/help/idea/2016.3/gradle-2.html" target="_blank" rel="noopener">IDEA中Gradle的设置</a> ,特别注意：不要在IDEA里开启offline work选项，否则你可能经常找不到你要的dependencies</p>
 <blockquote>
 <ul>
 <li>Offline work - use this check box to work with Gradle in the offline mode. In this case Gradle will use dependencies from the cache. Gradle will not attempt to access the network to perform dependency resolution. If required dependencies are not present in the dependencies’ cache, a build execution will fail.</li>
@@ -502,7 +501,7 @@
   <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
   <a class="jiathis_counter_style"></a>
 </div>
-<script type="text/javascript" >
+<script type="text/javascript">
   var jiathis_config={
     hideMore:false
   }
@@ -529,7 +528,7 @@
       
         
 <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="杨威 wechat" style="width: 100px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="杨威 wechat" style="width: 100px; max-width: 100%;">
     <div>微信订阅号</div>
 </div>
 
@@ -547,13 +546,13 @@
     <div id="QR" style="display: none;">
       
         <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/wechatpay.jpeg" alt="杨威 WeChat Pay"/>
+          <img id="wechat_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/wechatpay.jpeg" alt="杨威 WeChat Pay">
           <p>微信打赏</p>
         </div>
       
       
         <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/alipay.jpeg" alt="杨威 Alipay"/>
+          <img id="alipay_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/alipay.jpeg" alt="杨威 Alipay">
           <p>支付宝打赏</p>
         </div>
       
@@ -563,7 +562,7 @@
 
       
     </div>
-    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_26.jpg">
+    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_38.jpg">
 
 
         </div>
@@ -585,7 +584,7 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -596,9 +595,7 @@
 
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://img.willowspace.cn/hexo_post_img/portrait2.jpg"
-               alt="杨威" />
+          <img class="site-author-image" itemprop="image" src="http://img.willowspace.cn/hexo_post_img/portrait2.jpg" alt="杨威">
           <p class="site-author-name" itemprop="name">杨威</p>
           <p class="site-description motion-element" itemprop="description">捉虫子的人</p>
         </div>
@@ -607,7 +604,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">博客</span>
               </a>
             </div>
@@ -625,7 +622,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">106</span>
+                <span class="site-state-item-count">108</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -721,7 +718,7 @@
     <footer id="footer" class="footer">
       <blockquote class="blockquote-center">
         <div class="footer-inner">
-          <div class="copyright" >
+          <div class="copyright">
   
   &copy;  2017 - 
   <span itemprop="copyrightYear">2019</span>

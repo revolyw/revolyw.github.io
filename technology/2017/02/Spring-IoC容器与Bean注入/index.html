@@ -6,22 +6,22 @@
 
 
 <html class="theme-next mist use-motion" lang="en">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
 
 
 
-  <meta name="baidu-site-verification" content="cCnzKblc25" />
+  <meta name="baidu-site-verification" content="cCnzKblc25">
 
 
 
@@ -31,7 +31,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -39,72 +39,41 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="java,spring,设计模式,编程思想," />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="java,spring,设计模式,编程思想,">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
 
 
 
 
 
 
-<meta name="description" content="DIP即依赖倒置，是一种依赖原则：
-
-a.高层模块不应该依赖于底层模块，二者都应该依赖于抽象。b.抽象不应该依赖于细节，细节应该依赖于抽象。
-
-IoC即控制反转，是一种实现DIP的设计思想
-IoC也体现了好莱坞原则
-
-The Hollywood principle
-don‘t call us, we‘ll call you
-
-IoC容器既是”好莱坞”
-DI即依赖注入，是一种IoC的基本实现手段（除">
+<meta name="description" content="DIP即依赖倒置，是一种依赖原则：  a.高层模块不应该依赖于底层模块，二者都应该依赖于抽象。b.抽象不应该依赖于细节，细节应该依赖于抽象。  IoC即控制反转，是一种实现DIP的设计思想 IoC也体现了好莱坞原则  The Hollywood principle don‘t call us, we‘ll call you  IoC容器既是”好莱坞” DI即依赖注入，是一种IoC的基本实现手段（除">
+<meta name="keywords" content="java,spring,设计模式,编程思想">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring IoC容器与Spring DI">
 <meta property="og:url" content="http://blog.willowspace.cn/technology/2017/02/Spring-IoC容器与Bean注入/index.html">
-<meta property="og:site_name" content="Willow's blog">
-<meta property="og:description" content="DIP即依赖倒置，是一种依赖原则：
-
-a.高层模块不应该依赖于底层模块，二者都应该依赖于抽象。b.抽象不应该依赖于细节，细节应该依赖于抽象。
-
-IoC即控制反转，是一种实现DIP的设计思想
-IoC也体现了好莱坞原则
-
-The Hollywood principle
-don‘t call us, we‘ll call you
-
-IoC容器既是”好莱坞”
-DI即依赖注入，是一种IoC的基本实现手段（除">
+<meta property="og:site_name" content="Willow&#39;s blog">
+<meta property="og:description" content="DIP即依赖倒置，是一种依赖原则：  a.高层模块不应该依赖于底层模块，二者都应该依赖于抽象。b.抽象不应该依赖于细节，细节应该依赖于抽象。  IoC即控制反转，是一种实现DIP的设计思想 IoC也体现了好莱坞原则  The Hollywood principle don‘t call us, we‘ll call you  IoC容器既是”好莱坞” DI即依赖注入，是一种IoC的基本实现手段（除">
+<meta property="og:locale" content="en">
 <meta property="og:image" content="http://img.willowspace.cn/confused_injection.png">
 <meta property="og:image" content="http://img.willowspace.cn/simple_injection.png">
 <meta property="og:updated_time" content="2018-05-24T12:35:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring IoC容器与Spring DI">
-<meta name="twitter:description" content="DIP即依赖倒置，是一种依赖原则：
-
-a.高层模块不应该依赖于底层模块，二者都应该依赖于抽象。b.抽象不应该依赖于细节，细节应该依赖于抽象。
-
-IoC即控制反转，是一种实现DIP的设计思想
-IoC也体现了好莱坞原则
-
-The Hollywood principle
-don‘t call us, we‘ll call you
-
-IoC容器既是”好莱坞”
-DI即依赖注入，是一种IoC的基本实现手段（除">
+<meta name="twitter:description" content="DIP即依赖倒置，是一种依赖原则：  a.高层模块不应该依赖于底层模块，二者都应该依赖于抽象。b.抽象不应该依赖于细节，细节应该依赖于抽象。  IoC即控制反转，是一种实现DIP的设计思想 IoC也体现了好莱坞原则  The Hollywood principle don‘t call us, we‘ll call you  IoC容器既是”好莱坞” DI即依赖注入，是一种IoC的基本实现手段（除">
 <meta name="twitter:image" content="http://img.willowspace.cn/confused_injection.png">
 
 
@@ -133,7 +102,7 @@ DI即依赖注入，是一种IoC的基本实现手段（除">
 
 
 
-  <link rel="canonical" href="http://blog.willowspace.cn/technology/2017/02/Spring-IoC容器与Bean注入/"/>
+  <link rel="canonical" href="http://blog.willowspace.cn/technology/2017/02/Spring-IoC容器与Bean注入/">
 
 
 
@@ -187,14 +156,14 @@ DI即依赖注入，是一种IoC的基本实现手段（除">
   
 
   <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">Willow's blog</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
     
-      <h1 class="site-subtitle" itemprop="description"><a href="" target="_blank">Writing</a></h1>
+      <h1 class="site-subtitle" itemprop="description"><a href target="_blank">Writing</a></h1>
     
 </div>
 
@@ -216,7 +185,7 @@ DI即依赖注入，是一种IoC的基本实现手段（除">
         <li class="menu-item menu-item-home">
           <a href="http://blog.willowspace.cn" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -226,7 +195,7 @@ DI即依赖注入，是一种IoC的基本实现手段（除">
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             文章分类
           </a>
@@ -236,7 +205,7 @@ DI即依赖注入，是一种IoC的基本实现手段（除">
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             最新文章
           </a>
@@ -246,7 +215,7 @@ DI即依赖注入，是一种IoC的基本实现手段（除">
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             分类标签
           </a>
@@ -259,7 +228,7 @@ DI即依赖注入，是一种IoC的基本实现手段（除">
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             文章搜索
           </a>
@@ -308,14 +277,14 @@ DI即依赖注入，是一种IoC的基本实现手段（除">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="杨威">
-    <meta itemprop="description" content="">
+    <meta itemprop="description" content>
     <meta itemprop="image" content="http://img.willowspace.cn/hexo_post_img/portrait2.jpg">
   </span>
 
   <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Willow's blog">
     <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Willow's blog" src="">
+      <img style="display:none;" itemprop="url image" alt="Willow's blog" src>
     </span>
   </span>
 
@@ -354,7 +323,7 @@ DI即依赖注入，是一种IoC的基本实现手段（除">
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -412,7 +381,7 @@ DI即依赖注入，是一种IoC的基本实现手段（除">
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -440,7 +409,7 @@ DI即依赖注入，是一种IoC的基本实现手段（除">
 </blockquote>
 <p>IoC容器既是”好莱坞”</p>
 <h1 id="DI"><a href="#DI" class="headerlink" title="DI"></a>DI</h1><p>即<code>依赖注入</code>，是一种IoC的基本实现手段（除DI外还有DL（依赖查找）、DP（依赖拖拽）等）</p>
-<h2 id="Spring-IoC容器"><a href="#Spring-IoC容器" class="headerlink" title="Spring IoC容器"></a>Spring IoC容器</h2><p>Spring IoC容器其实就是一个应用程序的上下文，根据<a href="http://static.springsource.org/spring/docs/3.2.x/spring-framework-reference/html/beans.html#beans-basics" target="_blank" rel="external">官方文档</a>，</p>
+<h2 id="Spring-IoC容器"><a href="#Spring-IoC容器" class="headerlink" title="Spring IoC容器"></a>Spring IoC容器</h2><p>Spring IoC容器其实就是一个应用程序的上下文，根据<a href="http://static.springsource.org/spring/docs/3.2.x/spring-framework-reference/html/beans.html#beans-basics" target="_blank" rel="noopener">官方文档</a>，</p>
 <blockquote>
 <p><code>org.springframework.beans</code>和<code>org.sprinframework.context</code>包是Spring框架的基础IoC容器。<code>BeanFactory</code>接口提供了高级的配置机制来管理任意对象。<code>ApplicationContext</code>是<code>BeanFactory</code>的一个子接口,它增加了更易于集成的Spring AOP特性；消息资源处理(用于国际化),事件发布以及特定的应用层上下文，例如,用于Web应用的<code>WebApplicationContext</code></p>
 </blockquote>
@@ -449,7 +418,7 @@ DI即依赖注入，是一种IoC的基本实现手段（除">
 <p>接口<code>org.springframework.context.ApplicationContext</code>提供了一个Spring IoC容器，它代表了beans可靠的实例化、配置化以及组件化。 容器通过读取配置元数据（xml或annotation或Java Code）来实例化、配置或组装对象。</p>
 <p><code>Application Context</code>这个容器，由定义在web.xml中的<code>ContextLoaderListener</code>或<code>ContextLoaderServlet</code>初始化，其配置一般如下</p>
 </blockquote>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">listener</span>&gt;</span></div><div class="line">     <span class="tag">&lt;<span class="name">listener-class</span>&gt;</span>org.springframework.web.context.ContextLoaderListener<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">listener</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">context-param</span>&gt;</span></div><div class="line">     <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>contextConfigLocation<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></div><div class="line">     <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>classpath:*-context.xml<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">listener</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">listener-class</span>&gt;</span>org.springframework.web.context.ContextLoaderListener<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">listener</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">context-param</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>contextConfigLocation<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>classpath:*-context.xml<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>上面的配置中，我们让spring去加载所有classpath中的-context.xml结尾的文件并且用它们创建了一个应用程序上下文.   这些文件常常包含的是一些在应用中将被用到的中间层事务服务、数据访问或其它对象。基于这个配置，对于每个应用都会有这样一个应用程序上下文。</p>
 </blockquote>
@@ -457,14 +426,14 @@ DI即依赖注入，是一种IoC的基本实现手段（除">
 <p>在Spring MVC框架中，每个<code>DispatcherServlet</code>有它自己的<code>WebApplicationContext</code>，它继承了所有已经定义在根WebApplicationContext中的beans。那些继承的beans可以在具体的servlet作用域中被重载，而且在这个Servlet实例中你可以定义一些有特定作用域的beans</p>
 <p><code>WebApplicationContext</code>是一个应用程序上下文的子上下文。每个在Spring Web应用中定义的<code>DispatcherServlet</code>都有一个关联的<code>WebApplicationContext</code>,其一般配置如下</p>
 </blockquote>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">servlet</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>platform-services<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>org.springframework.web.servlet.DispatcherServlet<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">init-param</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>contextConfigLocation<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>classpath:platform-services-servlet.xml<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">load-on-startup</span>&gt;</span>1<span class="tag">&lt;/<span class="name">load-on-startup</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>platform-services<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>org.springframework.web.servlet.DispatcherServlet<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">init-param</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>contextConfigLocation<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>classpath:platform-services-servlet.xml<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">load-on-startup</span>&gt;</span>1<span class="tag">&lt;/<span class="name">load-on-startup</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>你需要提供spring配置文件(xml)的名字作为servlet的初始化参数。值得注意的是，这个xml的名字必须是<code>*-servlet.xml</code>的格式。拿上面的配置为例来说，servlet的名字为platform-services，因此xml的名字必须为platform-service-servlet.xml。不论<code>ApplicationContext</code>中定义的beans是否可用，它们都将被每个<code>WebApplicationContext</code>所引用。最佳实践是，保持一个清晰的分层，中间层服务作为业务逻辑组件，而数据访问层（通畅定义在<code>ApplicationContext</code>）和web相关组件作为控制器和视图解析器（通常定义在每个Dispatcher Servlet的<code>WebApplicationContext</code>中）</p>
 </blockquote>
-<p>参考: <a href="http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/mvc.html#mvc-servlet" target="_blank" rel="external">understand Spring MVC’s ApplicationContext hierarchy</a> and <a href="http://download.oracle.com/javaee/6/tutorial/doc/bnafd.html" target="_blank" rel="external">basic components and lifecycles in a servlet container</a> and <a href="http://stackoverflow.com/questions/7746633/declaring-spring-bean-in-parent-context-vs-child-context" target="_blank" rel="external">application initialization</a></p>
+<p>参考: <a href="http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/mvc.html#mvc-servlet" target="_blank" rel="noopener">understand Spring MVC’s ApplicationContext hierarchy</a> and <a href="http://download.oracle.com/javaee/6/tutorial/doc/bnafd.html" target="_blank" rel="noopener">basic components and lifecycles in a servlet container</a> and <a href="http://stackoverflow.com/questions/7746633/declaring-spring-bean-in-parent-context-vs-child-context" target="_blank" rel="noopener">application initialization</a></p>
 <h2 id="Spring-DI-依赖注入"><a href="#Spring-DI-依赖注入" class="headerlink" title="Spring DI(依赖注入)"></a>Spring DI(依赖注入)</h2><p>依赖注入的对象是bean，也就是各种java对象</p>
 <h3 id="被注入Bean的作用域"><a href="#被注入Bean的作用域" class="headerlink" title="被注入Bean的作用域"></a>被注入Bean的作用域</h3><p>Spring中使用scope属性来声明bean的作用域</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"com.company.class"</span> <span class="attr">scope</span>=<span class="string">"singleton"</span> /&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"com.company.class"</span> <span class="attr">scope</span>=<span class="string">"singleton"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 <p>scope取值如下</p>
 <table>
 <thead>
@@ -497,16 +466,16 @@ DI即依赖注入，是一种IoC的基本实现手段（除">
 </tbody>
 </table>
 <h3 id="集中注入"><a href="#集中注入" class="headerlink" title="集中注入"></a>集中注入</h3><p>对于1控制层、2中间业务层、3数据访问层对象。往往是3注入2，2注入1，如果系统或业务庞杂，那么注入配置会很臃肿，注入关系不清晰，如果你的不是按3-&gt;2-&gt;1这样注入，那可能情况会更糟糕。</p>
-<p><img src="http://img.willowspace.cn/confused_injection.png" alt=""></p>
+<p><img src="http://img.willowspace.cn/confused_injection.png" alt></p>
 <p>控制层、中间业务层、数据访问层的对象往往都是以singleton的形式存在于我们的系统，基于这一点，我们可以对一个类注入同一层中所有的对象，这个类本身再以<strong>singleton</strong>初始化到IoC容器中，哪里需要则注入就可以了。</p>
-<p><img src="http://img.willowspace.cn/simple_injection.png" alt=""></p>
+<p><img src="http://img.willowspace.cn/simple_injection.png" alt></p>
 <p>这里只有典型的三层的对象， 如果有更复杂的分层分块对象需要注入，则更需要集中管理注入。</p>
 <h3 id="循环注入"><a href="#循环注入" class="headerlink" title="循环注入"></a>循环注入</h3><p><strong>Circular dependencies</strong></p>
 <p>If you use predominantly constructor injection, it is possible to create an unresolvable circular dependency scenario.</p>
 <p>For example: Class A requires an instance of class B through constructor injection, and class B requires an instance of class A through constructor injection. If you configure beans for classes A and B to be injected into each other, the Spring IoC container detects this circular reference at runtime, and throws a<code>BeanCurrentlyInCreationException</code>.</p>
 <p>One possible solution is to edit the source code of some classes to be configured by setters rather than constructors. Alternatively, avoid constructor injection and use setter injection only. In other words, although it is not recommended, you can configure circular dependencies with setter injection.</p>
 <p>Unlike the <em>typical</em> case (with no circular dependencies), a circular dependency between bean A and bean B forces one of the beans to be injected into the other prior to being fully initialized itself (a classic chicken/egg scenario).</p>
-<p><a href="https://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/beans.html#beans-dependency-resolution" target="_blank" rel="external">link</a></p>
+<p><a href="https://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/beans.html#beans-dependency-resolution" target="_blank" rel="noopener">link</a></p>
 
         （EOF）
           <blockquote class="blockquote-center">
@@ -583,7 +552,7 @@ DI即依赖注入，是一种IoC的基本实现手段（除">
   <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
   <a class="jiathis_counter_style"></a>
 </div>
-<script type="text/javascript" >
+<script type="text/javascript">
   var jiathis_config={
     hideMore:false
   }
@@ -610,7 +579,7 @@ DI即依赖注入，是一种IoC的基本实现手段（除">
       
         
 <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="杨威 wechat" style="width: 100px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="杨威 wechat" style="width: 100px; max-width: 100%;">
     <div>微信订阅号</div>
 </div>
 
@@ -628,13 +597,13 @@ DI即依赖注入，是一种IoC的基本实现手段（除">
     <div id="QR" style="display: none;">
       
         <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/wechatpay.jpeg" alt="杨威 WeChat Pay"/>
+          <img id="wechat_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/wechatpay.jpeg" alt="杨威 WeChat Pay">
           <p>微信打赏</p>
         </div>
       
       
         <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/alipay.jpeg" alt="杨威 Alipay"/>
+          <img id="alipay_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/alipay.jpeg" alt="杨威 Alipay">
           <p>支付宝打赏</p>
         </div>
       
@@ -644,7 +613,7 @@ DI即依赖注入，是一种IoC的基本实现手段（除">
 
       
     </div>
-    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_25.jpg">
+    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_75.jpg">
 
 
         </div>
@@ -666,7 +635,7 @@ DI即依赖注入，是一种IoC的基本实现手段（除">
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -677,9 +646,7 @@ DI即依赖注入，是一种IoC的基本实现手段（除">
 
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://img.willowspace.cn/hexo_post_img/portrait2.jpg"
-               alt="杨威" />
+          <img class="site-author-image" itemprop="image" src="http://img.willowspace.cn/hexo_post_img/portrait2.jpg" alt="杨威">
           <p class="site-author-name" itemprop="name">杨威</p>
           <p class="site-description motion-element" itemprop="description">捉虫子的人</p>
         </div>
@@ -688,7 +655,7 @@ DI即依赖注入，是一种IoC的基本实现手段（除">
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">博客</span>
               </a>
             </div>
@@ -706,7 +673,7 @@ DI即依赖注入，是一种IoC的基本实现手段（除">
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">106</span>
+                <span class="site-state-item-count">108</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -802,7 +769,7 @@ DI即依赖注入，是一种IoC的基本实现手段（除">
     <footer id="footer" class="footer">
       <blockquote class="blockquote-center">
         <div class="footer-inner">
-          <div class="copyright" >
+          <div class="copyright">
   
   &copy;  2017 - 
   <span itemprop="copyrightYear">2019</span>

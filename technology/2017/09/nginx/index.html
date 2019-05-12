@@ -6,22 +6,22 @@
 
 
 <html class="theme-next mist use-motion" lang="en">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
 
 
 
-  <meta name="baidu-site-verification" content="cCnzKblc25" />
+  <meta name="baidu-site-verification" content="cCnzKblc25">
 
 
 
@@ -31,7 +31,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -39,21 +39,21 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="ops,nginx,负载均衡,proxy," />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="ops,nginx,负载均衡,proxy,">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
 
 
 
@@ -61,11 +61,13 @@
 
 
 <meta name="description" content="一、nginx安装12345678#安装依赖sudo apt-get install openssl zlib1g-dev libssl-dev gcc libpcre3 libpcre3-dev#配置./configure --prefix=/srv/nginx --with-http_ssl_module --with-http_realip_module --with-http_additi">
+<meta name="keywords" content="ops,nginx,负载均衡,proxy">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nginx">
 <meta property="og:url" content="http://blog.willowspace.cn/technology/2017/09/nginx/index.html">
-<meta property="og:site_name" content="Willow's blog">
+<meta property="og:site_name" content="Willow&#39;s blog">
 <meta property="og:description" content="一、nginx安装12345678#安装依赖sudo apt-get install openssl zlib1g-dev libssl-dev gcc libpcre3 libpcre3-dev#配置./configure --prefix=/srv/nginx --with-http_ssl_module --with-http_realip_module --with-http_additi">
+<meta property="og:locale" content="en">
 <meta property="og:image" content="http://img.willowspace.cn/willowspace_2016/1505020882341.png">
 <meta property="og:updated_time" content="2018-02-24T02:56:27.000Z">
 <meta name="twitter:card" content="summary">
@@ -99,7 +101,7 @@
 
 
 
-  <link rel="canonical" href="http://blog.willowspace.cn/technology/2017/09/nginx/"/>
+  <link rel="canonical" href="http://blog.willowspace.cn/technology/2017/09/nginx/">
 
 
 
@@ -153,14 +155,14 @@
   
 
   <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">Willow's blog</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
     
-      <h1 class="site-subtitle" itemprop="description"><a href="" target="_blank">Writing</a></h1>
+      <h1 class="site-subtitle" itemprop="description"><a href target="_blank">Writing</a></h1>
     
 </div>
 
@@ -182,7 +184,7 @@
         <li class="menu-item menu-item-home">
           <a href="http://blog.willowspace.cn" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -192,7 +194,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             文章分类
           </a>
@@ -202,7 +204,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             最新文章
           </a>
@@ -212,7 +214,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             分类标签
           </a>
@@ -225,7 +227,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             文章搜索
           </a>
@@ -274,14 +276,14 @@
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="杨威">
-    <meta itemprop="description" content="">
+    <meta itemprop="description" content>
     <meta itemprop="image" content="http://img.willowspace.cn/hexo_post_img/portrait2.jpg">
   </span>
 
   <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Willow's blog">
     <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Willow's blog" src="">
+      <img style="display:none;" itemprop="url image" alt="Willow's blog" src>
     </span>
   </span>
 
@@ -320,7 +322,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -378,7 +380,7 @@
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -394,50 +396,50 @@
       
 
       
-        <h1 id="一、nginx安装"><a href="#一、nginx安装" class="headerlink" title="一、nginx安装"></a>一、nginx安装</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">#安装依赖</div><div class="line">sudo apt-get install openssl zlib1g-dev libssl-dev gcc libpcre3 libpcre3-dev</div><div class="line">#配置</div><div class="line">./configure --prefix=/srv/nginx --with-http_ssl_module --with-http_realip_module --with-http_addition_module --with-http_dav_module --with-http_flv_module --with-http_mp4_module --with-http_gzip_static_module --with-mail --with-mail_ssl_module</div><div class="line">#安装</div><div class="line">make &amp;&amp; make install</div><div class="line">#设置nginx环境变量(软链接)</div><div class="line">sudo ln -s /srv/nginx/sbin/nginx /usr/local/sbin/nginx</div></pre></td></tr></table></figure>
-<h1 id="二、nginx模块管理"><a href="#二、nginx模块管理" class="headerlink" title="二、nginx模块管理"></a>二、nginx模块管理</h1><h2 id="查看已安装的模块"><a href="#查看已安装的模块" class="headerlink" title="查看已安装的模块"></a>查看已安装的模块</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nginx -V</div></pre></td></tr></table></figure>
+        <h1 id="一、nginx安装"><a href="#一、nginx安装" class="headerlink" title="一、nginx安装"></a>一、nginx安装</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">安装依赖</span></span><br><span class="line">sudo apt-get install openssl zlib1g-dev libssl-dev gcc libpcre3 libpcre3-dev</span><br><span class="line"><span class="meta">#</span><span class="bash">配置</span></span><br><span class="line">./configure --prefix=/srv/nginx --with-http_ssl_module --with-http_realip_module --with-http_addition_module --with-http_dav_module --with-http_flv_module --with-http_mp4_module --with-http_gzip_static_module --with-mail --with-mail_ssl_module</span><br><span class="line"><span class="meta">#</span><span class="bash">安装</span></span><br><span class="line">make &amp;&amp; make install</span><br><span class="line"><span class="meta">#</span><span class="bash">设置nginx环境变量(软链接)</span></span><br><span class="line">sudo ln -s /srv/nginx/sbin/nginx /usr/local/sbin/nginx</span><br></pre></td></tr></table></figure>
+<h1 id="二、nginx模块管理"><a href="#二、nginx模块管理" class="headerlink" title="二、nginx模块管理"></a>二、nginx模块管理</h1><h2 id="查看已安装的模块"><a href="#查看已安装的模块" class="headerlink" title="查看已安装的模块"></a>查看已安装的模块</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -V</span><br></pre></td></tr></table></figure>
 <h2 id="添加编译模块"><a href="#添加编译模块" class="headerlink" title="添加编译模块"></a>添加编译模块</h2><ol>
 <li><p>查看已安装的模块</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">nginx -V</div><div class="line"># 复制configure arguments后的模块</div><div class="line">configure arguments: --prefix=/srv/nginx --with-http_ssl_module --with-http_realip_module --with-http_addition_module --with-http_dav_module --with-http_flv_module --with-http_mp4_module --with-http_gzip_static_module --with-mail --with-mail_ssl_module</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nginx -V</span><br><span class="line"><span class="meta">#</span><span class="bash"> 复制configure arguments后的模块</span></span><br><span class="line">configure arguments: --prefix=/srv/nginx --with-http_ssl_module --with-http_realip_module --with-http_addition_module --with-http_dav_module --with-http_flv_module --with-http_mp4_module --with-http_gzip_static_module --with-mail --with-mail_ssl_module</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>重新配置编译选项并追加新增的某块</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./configure --prefix=/srv/nginx --with-http_ssl_module --with-http_realip_module --with-http_addition_module --with-http_dav_module --with-http_flv_module --with-http_mp4_module --with-http_gzip_static_module --with-mail --with-mail_ssl_module</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/srv/nginx --with-http_ssl_module --with-http_realip_module --with-http_addition_module --with-http_dav_module --with-http_flv_module --with-http_mp4_module --with-http_gzip_static_module --with-mail --with-mail_ssl_module</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>make</p>
 <p><strong>切勿执行make install，否则将覆盖已安装的nginx</strong> </p>
 </li>
 <li><p>备份已安装的nginx二进制文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cp /usr/local/sbin/nginx /usr/local/sbin/nginx.bak</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /usr/local/sbin/nginx /usr/local/sbin/nginx.bak</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>替换重新编译的er禁止文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 源码目录中</div><div class="line">cp ./objs/nginx /usr/local/sbin/nginx</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 源码目录中</span></span><br><span class="line">cp ./objs/nginx /usr/local/sbin/nginx</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>测试无误后删除备份</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm /usr/local/nginx/sbin/nginx.bak</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm /usr/local/nginx/sbin/nginx.bak</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h1 id="三、nginx基本配置"><a href="#三、nginx基本配置" class="headerlink" title="三、nginx基本配置"></a>三、nginx基本配置</h1><h2 id="代理转发"><a href="#代理转发" class="headerlink" title="代理转发"></a>代理转发</h2><h3 id="http代理转发"><a href="#http代理转发" class="headerlink" title="http代理转发"></a>http代理转发</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"># 将域名为x.domain.com的请求代理至localhost的8080端口</div><div class="line">server&#123;</div><div class="line">    listen  80;</div><div class="line">    server_name x.domain.com;</div><div class="line">    location / &#123;</div><div class="line">       proxy_pass  http://localhost:8080/;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="https代理转发"><a href="#https代理转发" class="headerlink" title="https代理转发"></a>https代理转发</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 默认https使用443端口</span></div><div class="line"><span class="comment"># 将从443端口进入且域名为x.domain.com的请求代理至localhost的8080端口</span></div><div class="line"><span class="section">server</span> &#123;</div><div class="line">   <span class="attribute">listen</span>       <span class="number">443</span> ssl;</div><div class="line">   <span class="attribute">server_name</span>  x.domain.com;</div><div class="line"></div><div class="line">   <span class="attribute">ssl</span> <span class="literal">on</span>;</div><div class="line">   <span class="attribute">ssl_certificate</span>      <span class="variable">$&#123;cert_path&#125;</span>/x.pem;</div><div class="line">   <span class="attribute">ssl_certificate_key</span>  <span class="variable">$&#123;cert_path&#125;</span>/x.key;</div><div class="line">   <span class="attribute">ssl_session_timeout</span>  <span class="number">5m</span>;</div><div class="line">   <span class="attribute">ssl_ciphers</span>  ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;</div><div class="line">   <span class="attribute">ssl_protocols</span> TLSv1 TLSv1.<span class="number">1</span> TLSv1.<span class="number">2</span>;</div><div class="line">   <span class="attribute">ssl_prefer_server_ciphers</span>  <span class="literal">on</span>;</div><div class="line"></div><div class="line">   <span class="attribute">location</span> / &#123;</div><div class="line">       <span class="attribute">proxy_pass</span>  http://localhost:8080/;</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="http强转https"><a href="#http强转https" class="headerlink" title="http强转https"></a>http强转https</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"># 将域名为x.domain.com的请求301重定向为https协议请求</div><div class="line">server&#123;</div><div class="line">    listen  80;</div><div class="line">    server_name x.domain.com;</div><div class="line"></div><div class="line">    location / &#123;</div><div class="line">        return 301 https://$host$request_uri;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="禁止ip直接访问"><a href="#禁止ip直接访问" class="headerlink" title="禁止ip直接访问"></a>禁止ip直接访问</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#禁止ip直接访问80端口</span></div><div class="line"><span class="section">server</span> &#123;</div><div class="line">   <span class="attribute">listen</span> <span class="number">80</span> default_server;</div><div class="line">   <span class="attribute">server_name</span> _;</div><div class="line">   <span class="attribute">return</span> <span class="number">444</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">#禁止ip直接访问443端口</span></div><div class="line"><span class="section">server</span> &#123;</div><div class="line">   <span class="attribute">listen</span>       <span class="number">443</span> ssl default_server;</div><div class="line">   <span class="attribute">server_name</span>  _;</div><div class="line"></div><div class="line">   <span class="attribute">ssl</span> <span class="literal">on</span>;</div><div class="line">   <span class="attribute">ssl_certificate</span>      <span class="variable">$&#123;pem_file&#125;</span>;</div><div class="line">   <span class="attribute">ssl_certificate_key</span>  <span class="variable">$&#123;key_file&#125;</span>;</div><div class="line">   <span class="attribute">ssl_session_timeout</span>  <span class="number">5m</span>;</div><div class="line">   <span class="attribute">ssl_ciphers</span>  <span class="variable">$&#123;ssl_ciphers_string&#125;</span>;</div><div class="line">   <span class="attribute">ssl_protocols</span> TLSv1 TLSv1.<span class="number">1</span> TLSv1.<span class="number">2</span>;</div><div class="line">   <span class="attribute">ssl_prefer_server_ciphers</span>  <span class="literal">on</span>;</div><div class="line">   <span class="attribute">return</span> <span class="number">444</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="四、nginx开源模块"><a href="#四、nginx开源模块" class="headerlink" title="四、nginx开源模块"></a>四、nginx开源模块</h1><h2 id="上游节点健康检测"><a href="#上游节点健康检测" class="headerlink" title="上游节点健康检测"></a>上游节点健康检测</h2><p>健康检测选用淘宝团队开发的<a href="https://github.com/yaoweibin/nginx_upstream_check_module" target="_blank" rel="external">nginx_upstream_check_module</a>模块</p>
+<h1 id="三、nginx基本配置"><a href="#三、nginx基本配置" class="headerlink" title="三、nginx基本配置"></a>三、nginx基本配置</h1><h2 id="代理转发"><a href="#代理转发" class="headerlink" title="代理转发"></a>代理转发</h2><h3 id="http代理转发"><a href="#http代理转发" class="headerlink" title="http代理转发"></a>http代理转发</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将域名为x.domain.com的请求代理至localhost的8080端口</span></span><br><span class="line">server&#123;</span><br><span class="line">    <span class="attribute">listen</span>  <span class="number">80</span>;</span><br><span class="line">    <span class="attribute">server_name</span> x.domain.com;</span><br><span class="line">    <span class="attribute">location</span> / &#123;</span><br><span class="line">       <span class="attribute">proxy_pass</span>  http://localhost:8080/;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="https代理转发"><a href="#https代理转发" class="headerlink" title="https代理转发"></a>https代理转发</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认https使用443端口</span></span><br><span class="line"><span class="comment"># 将从443端口进入且域名为x.domain.com的请求代理至localhost的8080端口</span></span><br><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">   <span class="attribute">listen</span>       <span class="number">443</span> ssl;</span><br><span class="line">   <span class="attribute">server_name</span>  x.domain.com;</span><br><span class="line"></span><br><span class="line">   <span class="attribute">ssl</span> <span class="literal">on</span>;</span><br><span class="line">   <span class="attribute">ssl_certificate</span>      <span class="variable">$&#123;cert_path&#125;</span>/x.pem;</span><br><span class="line">   <span class="attribute">ssl_certificate_key</span>  <span class="variable">$&#123;cert_path&#125;</span>/x.key;</span><br><span class="line">   <span class="attribute">ssl_session_timeout</span>  <span class="number">5m</span>;</span><br><span class="line">   <span class="attribute">ssl_ciphers</span>  ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;</span><br><span class="line">   <span class="attribute">ssl_protocols</span> TLSv1 TLSv1.<span class="number">1</span> TLSv1.<span class="number">2</span>;</span><br><span class="line">   <span class="attribute">ssl_prefer_server_ciphers</span>  <span class="literal">on</span>;</span><br><span class="line"></span><br><span class="line">   <span class="attribute">location</span> / &#123;</span><br><span class="line">       <span class="attribute">proxy_pass</span>  http://localhost:8080/;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="http强转https"><a href="#http强转https" class="headerlink" title="http强转https"></a>http强转https</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将域名为x.domain.com的请求301重定向为https协议请求</span></span><br><span class="line">server&#123;</span><br><span class="line">    <span class="attribute">listen</span>  <span class="number">80</span>;</span><br><span class="line">    <span class="attribute">server_name</span> x.domain.com;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">location</span> / &#123;</span><br><span class="line">        <span class="attribute">return</span> <span class="number">301</span> https://<span class="variable">$host</span><span class="variable">$request_uri</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="禁止ip直接访问"><a href="#禁止ip直接访问" class="headerlink" title="禁止ip直接访问"></a>禁止ip直接访问</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#禁止ip直接访问80端口</span></span><br><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">   <span class="attribute">listen</span> <span class="number">80</span> default_server;</span><br><span class="line">   <span class="attribute">server_name</span> _;</span><br><span class="line">   <span class="attribute">return</span> <span class="number">444</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#禁止ip直接访问443端口</span></span><br><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">   <span class="attribute">listen</span>       <span class="number">443</span> ssl default_server;</span><br><span class="line">   <span class="attribute">server_name</span>  _;</span><br><span class="line"></span><br><span class="line">   <span class="attribute">ssl</span> <span class="literal">on</span>;</span><br><span class="line">   <span class="attribute">ssl_certificate</span>      <span class="variable">$&#123;pem_file&#125;</span>;</span><br><span class="line">   <span class="attribute">ssl_certificate_key</span>  <span class="variable">$&#123;key_file&#125;</span>;</span><br><span class="line">   <span class="attribute">ssl_session_timeout</span>  <span class="number">5m</span>;</span><br><span class="line">   <span class="attribute">ssl_ciphers</span>  <span class="variable">$&#123;ssl_ciphers_string&#125;</span>;</span><br><span class="line">   <span class="attribute">ssl_protocols</span> TLSv1 TLSv1.<span class="number">1</span> TLSv1.<span class="number">2</span>;</span><br><span class="line">   <span class="attribute">ssl_prefer_server_ciphers</span>  <span class="literal">on</span>;</span><br><span class="line">   <span class="attribute">return</span> <span class="number">444</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="四、nginx开源模块"><a href="#四、nginx开源模块" class="headerlink" title="四、nginx开源模块"></a>四、nginx开源模块</h1><h2 id="上游节点健康检测"><a href="#上游节点健康检测" class="headerlink" title="上游节点健康检测"></a>上游节点健康检测</h2><p>健康检测选用淘宝团队开发的<a href="https://github.com/yaoweibin/nginx_upstream_check_module" target="_blank" rel="noopener">nginx_upstream_check_module</a>模块</p>
 <ol>
 <li>安装nginx_upstream_check_module</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"># 进入nginx源码目录</div><div class="line">cd /srv/nginx-1.12.1</div><div class="line"></div><div class="line"># 下载check模块</div><div class="line">wget -O nginx_upstream_check_module.zip &apos;https://codeload.github.com/yaoweibin/nginx_upstream_check_module/zip/master&apos;</div><div class="line"></div><div class="line"># 解压</div><div class="line">unzip nginx_upstream_check_module.zip</div><div class="line"></div><div class="line"># 打补丁</div><div class="line">patch -p1 &lt; ./nginx_upstream_check_module-master/check_1.12.1+.patch</div><div class="line"></div><div class="line"># 添加check模块(参考上面添加编译模块的方法)</div><div class="line">./configure $&#123;origin_params&#125; --add-module=./nginx_upstream_check_module-master/</div><div class="line">make (注意：此处只make，编译参数需要和之前的一样)</div><div class="line">mv /usr/local/sbin/nginx /usr/local/sbin/nginx-1.21.1.bak</div><div class="line">cp ./objs/nginx /usr/local/sbin/nginx</div><div class="line"></div><div class="line"># 检测是否成功</div><div class="line">/usr/local/sbin/nginx -t</div></pre></td></tr></table></figure>
-<ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 进入nginx源码目录</span></span><br><span class="line">cd /srv/nginx-1.12.1</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 下载check模块</span></span><br><span class="line">wget -O nginx_upstream_check_module.zip 'https://codeload.github.com/yaoweibin/nginx_upstream_check_module/zip/master'</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 解压</span></span><br><span class="line">unzip nginx_upstream_check_module.zip</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 打补丁</span></span><br><span class="line">patch -p1 &lt; ./nginx_upstream_check_module-master/check_1.12.1+.patch</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加check模块(参考上面添加编译模块的方法)</span></span><br><span class="line">./configure $&#123;origin_params&#125; --add-module=./nginx_upstream_check_module-master/</span><br><span class="line">make (注意：此处只make，编译参数需要和之前的一样)</span><br><span class="line">mv /usr/local/sbin/nginx /usr/local/sbin/nginx-1.21.1.bak</span><br><span class="line">cp ./objs/nginx /usr/local/sbin/nginx</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 检测是否成功</span></span><br><span class="line">/usr/local/sbin/nginx -t</span><br></pre></td></tr></table></figure>
+<ol start="2">
 <li>配置健康检测</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"># 配置上游服务器健康检测</div><div class="line">upstream tomcat-cluster-2 &#123;</div><div class="line">    server 127.0.0.1:8082; #上游服务器地址及端口</div><div class="line">    check interval=1800000 rise=2 fall=5 timeout=1000 type=http; #检测规则</div><div class="line">    check_http_send &quot;GET /health HTTP/1.0\r\n\r\n&quot;; #健康检测接口，将按检测规则进行轮询</div><div class="line">    check_http_expect_alive http_2xx http_3xx; #规定健康检测接口的成功返回状态码</div><div class="line">&#125;</div><div class="line"># 配置服务器</div><div class="line">server&#123;</div><div class="line">    listen  80;</div><div class="line">    server_name x.domain.cn;</div><div class="line"></div><div class="line">    location / &#123;</div><div class="line">        proxy_pass  http://tomcat-cluster-2/;</div><div class="line">    &#125;</div><div class="line">    # 开启健康状态页面路由</div><div class="line">    location /status &#123;</div><div class="line">            check_status html; #健康状态页面，默认以html格式展现，可选html、json、csv</div><div class="line">            access_log   off; #不记录access_log</div><div class="line">            #allow all;</div><div class="line">            #deny all;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 配置上游服务器健康检测</span></span><br><span class="line">upstream tomcat-cluster-2 &#123;</span><br><span class="line">    server 127.0.0.1:8082; #上游服务器地址及端口</span><br><span class="line">    check interval=1800000 rise=2 fall=5 timeout=1000 type=http; #检测规则</span><br><span class="line">    check_http_send "GET /health HTTP/1.0\r\n\r\n"; #健康检测接口，将按检测规则进行轮询</span><br><span class="line">    check_http_expect_alive http_2xx http_3xx; #规定健康检测接口的成功返回状态码</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#</span><span class="bash"> 配置服务器</span></span><br><span class="line">server&#123;</span><br><span class="line">    listen  80;</span><br><span class="line">    server_name x.domain.cn;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        proxy_pass  http://tomcat-cluster-2/;</span><br><span class="line">    &#125;</span><br><span class="line">    # 开启健康状态页面路由</span><br><span class="line">    location /status &#123;</span><br><span class="line">            check_status html; #健康状态页面，默认以html格式展现，可选html、json、csv</span><br><span class="line">            access_log   off; #不记录access_log</span><br><span class="line">            #allow all;</span><br><span class="line">            #deny all;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
 <li>查看健康状态</li>
 </ol>
-<p>按照如上配置，访问x.domain.cn/status可以看到健康状态<img src="http://img.willowspace.cn/willowspace_2016/1505020882341.png" alt=""></p>
+<p>按照如上配置，访问x.domain.cn/status可以看到健康状态<img src="http://img.willowspace.cn/willowspace_2016/1505020882341.png" alt></p>
 <p>其中<code>number</code>代表上游服务器节点个数，<code>generation</code>为健康检测本身load的次数(nginx重启或者reload都会导致<code>generation</code>增加)</p>
-<p>更多健康检测模块配置参考<a href="http://tengine.taobao.org/document_cn/http_upstream_check_cn.html" target="_blank" rel="external">配置文档</a></p>
-<h2 id="sticky"><a href="#sticky" class="headerlink" title="sticky"></a>sticky</h2><p>官方收费版，参考<a href="http://nginx.org/en/docs/http/ngx_http_upstream_module.html#sticky" target="_blank" rel="external">nginx stciky</a>模块</p>
-<p>开源版，参考<a href="https://bitbucket.org/nginx-goodies/nginx-sticky-module-ng" target="_blank" rel="external">https://bitbucket.org/nginx-goodies/nginx-sticky-module-ng</a></p>
-<h1 id="五、更多配置"><a href="#五、更多配置" class="headerlink" title="五、更多配置"></a>五、更多配置</h1><h2 id="413-Request-Entity-Too-Large-Error"><a href="#413-Request-Entity-Too-Large-Error" class="headerlink" title="413 Request Entity Too Large Error"></a>413 Request Entity Too Large Error</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># http, server 或 location节点中添加</span></div><div class="line"><span class="attribute">client_max_body_size</span> <span class="number">10M</span>;</div></pre></td></tr></table></figure>
+<p>更多健康检测模块配置参考<a href="http://tengine.taobao.org/document_cn/http_upstream_check_cn.html" target="_blank" rel="noopener">配置文档</a></p>
+<h2 id="sticky"><a href="#sticky" class="headerlink" title="sticky"></a>sticky</h2><p>官方收费版，参考<a href="http://nginx.org/en/docs/http/ngx_http_upstream_module.html#sticky" target="_blank" rel="noopener">nginx stciky</a>模块</p>
+<p>开源版，参考<a href="https://bitbucket.org/nginx-goodies/nginx-sticky-module-ng" target="_blank" rel="noopener">https://bitbucket.org/nginx-goodies/nginx-sticky-module-ng</a></p>
+<h1 id="五、更多配置"><a href="#五、更多配置" class="headerlink" title="五、更多配置"></a>五、更多配置</h1><h2 id="413-Request-Entity-Too-Large-Error"><a href="#413-Request-Entity-Too-Large-Error" class="headerlink" title="413 Request Entity Too Large Error"></a>413 Request Entity Too Large Error</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># http, server 或 location节点中添加</span></span><br><span class="line"><span class="attribute">client_max_body_size</span> <span class="number">10M</span>;</span><br></pre></td></tr></table></figure>
 
         （EOF）
           <blockquote class="blockquote-center">
@@ -514,7 +516,7 @@
   <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
   <a class="jiathis_counter_style"></a>
 </div>
-<script type="text/javascript" >
+<script type="text/javascript">
   var jiathis_config={
     hideMore:false
   }
@@ -541,7 +543,7 @@
       
         
 <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="杨威 wechat" style="width: 100px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="杨威 wechat" style="width: 100px; max-width: 100%;">
     <div>微信订阅号</div>
 </div>
 
@@ -559,13 +561,13 @@
     <div id="QR" style="display: none;">
       
         <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/wechatpay.jpeg" alt="杨威 WeChat Pay"/>
+          <img id="wechat_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/wechatpay.jpeg" alt="杨威 WeChat Pay">
           <p>微信打赏</p>
         </div>
       
       
         <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/alipay.jpeg" alt="杨威 Alipay"/>
+          <img id="alipay_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/alipay.jpeg" alt="杨威 Alipay">
           <p>支付宝打赏</p>
         </div>
       
@@ -575,7 +577,7 @@
 
       
     </div>
-    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_57.jpg">
+    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_51.jpg">
 
 
         </div>
@@ -597,7 +599,7 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -608,9 +610,7 @@
 
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://img.willowspace.cn/hexo_post_img/portrait2.jpg"
-               alt="杨威" />
+          <img class="site-author-image" itemprop="image" src="http://img.willowspace.cn/hexo_post_img/portrait2.jpg" alt="杨威">
           <p class="site-author-name" itemprop="name">杨威</p>
           <p class="site-description motion-element" itemprop="description">捉虫子的人</p>
         </div>
@@ -619,7 +619,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">博客</span>
               </a>
             </div>
@@ -637,7 +637,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">106</span>
+                <span class="site-state-item-count">108</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -733,7 +733,7 @@
     <footer id="footer" class="footer">
       <blockquote class="blockquote-center">
         <div class="footer-inner">
-          <div class="copyright" >
+          <div class="copyright">
   
   &copy;  2017 - 
   <span itemprop="copyrightYear">2019</span>

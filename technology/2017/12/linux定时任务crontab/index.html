@@ -6,22 +6,22 @@
 
 
 <html class="theme-next mist use-motion" lang="en">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
 
 
 
-  <meta name="baidu-site-verification" content="cCnzKblc25" />
+  <meta name="baidu-site-verification" content="cCnzKblc25">
 
 
 
@@ -31,7 +31,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -39,47 +39,40 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="ops,linux,crontab," />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="ops,linux,crontab,">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
 
 
 
 
 
 
-<meta name="description" content="crontab介绍通过crontab 命令，我们可以在固定的间隔时间执行指定的系统指令或 shell script脚本。时间间隔的单位可以是分钟、小时、日、月、周及以上的任意组合。这个命令非常适合周期性的日志分析或数据备份等工作。
-1crontab [-u user] file crontab [-u user][ -e | -l | -r ]
-参数
--u user：用来设定某个用户的cronta">
+<meta name="description" content="crontab介绍通过crontab 命令，我们可以在固定的间隔时间执行指定的系统指令或 shell script脚本。时间间隔的单位可以是分钟、小时、日、月、周及以上的任意组合。这个命令非常适合周期性的日志分析或数据备份等工作。 1crontab [-u user] file crontab [-u user][ -e | -l | -r ] 参数 -u user：用来设定某个用户的cronta">
+<meta name="keywords" content="ops,linux,crontab">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux定时任务crontab">
 <meta property="og:url" content="http://blog.willowspace.cn/technology/2017/12/linux定时任务crontab/index.html">
-<meta property="og:site_name" content="Willow's blog">
-<meta property="og:description" content="crontab介绍通过crontab 命令，我们可以在固定的间隔时间执行指定的系统指令或 shell script脚本。时间间隔的单位可以是分钟、小时、日、月、周及以上的任意组合。这个命令非常适合周期性的日志分析或数据备份等工作。
-1crontab [-u user] file crontab [-u user][ -e | -l | -r ]
-参数
--u user：用来设定某个用户的cronta">
+<meta property="og:site_name" content="Willow&#39;s blog">
+<meta property="og:description" content="crontab介绍通过crontab 命令，我们可以在固定的间隔时间执行指定的系统指令或 shell script脚本。时间间隔的单位可以是分钟、小时、日、月、周及以上的任意组合。这个命令非常适合周期性的日志分析或数据备份等工作。 1crontab [-u user] file crontab [-u user][ -e | -l | -r ] 参数 -u user：用来设定某个用户的cronta">
+<meta property="og:locale" content="en">
 <meta property="og:image" content="http://img.willowspace.cn/willowspace_2016/1504599291802.png">
 <meta property="og:updated_time" content="2017-12-09T03:47:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux定时任务crontab">
-<meta name="twitter:description" content="crontab介绍通过crontab 命令，我们可以在固定的间隔时间执行指定的系统指令或 shell script脚本。时间间隔的单位可以是分钟、小时、日、月、周及以上的任意组合。这个命令非常适合周期性的日志分析或数据备份等工作。
-1crontab [-u user] file crontab [-u user][ -e | -l | -r ]
-参数
--u user：用来设定某个用户的cronta">
+<meta name="twitter:description" content="crontab介绍通过crontab 命令，我们可以在固定的间隔时间执行指定的系统指令或 shell script脚本。时间间隔的单位可以是分钟、小时、日、月、周及以上的任意组合。这个命令非常适合周期性的日志分析或数据备份等工作。 1crontab [-u user] file crontab [-u user][ -e | -l | -r ] 参数 -u user：用来设定某个用户的cronta">
 <meta name="twitter:image" content="http://img.willowspace.cn/willowspace_2016/1504599291802.png">
 
 
@@ -108,7 +101,7 @@
 
 
 
-  <link rel="canonical" href="http://blog.willowspace.cn/technology/2017/12/linux定时任务crontab/"/>
+  <link rel="canonical" href="http://blog.willowspace.cn/technology/2017/12/linux定时任务crontab/">
 
 
 
@@ -162,14 +155,14 @@
   
 
   <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">Willow's blog</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
     
-      <h1 class="site-subtitle" itemprop="description"><a href="" target="_blank">Writing</a></h1>
+      <h1 class="site-subtitle" itemprop="description"><a href target="_blank">Writing</a></h1>
     
 </div>
 
@@ -191,7 +184,7 @@
         <li class="menu-item menu-item-home">
           <a href="http://blog.willowspace.cn" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -201,7 +194,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             文章分类
           </a>
@@ -211,7 +204,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             最新文章
           </a>
@@ -221,7 +214,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             分类标签
           </a>
@@ -234,7 +227,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             文章搜索
           </a>
@@ -283,14 +276,14 @@
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="杨威">
-    <meta itemprop="description" content="">
+    <meta itemprop="description" content>
     <meta itemprop="image" content="http://img.willowspace.cn/hexo_post_img/portrait2.jpg">
   </span>
 
   <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Willow's blog">
     <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Willow's blog" src="">
+      <img style="display:none;" itemprop="url image" alt="Willow's blog" src>
     </span>
   </span>
 
@@ -329,7 +322,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -387,7 +380,7 @@
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -404,7 +397,7 @@
 
       
         <h1 id="crontab"><a href="#crontab" class="headerlink" title="crontab"></a>crontab</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>通过crontab 命令，我们可以在固定的间隔时间执行指定的系统指令或 shell script脚本。时间间隔的单位可以是分钟、小时、日、月、周及以上的任意组合。这个命令非常适合周期性的日志分析或数据备份等工作。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">crontab [-u user] file crontab [-u user][ -e | -l | -r ]</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab [-u user] file crontab [-u user][ -e | -l | -r ]</span><br></pre></td></tr></table></figure>
 <h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><ul>
 <li>-u user：用来设定某个用户的crontab服务；</li>
 <li>file：file是命令文件的名字,表示将file做为crontab的任务列表文件并载入crontab。如果在命令行中没有指定这个文件，crontab命令将接受标准输入（键盘）上键入的命令，并将它们载入crontab。</li>
@@ -424,13 +417,13 @@
 </ul>
 <h2 id="crontab文件惯例"><a href="#crontab文件惯例" class="headerlink" title="crontab文件惯例"></a>crontab文件惯例</h2><p>我个人惯例会把cron文件创建在<code>/opt/cron</code>目录下</p>
 <p>新创建的cron文件的副本会被放在<code>/var/spool/cron/crontabs</code>目录下，文件名为用户名</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"># 创建cron文件</div><div class="line">vim /opt/cron/cron_file</div><div class="line"># 提交cron任务</div><div class="line">crontab /opt/cron/cron_file</div><div class="line"># 启动</div><div class="line">/etc/init.d/cron start</div><div class="line"># 关闭</div><div class="line">/etc/init.d/cron stop</div><div class="line"># 重启</div><div class="line">/etc/init.d/cron restart</div></pre></td></tr></table></figure>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 创建cron文件</span></span><br><span class="line">vim /opt/cron/cron_file</span><br><span class="line"><span class="meta">#</span><span class="bash"> 提交cron任务</span></span><br><span class="line">crontab /opt/cron/cron_file</span><br><span class="line"><span class="meta">#</span><span class="bash"> 启动</span></span><br><span class="line">/etc/init.d/cron start</span><br><span class="line"><span class="meta">#</span><span class="bash"> 关闭</span></span><br><span class="line">/etc/init.d/cron stop</span><br><span class="line"><span class="meta">#</span><span class="bash"> 重启</span></span><br><span class="line">/etc/init.d/cron restart</span><br></pre></td></tr></table></figure>
 <h2 id="使用注意事项"><a href="#使用注意事项" class="headerlink" title="使用注意事项"></a>使用注意事项</h2><p>新创建的cron job，不会马上执行，至少要过2分钟才执行。如果重启cron则马上执行。</p>
 <p>当crontab失效时，可以尝试/etc/init.d/crond restart解决问题。或者查看日志看某个job有没有执行/报错tail -f /var/log/cron。</p>
 <p>千万别乱运行crontab -r。它从Crontab目录（/var/spool/cron）中删除用户的Crontab文件。删除了该用户的所有crontab都没了。</p>
 <p>在crontab中%是有特殊含义的，表示换行的意思。如果要用的话必须进行转义%，如经常用的date ‘+%Y%m%d’在crontab里是不会执行的，应该换成date ‘+%Y%m%d’。`</p>
-<h2 id="cron表达式"><a href="#cron表达式" class="headerlink" title="cron表达式"></a>cron表达式<img src="http://img.willowspace.cn/willowspace_2016/1504599291802.png" alt=""></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"># 实例1：每1分钟执行一次myCommand</div><div class="line">* * * * * myCommand</div><div class="line"># 实例2：每小时的第3和第15分钟执行</div><div class="line">3,15 * * * * myCommand</div><div class="line"># 实例3：在上午8点到11点的第3和第15分钟执行</div><div class="line">3,15 8-11 * * * myCommand</div><div class="line"># 实例4：每隔两天的上午8点到11点的第3和第15分钟执行</div><div class="line">3,15 8-11 */2  *  * myCommand</div><div class="line"># 实例5：每周一上午8点到11点的第3和第15分钟执行</div><div class="line">3,15 8-11 * * 1 myCommand</div><div class="line"># 实例6：每晚的21:30重启smb</div><div class="line">30 21 * * * /etc/init.d/smb restart</div><div class="line"># 实例7：每月1、10、22日的4 : 45重启smb</div><div class="line">45 4 1,10,22 * * /etc/init.d/smb restart</div><div class="line"># 实例8：每周六、周日的1 : 10重启smb</div><div class="line">10 1 * * 6,0 /etc/init.d/smb restart</div><div class="line"># 实例9：每天18 : 00至23 : 00之间每隔30分钟重启smb</div><div class="line">0,30 18-23 * * * /etc/init.d/smb restart</div><div class="line"># 实例10：每星期六的晚上11 : 00 pm重启smb</div><div class="line">0 23 * * 6 /etc/init.d/smb restart</div><div class="line"># 实例11：每一小时重启smb</div><div class="line">* */1 * * * /etc/init.d/smb restart</div><div class="line"># 实例12：晚上11点到早上7点之间，每隔一小时重启smb</div><div class="line">0 23-7 * * * /etc/init.d/smb restart</div></pre></td></tr></table></figure>
-<h1 id="定时备份"><a href="#定时备份" class="headerlink" title="定时备份"></a>定时备份</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># 创建定时任务文件</div><div class="line">crontab $cron-file-name</div><div class="line"># 写入规则每天0点、12点备份一次</div><div class="line">vim $cron-file-name</div><div class="line">0 0,12 */1 * * $backup-shell</div><div class="line"># 启动定时任务</div><div class="line">crontab $cron-file-name</div></pre></td></tr></table></figure>
+<h2 id="cron表达式"><a href="#cron表达式" class="headerlink" title="cron表达式"></a>cron表达式<img src="http://img.willowspace.cn/willowspace_2016/1504599291802.png" alt></h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 实例1：每1分钟执行一次myCommand</span></span><br><span class="line">* * * * * myCommand</span><br><span class="line"><span class="meta">#</span><span class="bash"> 实例2：每小时的第3和第15分钟执行</span></span><br><span class="line">3,15 * * * * myCommand</span><br><span class="line"><span class="meta">#</span><span class="bash"> 实例3：在上午8点到11点的第3和第15分钟执行</span></span><br><span class="line">3,15 8-11 * * * myCommand</span><br><span class="line"><span class="meta">#</span><span class="bash"> 实例4：每隔两天的上午8点到11点的第3和第15分钟执行</span></span><br><span class="line">3,15 8-11 */2  *  * myCommand</span><br><span class="line"><span class="meta">#</span><span class="bash"> 实例5：每周一上午8点到11点的第3和第15分钟执行</span></span><br><span class="line">3,15 8-11 * * 1 myCommand</span><br><span class="line"><span class="meta">#</span><span class="bash"> 实例6：每晚的21:30重启smb</span></span><br><span class="line">30 21 * * * /etc/init.d/smb restart</span><br><span class="line"><span class="meta">#</span><span class="bash"> 实例7：每月1、10、22日的4 : 45重启smb</span></span><br><span class="line">45 4 1,10,22 * * /etc/init.d/smb restart</span><br><span class="line"><span class="meta">#</span><span class="bash"> 实例8：每周六、周日的1 : 10重启smb</span></span><br><span class="line">10 1 * * 6,0 /etc/init.d/smb restart</span><br><span class="line"><span class="meta">#</span><span class="bash"> 实例9：每天18 : 00至23 : 00之间每隔30分钟重启smb</span></span><br><span class="line">0,30 18-23 * * * /etc/init.d/smb restart</span><br><span class="line"><span class="meta">#</span><span class="bash"> 实例10：每星期六的晚上11 : 00 pm重启smb</span></span><br><span class="line">0 23 * * 6 /etc/init.d/smb restart</span><br><span class="line"><span class="meta">#</span><span class="bash"> 实例11：每一小时重启smb</span></span><br><span class="line">* */1 * * * /etc/init.d/smb restart</span><br><span class="line"><span class="meta">#</span><span class="bash"> 实例12：晚上11点到早上7点之间，每隔一小时重启smb</span></span><br><span class="line">0 23-7 * * * /etc/init.d/smb restart</span><br></pre></td></tr></table></figure>
+<h1 id="定时备份"><a href="#定时备份" class="headerlink" title="定时备份"></a>定时备份</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 创建定时任务文件</span></span><br><span class="line">crontab $cron-file-name</span><br><span class="line"><span class="meta">#</span><span class="bash"> 写入规则每天0点、12点备份一次</span></span><br><span class="line">vim $cron-file-name</span><br><span class="line">0 0,12 */1 * * $backup-shell</span><br><span class="line"><span class="meta">#</span><span class="bash"> 启动定时任务</span></span><br><span class="line">crontab $cron-file-name</span><br></pre></td></tr></table></figure>
 
         （EOF）
           <blockquote class="blockquote-center">
@@ -505,7 +498,7 @@
   <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
   <a class="jiathis_counter_style"></a>
 </div>
-<script type="text/javascript" >
+<script type="text/javascript">
   var jiathis_config={
     hideMore:false
   }
@@ -532,7 +525,7 @@
       
         
 <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="杨威 wechat" style="width: 100px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="杨威 wechat" style="width: 100px; max-width: 100%;">
     <div>微信订阅号</div>
 </div>
 
@@ -550,13 +543,13 @@
     <div id="QR" style="display: none;">
       
         <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/wechatpay.jpeg" alt="杨威 WeChat Pay"/>
+          <img id="wechat_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/wechatpay.jpeg" alt="杨威 WeChat Pay">
           <p>微信打赏</p>
         </div>
       
       
         <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/alipay.jpeg" alt="杨威 Alipay"/>
+          <img id="alipay_qr" src="http://img.willowspace.cn/hexo_reward_qrcode_img/alipay.jpeg" alt="杨威 Alipay">
           <p>支付宝打赏</p>
         </div>
       
@@ -566,7 +559,7 @@
 
       
     </div>
-    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_11.jpg">
+    <img class="full-image" src="http://img.willowspace.cn/hexo_post_img/img_16.jpg">
 
 
         </div>
@@ -588,7 +581,7 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -599,9 +592,7 @@
 
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://img.willowspace.cn/hexo_post_img/portrait2.jpg"
-               alt="杨威" />
+          <img class="site-author-image" itemprop="image" src="http://img.willowspace.cn/hexo_post_img/portrait2.jpg" alt="杨威">
           <p class="site-author-name" itemprop="name">杨威</p>
           <p class="site-description motion-element" itemprop="description">捉虫子的人</p>
         </div>
@@ -610,7 +601,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">博客</span>
               </a>
             </div>
@@ -628,7 +619,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">106</span>
+                <span class="site-state-item-count">108</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -724,7 +715,7 @@
     <footer id="footer" class="footer">
       <blockquote class="blockquote-center">
         <div class="footer-inner">
-          <div class="copyright" >
+          <div class="copyright">
   
   &copy;  2017 - 
   <span itemprop="copyrightYear">2019</span>
