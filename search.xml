@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[摄影术传入至今的中国摄影书写]]></title>
-    <url>%2Fphotography%2F2019%2F07%2F%E6%91%84%E5%BD%B1%E6%9C%AF%E4%BC%A0%E5%85%A5%E8%87%B3%E4%BB%8A%E7%9A%84%E4%B8%AD%E5%9B%BD%E6%91%84%E5%BD%B1%E4%B9%A6%E5%86%99%2F</url>
+    <url>%2Fphotography%2F2019%2F07%2F%E6%91%84%E5%BD%B1%E6%9C%AF%E4%BC%A0%E5%85%A5%E8%87%B3%E4%BB%8A%E7%9A%84%E4%B8%AD%E5%9B%BD%E6%91%84%E5%BD%B1%E4%B9%A6%E5%86%991%2F</url>
     <content type="text"></content>
       <categories>
         <category>photography</category>
@@ -273,8 +273,8 @@
         <category>technology</category>
       </categories>
       <tags>
-        <tag>虚拟内存</tag>
         <tag>linux</tag>
+        <tag>虚拟内存</tag>
         <tag>内存管理</tag>
       </tags>
   </entry>
@@ -484,8 +484,8 @@
       </categories>
       <tags>
         <tag>架构</tag>
-        <tag>java</tag>
         <tag>ops</tag>
+        <tag>java</tag>
         <tag>spring</tag>
         <tag>web安全</tag>
         <tag>分布式</tag>
