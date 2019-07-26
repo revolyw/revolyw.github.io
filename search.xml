@@ -483,9 +483,9 @@
         <category>technology</category>
       </categories>
       <tags>
-        <tag>ops</tag>
         <tag>架构</tag>
         <tag>java</tag>
+        <tag>ops</tag>
         <tag>spring</tag>
         <tag>web安全</tag>
         <tag>分布式</tag>
