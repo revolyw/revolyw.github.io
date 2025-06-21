@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "博客,观山,头秃往事,willow,blog"
+keywords: "博客,观山,willow,blog"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -36,12 +36,12 @@ seo: true
 
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
-  主页: http://blog.willowspace.cn
-  分类: /categories
+  home: http://blog.willowspace.cn
+  categories: /categories
   #about: /about
-  归档: /archives
-  标签: /tags
-  # sitemap: /sitemap.xml
+  archives: /archives
+  tags: /tags
+  #sitemap: /sitemap.xml
   #commonweal: /404.html
 
 
@@ -134,7 +134,7 @@ font:
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
   GitHub: https://github.com/revolyw
-  WillowSpace: http://willowspace.cn
+  Weibo: http://weibo.com/revolyw
 
 # Social Links Icons
 # Icon Mapping:
@@ -188,13 +188,13 @@ sidebar:
 
 
 # Blogrolls
-# links_title: Links
+links_title: Links
 #links_layout: block
 #links_layout: inline
-# links:
-  # Willow's space: http://willowspace.cn
-  # Chrisp's blog: https://Chrisp7.github.io
-  # Yuewen's Note: http://kenneth-hao.github.io
+links:
+  Willow's space: http://willowspace.cn
+  Chrisp's blog: https://Chrisp7.github.io
+  Yuewen's Note: http://kenneth-hao.github.io
 
 # ---------------------------------------------------------------
 # Post Settings
@@ -264,7 +264,7 @@ mathjax:
 #swiftype_key: o38Yj4MhfLeNLEgpkTXx
 
 # Baidu Analytics ID
-# baidu_analytics: 244558d220e72839afa5633c6c823d79
+baidu_analytics: 244558d220e72839afa5633c6c823d79
 
 # Duoshuo ShortName
 #duoshuo_shortname: willow
@@ -473,7 +473,7 @@ vendors:
   canvas_nest:
 
 # 打赏
-reward_comment: 站着把钱挣了
+reward_comment: 写点什么 心里不慌
 wechatpay: http://img.willowspace.cn/hexo_reward_qrcode_img/wechatpay.jpeg
 alipay: http://img.willowspace.cn/hexo_reward_qrcode_img/alipay.jpeg
 
